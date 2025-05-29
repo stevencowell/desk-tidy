@@ -71,31 +71,776 @@
 
 <main class="content">
 
-  <!-- ======================= MAIN THEORY CONTENT EXAMPLE (Week 1) ======================= -->
-  <section class="content-section active" id="main-theory" tabindex="0">
-    <h2>Main Theory Content</h2>
-    <details open>
-      <summary><b>Week 1: Sample Topic</b></summary>
-      <article>
-        <h4>Theory Example</h4>
-        <p>Use this area for your main theory notes for the week.</p>
-        <form class="quiz" data-week="1" id="main-week1-quiz">
-          <fieldset>
-            <legend><b>Week 1 Quiz</b></legend>
-            <ol>
-              <li>
-                <p>Which of these is a safe workshop practice?</p>
-                <label><input data-correct="true" name="main_q1_1" type="radio" value="Wear glasses" /> Wearing safety glasses</label><br />
-                <label><input name="main_q1_1" type="radio" value="No PPE" /> Not using PPE</label>
-              </li>
-            </ol>
-            <button class="check-btn" type="button" onclick="submitQuiz(this, 'Main Theory Content - Week 1')">Check Answers</button>
-            <span class="quiz-msg"></span>
-          </fieldset>
-        </form>
-      </article>
-    </details>
-  </section>
+<section class="content-section active" id="main-theory" tabindex="0">
+  <h2>Main Theory Content</h2>
+
+  <details>
+    <summary><b>Week 1: Safety, Introduction to Materials &amp; Project Brief</b></summary>
+    <article>
+      <p>Workshop Safety: In the workshop, safety is the top priority. Everyone must learn and follow basic safety rules to prevent accidents. Always listen carefully to your teacher’s instructions and never use any tool or machine without permission and proper training. Do not run or play around in the workshop – move calmly and stay focused on what you are doing. If you are unsure how to use something, always ask for help.</p>
+      <p>Personal Protective Equipment (PPE): Wear your safety gear every time. Safety glasses protect your eyes from flying wood chips and dust when cutting or sanding. An apron (or workshop coat) protects your clothes and keeps loose clothing secure so it doesn’t get caught in tools. If you have long hair, tie it back, and remove any loose jewellery or ties. Wear closed, sturdy shoes to protect your feet. Wearing the right PPE helps keep you safe while you work.</p>
+      <p>Safe Tool Use and Behavior: Always use tools for their intended purpose and in the correct way. Keep both hands behind the cutting edge of tools. For example, when using a saw or chisel, your free hand should be well away from the blade path. Only one person should use a tool or machine at a time. Keep your work area tidy and return tools after use.</p>
+      <p>Introduction to Materials: We will mainly use wood. Softwoods like pine come from fast-growing coniferous trees, while hardwoods like oak are from slower-growing deciduous trees. Manufactured boards such as plywood or MDF are man-made sheets useful for stability.</p>
+      <p>Project Brief – Desk Tidy: Design and build a wooden desk tidy to hold stationery. Think about what items you want it to hold and how to make it practical and good-looking. Safety always comes first.</p>
+      <form class="quiz" data-week="1" id="main-week1-quiz">
+        <fieldset>
+          <legend><b>Week 1 Quiz</b></legend>
+          <ol>
+            <li><p>Scenario: Jamie is about to cut wood without safety glasses. What should he do?</p>
+              <label><input name="w1_q1" type="radio" value="Continue" /> Continue cutting slowly.</label><br />
+              <label><input data-correct="true" name="w1_q1" type="radio" value="Put on" /> Stop and put on safety glasses</label><br />
+              <label><input name="w1_q1" type="radio" value="Ask" /> Ask a classmate to watch.</label><br />
+              <label><input name="w1_q1" type="radio" value="Hold away" /> Hold the wood further away.</label>
+            </li>
+            <li><p>Scenario: Students run in the workshop. Why is this unsafe?</p>
+              <label><input name="w1_q2" type="radio" value="Space" /> It’s not a problem; there’s open space.</label><br />
+              <label><input name="w1_q2" type="radio" value="Distract" /> They might distract others, but it’s fine.</label><br />
+              <label><input data-correct="true" name="w1_q2" type="radio" value="Bump" /> They could bump into equipment or people, causing an accident</label><br />
+              <label><input name="w1_q2" type="radio" value="Teacher" /> It only matters if the teacher sees.</label>
+            </li>
+            <li><p>Scenario: Priya has long hair and is about to drill. What should she do?</p>
+              <label><input name="w1_q3" type="radio" value="Nothing" /> Nothing.</label><br />
+              <label><input data-correct="true" name="w1_q3" type="radio" value="Tie" /> Tie back her hair</label><br />
+              <label><input name="w1_q3" type="radio" value="Friend" /> Ask a friend to hold it.</label><br />
+              <label><input name="w1_q3" type="radio" value="Slow" /> Drill very slowly.</label>
+            </li>
+            <li><p>Scenario: Alex finds a saw with a cracked handle. What should he do?</p>
+              <label><input name="w1_q4" type="radio" value="Ignore" /> Ignore it.</label><br />
+              <label><input name="w1_q4" type="radio" value="Fix" /> Try to fix it himself.</label><br />
+              <label><input data-correct="true" name="w1_q4" type="radio" value="Inform" /> Inform the teacher</label><br />
+              <label><input name="w1_q4" type="radio" value="Use" /> Continue using it carefully.</label>
+            </li>
+            <li><p>Scenario: During a demo, how should the class behave?</p>
+              <label><input data-correct="true" name="w1_q5" type="radio" value="Watch" /> Watch and listen carefully</label><br />
+              <label><input name="w1_q5" type="radio" value="Talk" /> Talk to friends.</label><br />
+              <label><input name="w1_q5" type="radio" value="Practice" /> Practice using tools at the same time.</label><br />
+              <label><input name="w1_q5" type="radio" value="Crowd" /> Crowd the teacher.</label>
+            </li>
+            <li><p>Scenario: Maya is sanding and there is a lot of dust. What should she wear?</p>
+              <label><input data-correct="true" name="w1_q6" type="radio" value="Mask" /> A dust mask</label><br />
+              <label><input name="w1_q6" type="radio" value="Ears" /> Ear defenders</label><br />
+              <label><input name="w1_q6" type="radio" value="Apron" /> A thicker apron</label><br />
+              <label><input name="w1_q6" type="radio" value="Light" /> A brighter light</label>
+            </li>
+            <li><p>Scenario: Which of these is a softwood used in school projects?</p>
+              <label><input data-correct="true" name="w1_q7" type="radio" value="Pine" /> Pine</label><br />
+              <label><input name="w1_q7" type="radio" value="Oak" /> Oak</label><br />
+              <label><input name="w1_q7" type="radio" value="Steel" /> Steel</label><br />
+              <label><input name="w1_q7" type="radio" value="Acrylic" /> Acrylic plastic</label>
+            </li>
+            <li><p>Scenario: Design brief requires the tidy to hold at least 5 pencils. What should you do?</p>
+              <label><input data-correct="true" name="w1_q8" type="radio" value="Design" /> Design it to hold at least 5 pencils</label><br />
+              <label><input name="w1_q8" type="radio" value="Ignore" /> Ignore it</label><br />
+              <label><input name="w1_q8" type="radio" value="Only3" /> Make it hold 3 pencils</label><br />
+              <label><input name="w1_q8" type="radio" value="Looks" /> Focus only on looks</label>
+            </li>
+            <li><p>Scenario: Ben tripped on untied shoelaces while carrying a hammer. Which rule?</p>
+              <label><input name="w1_q9" type="radio" value="One" /> Only carry one tool at a time</label><br />
+              <label><input name="w1_q9" type="radio" value="Untied" /> Wear shoes with laces undone</label><br />
+              <label><input data-correct="true" name="w1_q9" type="radio" value="Secure" /> Ensure clothing and shoes are secure</label><br />
+              <label><input name="w1_q9" type="radio" value="Fast" /> Walk faster</label>
+            </li>
+            <li><p>Scenario: Why have a safety briefing before starting?</p>
+              <label><input name="w1_q10" type="radio" value="Scare" /> To scare students</label><br />
+              <label><input data-correct="true" name="w1_q10" type="radio" value="Safe" /> To ensure everyone knows how to work without getting hurt</label><br />
+              <label><input name="w1_q10" type="radio" value="Fill" /> To fill time</label><br />
+              <label><input name="w1_q10" type="radio" value="Require" /> Because school requires it daily</label>
+            </li>
+          </ol>
+          <button class="check-btn" type="button" onclick="submitQuiz(this, 'Main Theory Content - Week 1')">Check Answers</button>
+          <span class="quiz-msg"></span>
+        </fieldset>
+      </form>
+    </article>
+  </details>
+
+  <details>
+    <summary><b>Week 2: Tools and Equipment – Using Hand Tools Safely</b></summary>
+    <article>
+      <p>Working on a project involves many hand tools. Know each tool and use it correctly. Always check tools are in good condition and secure your workpiece with a clamp or vice before cutting or drilling.</p>
+      <p>Common tools include rulers, pencils, try squares, tenon saws, bench hooks, coping saws, clamps or vices, files, sandpaper, drills, hammers, screwdrivers, and chisels with mallets. Maintain tools and tell your teacher if one is damaged.</p>
+      <form class="quiz" data-week="2" id="main-week2-quiz">
+        <fieldset>
+          <legend><b>Week 2 Quiz</b></legend>
+          <ol>
+            <li><p>Scenario: Sarah needs a 90° line from the edge of her wood. Which tool?</p>
+              <label><input name="w2_q1" type="radio" value="Tape" /> Measuring tape</label><br />
+              <label><input name="w2_q1" type="radio" value="Coping" /> Coping saw</label><br />
+              <label><input data-correct="true" name="w2_q1" type="radio" value="Try" /> Try square</label><br />
+              <label><input name="w2_q1" type="radio" value="File" /> File</label>
+            </li>
+            <li><p>Scenario: To cut a piece to 15 cm, which tools should Jack use?</p>
+              <label><input name="w2_q2" type="radio" value="Guess" /> Just a coping saw, guessing</label><br />
+              <label><input data-correct="true" name="w2_q2" type="radio" value="Measure" /> Measure with a ruler, mark with pencil, cut with tenon saw</label><br />
+              <label><input name="w2_q2" type="radio" value="File" /> File and hammer</label><br />
+              <label><input name="w2_q2" type="radio" value="Chisel" /> Chisel and mallet</label>
+            </li>
+            <li><p>Scenario: Wood keeps moving while Emily saws. What should she do?</p>
+              <label><input name="w2_q3" type="radio" value="Friend" /> Have a friend hold it</label><br />
+              <label><input name="w2_q3" type="radio" value="Sit" /> Sit on the wood</label><br />
+              <label><input data-correct="true" name="w2_q3" type="radio" value="Clamp" /> Clamp or vice the wood</label><br />
+              <label><input name="w2_q3" type="radio" value="Press" /> Press harder with her hand</label>
+            </li>
+            <li><p>Scenario: Liam needs to cut a curve. Which tool?</p>
+              <label><input name="w2_q4" type="radio" value="Tenon" /> Tenon saw</label><br />
+              <label><input data-correct="true" name="w2_q4" type="radio" value="Coping" /> Coping saw</label><br />
+              <label><input name="w2_q4" type="radio" value="Try" /> Try square</label><br />
+              <label><input name="w2_q4" type="radio" value="Hammer" /> Hammer and chisel</label>
+            </li>
+            <li><p>Scenario: Maria is filing edges. What is correct?</p>
+              <label><input name="w2_q5" type="radio" value="Hold" /> Hold wood in one hand</label><br />
+              <label><input data-correct="true" name="w2_q5" type="radio" value="Clamp" /> Clamp the wood and push the file forward</label><br />
+              <label><input name="w2_q5" type="radio" value="Rub" /> Rub back and forth quickly</label><br />
+              <label><input name="w2_q5" type="radio" value="Hammer" /> Hammer the file</label>
+            </li>
+            <li><p>Scenario: David wants to drill a hole. What steps?</p>
+              <label><input name="w2_q6" type="radio" value="Hand" /> Hold wood in hand and drill toward palm</label><br />
+              <label><input data-correct="true" name="w2_q6" type="radio" value="Clamp" /> Clamp the wood, wear glasses, drill steadily</label><br />
+              <label><input name="w2_q6" type="radio" value="Saw" /> Use coping saw first</label><br />
+              <label><input name="w2_q6" type="radio" value="Push" /> Push as hard as possible without clamping</label>
+            </li>
+            <li><p>Scenario: Which tool is used to drive in a screw?</p>
+              <label><input name="w2_q7" type="radio" value="Hammer" /> Hammer</label><br />
+              <label><input data-correct="true" name="w2_q7" type="radio" value="Screwdriver" /> Screwdriver</label><br />
+              <label><input name="w2_q7" type="radio" value="File" /> File</label><br />
+              <label><input name="w2_q7" type="radio" value="Chisel" /> Chisel</label>
+            </li>
+            <li><p>Scenario: Safe way to use a chisel?</p>
+              <label><input name="w2_q8" type="radio" value="Hand front" /> Free hand in front of blade</label><br />
+              <label><input name="w2_q8" type="radio" value="Metal" /> Use metal hammer</label><br />
+              <label><input name="w2_q8" type="radio" value="Toward" /> Push toward yourself</label><br />
+              <label><input data-correct="true" name="w2_q8" type="radio" value="Mallet" /> Hold handle, tap with wooden mallet, other hand behind blade</label>
+            </li>
+            <li><p>Scenario: Why use the correct tool?</p>
+              <label><input name="w2_q9" type="radio" value="Not" /> It isn’t important</label><br />
+              <label><input data-correct="true" name="w2_q9" type="radio" value="Better" /> It makes work easier, safer, and results better</label><br />
+              <label><input name="w2_q9" type="radio" value="Impress" /> To impress the teacher</label><br />
+              <label><input name="w2_q9" type="radio" value="Break" /> Because tools will break otherwise</label>
+            </li>
+            <li><p>Scenario: Tenon saw is dull. What should Tom do?</p>
+              <label><input name="w2_q10" type="radio" value="Push" /> Push harder</label><br />
+              <label><input name="w2_q10" type="radio" value="Gloves" /> Continue but wear gloves</label><br />
+              <label><input data-correct="true" name="w2_q10" type="radio" value="Inform" /> Stop and inform the teacher</label><br />
+              <label><input name="w2_q10" type="radio" value="Hammer" /> Use it like a hammer</label>
+            </li>
+          </ol>
+          <button class="check-btn" type="button" onclick="submitQuiz(this, 'Main Theory Content - Week 2')">Check Answers</button>
+          <span class="quiz-msg"></span>
+        </fieldset>
+      </form>
+    </article>
+  </details>
+
+  <details>
+    <summary><b>Week 3: Materials – Timber Types and Sustainability</b></summary>
+    <article>
+      <p>Wood types vary. Softwoods like pine grow quickly and are easier to cut. Hardwoods like oak grow slower and are stronger and often more expensive. Manufactured boards such as plywood, MDF, and chipboard are made from layers or fibers bonded together.</p>
+      <p>Sustainable use means sourcing timber responsibly (look for FSC certification) and minimizing waste. Wood is renewable and biodegradable, making it environmentally friendly when managed well.</p>
+      <form class="quiz" data-week="3" id="main-week3-quiz">
+        <fieldset>
+          <legend><b>Week 3 Quiz</b></legend>
+          <ol>
+            <li><p>Scenario: Jack wants an easy-to-cut, inexpensive wood. Which?</p>
+              <label><input name="w3_q1" type="radio" value="Oak" /> Oak</label><br />
+              <label><input data-correct="true" name="w3_q1" type="radio" value="Pine" /> Pine</label><br />
+              <label><input name="w3_q1" type="radio" value="Mahogany" /> Mahogany</label><br />
+              <label><input name="w3_q1" type="radio" value="Gold" /> Gold</label>
+            </li>
+            <li><p>Scenario: Samantha picks up light wood with knots and pine scent. It is likely?</p>
+              <label><input data-correct="true" name="w3_q2" type="radio" value="Softwood" /> A softwood like pine</label><br />
+              <label><input name="w3_q2" type="radio" value="Hardwood" /> A hardwood like oak</label><br />
+              <label><input name="w3_q2" type="radio" value="MDF" /> MDF</label><br />
+              <label><input name="w3_q2" type="radio" value="Metal" /> Metal</label>
+            </li>
+            <li><p>Scenario: Which of these is a manufactured board?</p>
+              <label><input name="w3_q3" type="radio" value="Beech" /> Beech</label><br />
+              <label><input data-correct="true" name="w3_q3" type="radio" value="MDF" /> MDF</label><br />
+              <label><input name="w3_q3" type="radio" value="Cedar" /> Cedar</label><br />
+              <label><input name="w3_q3" type="radio" value="Pine" /> Pine</label>
+            </li>
+            <li><p>Scenario: Why might plywood be good for a flat panel?</p>
+              <label><input name="w3_q4" type="radio" value="Plastic" /> Because it’s plastic</label><br />
+              <label><input data-correct="true" name="w3_q4" type="radio" value="Strong" /> Its layers make it strong and resistant to warping</label><br />
+              <label><input name="w3_q4" type="radio" value="Soft" /> It’s the softest wood</label><br />
+              <label><input name="w3_q4" type="radio" value="Magic" /> It has secret properties</label>
+            </li>
+            <li><p>Scenario: Luis hits a knot in pine. What issue?</p>
+              <label><input name="w3_q5" type="radio" value="Spin" /> The knot might spin</label><br />
+              <label><input data-correct="true" name="w3_q5" type="radio" value="Hard" /> Knots are harder and may slow the saw or fall out</label><br />
+              <label><input name="w3_q5" type="radio" value="Poison" /> Knots make wood poisonous</label><br />
+              <label><input name="w3_q5" type="radio" value="None" /> No issue</label>
+            </li>
+            <li><p>Scenario: Emily wants a smooth surface for painting made from recycled fibers. Which material?</p>
+              <label><input name="w3_q6" type="radio" value="Rough" /> Rough pine</label><br />
+              <label><input data-correct="true" name="w3_q6" type="radio" value="MDF" /> MDF board</label><br />
+              <label><input name="w3_q6" type="radio" value="Oak" /> Oak plank</label><br />
+              <label><input name="w3_q6" type="radio" value="Firewood" /> Firewood</label>
+            </li>
+            <li><p>Scenario: What does FSC-certified mean?</p>
+              <label><input name="w3_q7" type="radio" value="Country" /> It comes from a country named FSC</label><br />
+              <label><input name="w3_q7" type="radio" value="Fake" /> It is fake</label><br />
+              <label><input data-correct="true" name="w3_q7" type="radio" value="Sustainable" /> It comes from a sustainably managed forest</label><br />
+              <label><input name="w3_q7" type="radio" value="Soaked" /> It was soaked in water</label>
+            </li>
+            <li><p>Scenario: Why might wood be better than plastic environmentally?</p>
+              <label><input data-correct="true" name="w3_q8" type="radio" value="Renewable" /> Wood is renewable and biodegradable</label><br />
+              <label><input name="w3_q8" type="radio" value="Cheaper" /> It is always cheaper</label><br />
+              <label><input name="w3_q8" type="radio" value="No impact" /> Wood never impacts the environment</label><br />
+              <label><input name="w3_q8" type="radio" value="No reason" /> No reason</label>
+            </li>
+            <li><p>Scenario: What happens if a wooden tidy is left in the rain?</p>
+              <label><input name="w3_q9" type="radio" value="Nothing" /> Nothing</label><br />
+              <label><input data-correct="true" name="w3_q9" type="radio" value="Warp" /> It may swell or rot</label><br />
+              <label><input name="w3_q9" type="radio" value="Harden" /> It will harden</label><br />
+              <label><input name="w3_q9" type="radio" value="Metal" /> It will turn to metal</label>
+            </li>
+            <li><p>Scenario: Why are manufactured boards good for sustainability?</p>
+              <label><input name="w3_q10" type="radio" value="Grow" /> They grow on trees</label><br />
+              <label><input data-correct="true" name="w3_q10" type="radio" value="Recycle" /> They use recycled wood pieces</label><br />
+              <label><input name="w3_q10" type="radio" value="Forever" /> They last forever</label><br />
+              <label><input name="w3_q10" type="radio" value="Evaporate" /> They evaporate after use</label>
+            </li>
+          </ol>
+          <button class="check-btn" type="button" onclick="submitQuiz(this, 'Main Theory Content - Week 3')">Check Answers</button>
+          <span class="quiz-msg"></span>
+        </fieldset>
+      </form>
+    </article>
+  </details>
+
+  <details>
+    <summary><b>Week 4: Design &amp; Planning – Sketches and Specifications</b></summary>
+    <article>
+      <p>Good planning saves time and prevents mistakes. Clarify what your desk tidy must do, brainstorm ideas, choose the best design, and draw it with measurements. Make a cutting list and plan the order of building steps.</p>
+      <form class="quiz" data-week="4" id="main-week4-quiz">
+        <fieldset>
+          <legend><b>Week 4 Quiz</b></legend>
+          <ol>
+            <li><p>Scenario: Hannah starts cutting with no plan. Consequence?</p>
+              <label><input name="w4_q1" type="radio" value="Perfect" /> She will be perfect</label><br />
+              <label><input data-correct="true" name="w4_q1" type="radio" value="Mistakes" /> She might cut wrong sizes or miss requirements</label><br />
+              <label><input name="w4_q1" type="radio" value="Better" /> It will be better</label><br />
+              <label><input name="w4_q1" type="radio" value="Automatic" /> Wood forms automatically</label>
+            </li>
+            <li><p>Scenario: Ali has three ideas. How to choose?</p>
+              <label><input name="w4_q2" type="radio" value="Cool" /> Pick the coolest</label><br />
+              <label><input data-correct="true" name="w4_q2" type="radio" value="Evaluate" /> Evaluate against requirements and get feedback</label><br />
+              <label><input name="w4_q2" type="radio" value="Coin" /> Flip a coin</label><br />
+              <label><input name="w4_q2" type="radio" value="All" /> Build all</label>
+            </li>
+            <li><p>Scenario: Slot must fit an 8cm phone. What should Ryan do?</p>
+              <label><input name="w4_q3" type="radio" value="Random" /> Make it random</label><br />
+              <label><input data-correct="true" name="w4_q3" type="radio" value="Measure" /> Measure the phone and make slot slightly wider</label><br />
+              <label><input name="w4_q3" type="radio" value="2cm" /> Make it 2 cm</label><br />
+              <label><input name="w4_q3" type="radio" value="None" /> Skip the slot</label>
+            </li>
+            <li><p>Scenario: Why draw with measurements first?</p>
+              <label><input name="w4_q4" type="radio" value="No" /> No benefit</label><br />
+              <label><input data-correct="true" name="w4_q4" type="radio" value="Guide" /> It guides material needs and reduces mistakes</label><br />
+              <label><input name="w4_q4" type="radio" value="Art" /> For art</label><br />
+              <label><input name="w4_q4" type="radio" value="Useless" /> Useless</label>
+            </li>
+            <li><p>Scenario: Sofia’s cutting list helps how?</p>
+              <label><input name="w4_q5" type="radio" value="Friend" /> Give to a friend</label><br />
+              <label><input data-correct="true" name="w4_q5" type="radio" value="Remind" /> Reminds her what pieces to cut</label><br />
+              <label><input name="w4_q5" type="radio" value="After" /> Only helps after building</label><br />
+              <label><input name="w4_q5" type="radio" value="Magic" /> Transforms into pieces</label>
+            </li>
+            <li><p>Scenario: Marcus writes “drill holes before assembly.” Why?</p>
+              <label><input name="w4_q6" type="radio" value="Only" /> Drills only work on separate wood</label><br />
+              <label><input data-correct="true" name="w4_q6" type="radio" value="Easier" /> Easier and safer to drill pieces while flat</label><br />
+              <label><input name="w4_q6" type="radio" value="Not" /> Not a good idea</label><br />
+              <label><input name="w4_q6" type="radio" value="Extra" /> Making extra work</label>
+            </li>
+            <li><p>Scenario: Jenna shortened and widened her design. Which consideration?</p>
+              <label><input name="w4_q7" type="radio" value="Aesthetics" /> Aesthetics</label><br />
+              <label><input data-correct="true" name="w4_q7" type="radio" value="Stability" /> Stability and function</label><br />
+              <label><input name="w4_q7" type="radio" value="Cost" /> Material cost</label><br />
+              <label><input name="w4_q7" type="radio" value="Color" /> Color</label>
+            </li>
+            <li><p>Scenario: Tom will sand edges after assembly. When should this step be?</p>
+              <label><input data-correct="true" name="w4_q8" type="radio" value="End" /> At the end</label><br />
+              <label><input name="w4_q8" type="radio" value="Beginning" /> At the beginning</label><br />
+              <label><input name="w4_q8" type="radio" value="Middle" /> In the middle</label><br />
+              <label><input name="w4_q8" type="radio" value="Not" /> Not needed</label>
+            </li>
+            <li><p>Scenario: Why generate multiple ideas?</p>
+              <label><input name="w4_q9" type="radio" value="Guarantee" /> Guarantees same as others</label><br />
+              <label><input data-correct="true" name="w4_q9" type="radio" value="Explore" /> Lets you explore options and pick the best features</label><br />
+              <label><input name="w4_q9" type="radio" value="Waste" /> Waste of time</label><br />
+              <label><input name="w4_q9" type="radio" value="Confuse" /> Confuses</label>
+            </li>
+            <li><p>Scenario: How does a detailed plan affect building?</p>
+              <label><input data-correct="true" name="w4_q10" type="radio" value="Smooth" /> It goes more smoothly</label><br />
+              <label><input name="w4_q10" type="radio" value="Chaotic" /> More chaotic</label><br />
+              <label><input name="w4_q10" type="radio" value="None" /> No effect</label><br />
+              <label><input name="w4_q10" type="radio" value="No joy" /> No joy</label>
+            </li>
+          </ol>
+          <button class="check-btn" type="button" onclick="submitQuiz(this, 'Main Theory Content - Week 4')">Check Answers</button>
+          <span class="quiz-msg"></span>
+        </fieldset>
+      </form>
+    </article>
+  </details>
+
+  <details>
+    <summary><b>Week 5: Measuring and Marking Out</b></summary>
+    <article>
+      <p>Accurate measurement and marking are vital. Measure from the zero mark, use a sharp pencil, mark the waste side, and double-check before cutting. Use a try square for right angles. Remember: measure twice, cut once.</p>
+      <form class="quiz" data-week="5" id="main-week5-quiz">
+        <fieldset>
+          <legend><b>Week 5 Quiz</b></legend>
+          <ol>
+            <li><p>Carlos needs wood 150 mm long. Another way to say this?</p>
+              <label><input data-correct="true" name="w5_q1" type="radio" value="15" /> 15 cm</label><br />
+              <label><input name="w5_q1" type="radio" value="1.5" /> 1.5 cm</label><br />
+              <label><input name="w5_q1" type="radio" value="1500" /> 1500 cm</label><br />
+              <label><input name="w5_q1" type="radio" value="150" /> 150 m</label>
+            </li>
+            <li><p>Priya is measuring wood. Which is most accurate?</p>
+              <label><input name="w5_q2" type="radio" value="Frayed" /> Frayed tape measure</label><br />
+              <label><input data-correct="true" name="w5_q2" type="radio" value="Rigid" /> Start at 0 on a rigid ruler and use a sharp pencil</label><br />
+              <label><input name="w5_q2" type="radio" value="Worn" /> Start at 1 cm and forget to subtract</label><br />
+              <label><input name="w5_q2" type="radio" value="Estimate" /> Estimate by eye</label>
+            </li>
+            <li><p>What does “measure twice, cut once” mean?</p>
+              <label><input name="w5_q3" type="radio" value="Two" /> Use two rulers</label><br />
+              <label><input data-correct="true" name="w5_q3" type="radio" value="Check" /> Double-check measurements before cutting</label><br />
+              <label><input name="w5_q3" type="radio" value="Offcut" /> Measure offcuts for fun</label><br />
+              <label><input name="w5_q3" type="radio" value="Long" /> Cut long just in case</label>
+            </li>
+            <li><p>Jenny cut on the line and piece was short. Why?</p>
+              <label><input name="w5_q4" type="radio" value="Shrink" /> Wood shrank</label><br />
+              <label><input data-correct="true" name="w5_q4" type="radio" value="Kerf" /> Saw kerf removed extra material</label><br />
+              <label><input name="w5_q4" type="radio" value="Wrong" /> Measured wrong</label><br />
+              <label><input name="w5_q4" type="radio" value="Mark" /> Mark moved</label>
+            </li>
+            <li><p>Lee needs two pieces the same length. Best method?</p>
+              <label><input data-correct="true" name="w5_q5" type="radio" value="Measure" /> Measure and mark each piece carefully</label><br />
+              <label><input name="w5_q5" type="radio" value="Guess" /> Guess the second</label><br />
+              <label><input name="w5_q5" type="radio" value="Stack" /> Cut stacked together</label><br />
+              <label><input name="w5_q5" type="radio" value="Cutoff" /> Use cutoff as ruler</label>
+            </li>
+            <li><p>Sara uses a try square. What is she doing?</p>
+              <label><input name="w5_q6" type="radio" value="Circle" /> Drawing a circle</label><br />
+              <label><input data-correct="true" name="w5_q6" type="radio" value="Right" /> Marking a 90° line</label><br />
+              <label><input name="w5_q6" type="radio" value="Measure" /> Measuring three times</label><br />
+              <label><input name="w5_q6" type="radio" value="Formula" /> Calculating angles</label>
+            </li>
+            <li><p>Malik forgot to mark the waste side. Problem?</p>
+              <label><input data-correct="true" name="w5_q7" type="radio" value="Wrong" /> Might cut on wrong side</label><br />
+              <label><input name="w5_q7" type="radio" value="Decor" /> Just decoration</label><br />
+              <label><input name="w5_q7" type="radio" value="Throw" /> Throw away wrong piece</label><br />
+              <label><input name="w5_q7" type="radio" value="Forget" /> Forget saw</label>
+            </li>
+            <li><p>Kim marks a hole center with an X. What else helps drilling?</p>
+              <label><input data-correct="true" name="w5_q8" type="radio" value="Punch" /> Use a punch to make a dent</label><br />
+              <label><input name="w5_q8" type="radio" value="Circle" /> Draw a big circle</label><br />
+              <label><input name="w5_q8" type="radio" value="Paint" /> Paint it red</label><br />
+              <label><input name="w5_q8" type="radio" value="Nothing" /> Nothing</label>
+            </li>
+            <li><p>Why use a sharp pencil or marking knife?</p>
+              <label><input data-correct="true" name="w5_q9" type="radio" value="Precise" /> For precise thin lines</label><br />
+              <label><input name="w5_q9" type="radio" value="Marker" /> Use thick marker instead</label><br />
+              <label><input name="w5_q9" type="radio" value="Stain" /> Marker might stain</label><br />
+              <label><input name="w5_q9" type="radio" value="Metal" /> Markers only for metal</label>
+            </li>
+            <li><p>David used a worn ruler end and cut too short. Future fix?</p>
+              <label><input data-correct="true" name="w5_q10" type="radio" value="Zero" /> Start from the 0 mark or compensate</label><br />
+              <label><input name="w5_q10" type="radio" value="Add" /> Always add 5 cm</label><br />
+              <label><input name="w5_q10" type="radio" value="Never" /> Never cut under 1 m</label><br />
+              <label><input name="w5_q10" type="radio" value="Blame" /> Blame the ruler</label>
+            </li>
+          </ol>
+          <button class="check-btn" type="button" onclick="submitQuiz(this, 'Main Theory Content - Week 5')">Check Answers</button>
+          <span class="quiz-msg"></span>
+        </fieldset>
+      </form>
+    </article>
+  </details>
+
+  <details>
+    <summary><b>Week 6: Cutting and Shaping Wood</b></summary>
+    <article>
+      <p>Secure the wood before cutting. Use steady strokes with the tenon saw for straight cuts and a coping saw for curves. Smooth edges with a file and sandpaper.</p>
+      <form class="quiz" data-week="6" id="main-week6-quiz">
+        <fieldset>
+          <legend><b>Week 6 Quiz</b></legend>
+          <ol>
+            <li><p>What should Luke do before sawing?</p>
+              <label data-correct="true"><input name="w6_q1" type="radio" value="Secure" /> Clamp the wood and cut slowly on the waste side</label><br />
+              <label><input name="w6_q1" type="radio" value="One hand" /> Hold the wood in one hand</label><br />
+              <label><input name="w6_q1" type="radio" value="Eyeball" /> Eyeball without marking</label><br />
+              <label><input name="w6_q1" type="radio" value="Feet" /> Cut between feet</label>
+            </li>
+            <li><p>Maria wants a circular hole. What should she do?</p>
+              <label><input name="w6_q2" type="radio" value="Punch" /> Punch a hole</label><br />
+              <label data-correct="true"><input name="w6_q2" type="radio" value="Drill" /> Drill a pilot hole then use a coping saw</label><br />
+              <label><input name="w6_q2" type="radio" value="Tenon" /> Use tenon saw</label><br />
+              <label><input name="w6_q2" type="radio" value="Impossible" /> Impossible</label>
+            </li>
+            <li><p>James pushes the saw very hard and fast. Downside?</p>
+              <label><input name="w6_q3" type="radio" value="Nothing" /> Nothing</label><br />
+              <label data-correct="true"><input name="w6_q3" type="radio" value="Bind" /> Saw could bind or jump off line</label><br />
+              <label><input name="w6_q3" type="radio" value="Melt" /> Wood will melt</label><br />
+              <label><input name="w6_q3" type="radio" value="Straighter" /> Cuts straighter</label>
+            </li>
+            <li><p>When using a coping saw, avoid:</p>
+              <label data-correct="true"><input name="w6_q4" type="radio" value="Twist" /> Twisting blade quickly around tight curves</label><br />
+              <label><input name="w6_q4" type="radio" value="Secure" /> Securing the wood</label><br />
+              <label><input name="w6_q4" type="radio" value="Slow" /> Taking time</label><br />
+              <label><input name="w6_q4" type="radio" value="Follow" /> Following the line</label>
+            </li>
+            <li><p>Ella has splintery edges. Solution?</p>
+              <label data-correct="true"><input name="w6_q5" type="radio" value="File" /> File or sand them</label><br />
+              <label><input name="w6_q5" type="radio" value="Leave" /> Leave them</label><br />
+              <label><input name="w6_q5" type="radio" value="Ask" /> Ask wood to fix</label><br />
+              <label><input name="w6_q5" type="radio" value="Glue" /> Glue paper over</label>
+            </li>
+            <li><p>Ravi’s saw is stuck. Problem?</p>
+              <label data-correct="true"><input name="w6_q6" type="radio" value="Binding" /> The cut may be pinching; check alignment or wedge open</label><br />
+              <label><input name="w6_q6" type="radio" value="Dull" /> Saw teeth dull instantly</label><br />
+              <label><input name="w6_q6" type="radio" value="Weak" /> He isn’t strong enough</label><br />
+              <label><input name="w6_q6" type="radio" value="Normal" /> It’s normal</label>
+            </li>
+            <li><p>David needs a small 5 cm piece. Safe method?</p>
+              <label data-correct="true"><input name="w6_q7" type="radio" value="Clamp" /> Clamp the board and cut safely</label><br />
+              <label><input name="w6_q7" type="radio" value="Friend" /> Friend holds it</label><br />
+              <label><input name="w6_q7" type="radio" value="Air" /> Cut in mid-air</label><br />
+              <label><input name="w6_q7" type="radio" value="Dont" /> Don’t cut it</label>
+            </li>
+            <li><p>Sofia turns coping saw sharply. Good practice?</p>
+              <label data-correct="true"><input name="w6_q8" type="radio" value="Slow" /> Turn slowly and back out if needed</label><br />
+              <label><input name="w6_q8" type="radio" value="Fast" /> Twist quickly</label><br />
+              <label><input name="w6_q8" type="radio" value="Hands" /> Break wood with hands</label><br />
+              <label><input name="w6_q8" type="radio" value="Remove" /> Remove blade every turn</label>
+            </li>
+            <li><p>Mark’s pieces have a gap. What can he do?</p>
+              <label data-correct="true"><input name="w6_q9" type="radio" value="File" /> File or sand until they fit</label><br />
+              <label><input name="w6_q9" type="radio" value="Throw" /> Throw them away</label><br />
+              <label><input name="w6_q9" type="radio" value="Glue" /> Fill with glue</label><br />
+              <label><input name="w6_q9" type="radio" value="Squeeze" /> Squeeze in vice</label>
+            </li>
+            <li><p>Why smooth edges after cutting?</p>
+              <label data-correct="true"><input name="w6_q10" type="radio" value="Safe" /> To make it safe and ready for finish</label><br />
+              <label><input name="w6_q10" type="radio" value="Rustic" /> Leave rustic</label><br />
+              <label><input name="w6_q10" type="radio" value="Paint" /> Only so paint sticks</label><br />
+              <label><input name="w6_q10" type="radio" value="Character" /> Rough edges add character</label>
+            </li>
+          </ol>
+          <button class="check-btn" type="button" onclick="submitQuiz(this, 'Main Theory Content - Week 6')">Check Answers</button>
+          <span class="quiz-msg"></span>
+        </fieldset>
+      </form>
+    </article>
+  </details>
+
+  <details>
+    <summary><b>Week 7: Joining and Assembling</b></summary>
+    <article>
+      <p>Use wood glue on clean surfaces and clamp pieces while the glue dries. Small nails can reinforce joints. Plan the order of assembly and wipe away excess glue.</p>
+      <form class="quiz" data-week="7" id="main-week7-quiz">
+        <fieldset>
+          <legend><b>Week 7 Quiz</b></legend>
+          <ol>
+            <li><p>Sam uses a big blob of glue and it oozes out. What should he do?</p>
+              <label data-correct="true"><input name="w7_q1" type="radio" value="Thin" /> Use a thin layer and wipe excess</label><br />
+              <label><input name="w7_q1" type="radio" value="None" /> Not use glue</label><br />
+              <label><input name="w7_q1" type="radio" value="Ooze" /> Let it ooze</label><br />
+              <label><input name="w7_q1" type="radio" value="More" /> Use more glue</label>
+            </li>
+            <li><p>Chloe wants joints at 90°. What can she do?</p>
+              <label data-correct="true"><input name="w7_q2" type="radio" value="Square" /> Use a try square and clamp at 90°</label><br />
+              <label><input name="w7_q2" type="radio" value="Hope" /> Hope for best</label><br />
+              <label><input name="w7_q2" type="radio" value="Eye" /> Hold by eye</label><br />
+              <label><input name="w7_q2" type="radio" value="Bumpy" /> Lay on bumpy surface</label>
+            </li>
+            <li><p>Tariq unclamped after 10 minutes and joint broke. Why?</p>
+              <label data-correct="true"><input name="w7_q3" type="radio" value="Soon" /> Glue needs more time to set</label><br />
+              <label><input name="w7_q3" type="radio" value="Pressure" /> Too much pressure</label><br />
+              <label><input name="w7_q3" type="radio" value="Glue" /> Wrong glue</label><br />
+              <label><input name="w7_q3" type="radio" value="Clamp" /> Clamps prevent drying</label>
+            </li>
+            <li><p>Nina’s wood split when hammering a nail near the edge. Prevention?</p>
+              <label data-correct="true"><input name="w7_q4" type="radio" value="Pilot" /> Drill a pilot hole or use thinner nail</label><br />
+              <label><input name="w7_q4" type="radio" value="Two" /> Hammer two nails</label><br />
+              <label><input name="w7_q4" type="radio" value="Soak" /> Soak wood</label><br />
+              <label><input name="w7_q4" type="radio" value="Huge" /> Only huge nails</label>
+            </li>
+            <li><p>Main purpose of clamps when gluing?</p>
+              <label data-correct="true"><input name="w7_q5" type="radio" value="Hold" /> Hold pieces tightly while glue dries</label><br />
+              <label><input name="w7_q5" type="radio" value="Squeeze" /> Squeeze glue out</label><br />
+              <label><input name="w7_q5" type="radio" value="Decor" /> Just decorate</label><br />
+              <label><input name="w7_q5" type="radio" value="Not" /> Not needed</label>
+            </li>
+            <li><p>Best method for a butt joint?</p>
+              <label data-correct="true"><input name="w7_q6" type="radio" value="Glue" /> Glue and clamp; maybe small nails</label><br />
+              <label><input name="w7_q6" type="radio" value="Tape" /> Use tape</label><br />
+              <label><input name="w7_q6" type="radio" value="Nails" /> Only nails</label><br />
+              <label><input name="w7_q6" type="radio" value="Staple" /> Staple</label>
+            </li>
+            <li><p>Lila sees dried glue on the outside. Why bad?</p>
+              <label data-correct="true"><input name="w7_q7" type="radio" value="Finish" /> Dried glue prevents finish sticking and looks bad</label><br />
+              <label><input name="w7_q7" type="radio" value="Fine" /> It’s fine</label><br />
+              <label><input name="w7_q7" type="radio" value="Strength" /> Glue strengthens outside</label><br />
+              <label><input name="w7_q7" type="radio" value="Dissolve" /> Glue dissolves</label>
+            </li>
+            <li><p>Is a well-glued joint strong?</p>
+              <label data-correct="true"><input name="w7_q8" type="radio" value="Strong" /> Yes, often wood breaks elsewhere first</label><br />
+              <label><input name="w7_q8" type="radio" value="Weak" /> Glue is weak</label><br />
+              <label><input name="w7_q8" type="radio" value="Paper" /> Works only on paper</label><br />
+              <label><input name="w7_q8" type="radio" value="Flexible" /> Joint stays flexible</label>
+            </li>
+            <li><p>Best way to attach a thin plywood back?</p>
+              <label data-correct="true"><input name="w7_q9" type="radio" value="GlueClamp" /> Apply glue and clamp or weight it</label><br />
+              <label><input name="w7_q9" type="radio" value="Huge" /> Use huge nails</label><br />
+              <label><input name="w7_q9" type="radio" value="Tape" /> Use duct tape</label><br />
+              <label><input name="w7_q9" type="radio" value="Hold" /> Hold by hand</label>
+            </li>
+            <li><p>When is a screw better than a nail?</p>
+              <label data-correct="true"><input name="w7_q10" type="radio" value="Removable" /> If part may need to be removed or for tight hold</label><br />
+              <label><input name="w7_q10" type="radio" value="Never" /> Never</label><br />
+              <label><input name="w7_q10" type="radio" value="Out" /> If out of nails</label><br />
+              <label><input name="w7_q10" type="radio" value="Huge" /> Only if screw bigger than project</label>
+            </li>
+          </ol>
+          <button class="check-btn" type="button" onclick="submitQuiz(this, 'Main Theory Content - Week 7')">Check Answers</button>
+          <span class="quiz-msg"></span>
+        </fieldset>
+      </form>
+    </article>
+  </details>
+
+  <details>
+    <summary><b>Week 8: Surface Preparation and Finishing</b></summary>
+    <article>
+      <p>Sand surfaces smooth before painting or varnishing. Remove dust. Apply thin coats of paint or clear finish and let each coat dry before the next.</p>
+      <form class="quiz" data-week="8" id="main-week8-quiz">
+        <fieldset>
+          <legend><b>Week 8 Quiz</b></legend>
+          <ol>
+            <li><p>Priya still feels roughness after sanding. What should she do?</p>
+              <label data-correct="true"><input name="w8_q1" type="radio" value="Finer" /> Use finer sandpaper and remove dust</label><br />
+              <label><input name="w8_q1" type="radio" value="Paint" /> Start painting</label><br />
+              <label><input name="w8_q1" type="radio" value="Water" /> Add water</label><br />
+              <label><input name="w8_q1" type="radio" value="Skip" /> Skip sanding</label>
+            </li>
+            <li><p>Why remove sawdust before finishing?</p>
+              <label data-correct="true"><input name="w8_q2" type="radio" value="Clean" /> Dust can make the finish rough</label><br />
+              <label><input name="w8_q2" type="radio" value="React" /> Dust reacts chemically</label><br />
+              <label><input name="w8_q2" type="radio" value="Not" /> Not important</label><br />
+              <label><input name="w8_q2" type="radio" value="Allergy" /> Only for allergies</label>
+            </li>
+            <li><p>Jack wants the wood grain darker and shiny. What to do?</p>
+              <label data-correct="true"><input name="w8_q3" type="radio" value="Stain" /> Apply wood stain then clear varnish</label><br />
+              <label><input name="w8_q3" type="radio" value="Paint" /> Paint with acrylic</label><br />
+              <label><input name="w8_q3" type="radio" value="Water" /> Pour water</label><br />
+              <label><input name="w8_q3" type="radio" value="Stickers" /> Cover with stickers</label>
+            </li>
+            <li><p>Emily applies one thick coat of paint. Problem?</p>
+              <label data-correct="true"><input name="w8_q4" type="radio" value="Drip" /> Thick paint can drip and takes longer to dry</label><br />
+              <label><input name="w8_q4" type="radio" value="No" /> No problems</label><br />
+              <label><input name="w8_q4" type="radio" value="Color" /> Color changes</label><br />
+              <label><input name="w8_q4" type="radio" value="Faster" /> It dries faster</label>
+            </li>
+            <li><p>Miguel sees brush strokes in varnish. Solution?</p>
+              <label data-correct="true"><input name="w8_q5" type="radio" value="Sand" /> Lightly sand when dry and apply a thin second coat</label><br />
+              <label><input name="w8_q5" type="radio" value="Nothing" /> Nothing</label><br />
+              <label><input name="w8_q5" type="radio" value="Water" /> Add water</label><br />
+              <label><input name="w8_q5" type="radio" value="Switch" /> Switch to spray mid-way</label>
+            </li>
+            <li><p>Tina is spray painting. What precautions?</p>
+              <label data-correct="true"><input name="w8_q6" type="radio" value="Vent" /> Work in ventilation and wear mask and glasses</label><br />
+              <label><input name="w8_q6" type="radio" value="Gloves" /> Only heavy gloves</label><br />
+              <label><input name="w8_q6" type="radio" value="Closed" /> Spray in closed room</label><br />
+              <label><input name="w8_q6" type="radio" value="None" /> No precautions</label>
+            </li>
+            <li><p>Jack’s paint dried rough. What happened?</p>
+              <label data-correct="true"><input name="w8_q7" type="radio" value="Grain" /> Water in paint raised the grain; sand lightly and repaint</label><br />
+              <label><input name="w8_q7" type="radio" value="Bad" /> Paint was bad</label><br />
+              <label><input name="w8_q7" type="radio" value="Not" /> Not enough paint</label><br />
+              <label><input name="w8_q7" type="radio" value="Nature" /> That’s just wood</label>
+            </li>
+            <li><p>Sara wants a two-tone finish. How do it neatly?</p>
+              <label data-correct="true"><input name="w8_q8" type="radio" value="Tape" /> Paint inside first, tape edges, then varnish outside</label><br />
+              <label><input name="w8_q8" type="radio" value="Slop" /> Slop both at once</label><br />
+              <label><input name="w8_q8" type="radio" value="PaintAll" /> Paint over everything then remove</label><br />
+              <label><input name="w8_q8" type="radio" value="Impossible" /> Impossible</label>
+            </li>
+            <li><p>How many coats are enough?</p>
+              <label data-correct="true"><input name="w8_q9" type="radio" value="Even" /> When color or sheen is even, usually 2 coats paint or 2-3 varnish</label><br />
+              <label><input name="w8_q9" type="radio" value="All" /> Empty the paint can</label><br />
+              <label><input name="w8_q9" type="radio" value="Ten" /> Exactly 10 coats</label><br />
+              <label><input name="w8_q9" type="radio" value="Never" /> Keep going forever</label>
+            </li>
+            <li><p>Why finish a wood project?</p>
+              <label data-correct="true"><input name="w8_q10" type="radio" value="Protect" /> To protect the wood and improve appearance</label><br />
+              <label><input name="w8_q10" type="radio" value="Not" /> Not important</label><br />
+              <label><input name="w8_q10" type="radio" value="Heavy" /> Makes it heavier</label><br />
+              <label><input name="w8_q10" type="radio" value="Teacher" /> Only because teacher said so</label>
+            </li>
+          </ol>
+          <button class="check-btn" type="button" onclick="submitQuiz(this, 'Main Theory Content - Week 8')">Check Answers</button>
+          <span class="quiz-msg"></span>
+        </fieldset>
+      </form>
+    </article>
+  </details>
+
+  <details>
+    <summary><b>Week 9: Evaluation and Reflection</b></summary>
+    <article>
+      <p>Evaluate your finished project against the design brief. Test if it holds the required items, check stability, and consider feedback to improve next time.</p>
+      <form class="quiz" data-week="9" id="main-week9-quiz">
+        <fieldset>
+          <legend><b>Week 9 Quiz</b></legend>
+          <ol>
+            <li><p>Jade’s tidy only fits 3 pens and phone slot is narrow. What should she note?</p>
+              <label data-correct="true"><input name="w9_q1" type="radio" value="Not met" /> It does not fully meet requirements</label><br />
+              <label><input name="w9_q1" type="radio" value="Perfect" /> Everything is perfect</label><br />
+              <label><input name="w9_q1" type="radio" value="Lie" /> Lie about it</label><br />
+              <label><input name="w9_q1" type="radio" value="Blame" /> Blame the brief</label>
+            </li>
+            <li><p>Marcus’s tidy tips over when full. What does this mean?</p>
+              <label data-correct="true"><input name="w9_q2" type="radio" value="Stability" /> Stability requirement not met; base could be wider</label><br />
+              <label><input name="w9_q2" type="radio" value="Fine" /> It’s fine</label><br />
+              <label><input name="w9_q2" type="radio" value="Glue" /> Glue it to table</label><br />
+              <label><input name="w9_q2" type="radio" value="Items" /> Too many items</label>
+            </li>
+            <li><p>Classmate says, “Colors nice but eraser slot small.” How is this feedback useful?</p>
+              <label data-correct="true"><input name="w9_q3" type="radio" value="Outside" /> Provides outside perspective with a positive and a critique</label><br />
+              <label><input name="w9_q3" type="radio" value="Useless" /> Useless</label><br />
+              <label><input name="w9_q3" type="radio" value="Ignore" /> Ignore critique</label><br />
+              <label><input name="w9_q3" type="radio" value="Done" /> Project is done so no need</label>
+            </li>
+            <li><p>Ben notes a gap at a joint. Best next-time solution?</p>
+              <label data-correct="true"><input name="w9_q4" type="radio" value="Trim" /> Take more time to sand or trim pieces so they fit</label><br />
+              <label><input name="w9_q4" type="radio" value="More glue" /> Use more glue next time</label><br />
+              <label><input name="w9_q4" type="radio" value="Nothing" /> Nothing could be done</label><br />
+              <label><input name="w9_q4" type="radio" value="Avoid" /> Avoid making joints</label>
+            </li>
+            <li><p>Good question to ask when reflecting?</p>
+              <label data-correct="true"><input name="w9_q5" type="radio" value="Goals" /> Does my product meet the goals?</label><br />
+              <label><input name="w9_q5" type="radio" value="Blame" /> Who can I blame?</label><br />
+              <label><input name="w9_q5" type="radio" value="Hide" /> Can I hide mistakes?</label><br />
+              <label><input name="w9_q5" type="radio" value="Friend" /> Why didn’t friend do it?</label>
+            </li>
+            <li><p>Liz rushed painting and finish is uneven. What can she learn?</p>
+              <label data-correct="true"><input name="w9_q6" type="radio" value="Time" /> Allocate more time and patience for finishing</label><br />
+              <label><input name="w9_q6" type="radio" value="Impossible" /> Painting is impossible</label><br />
+              <label><input name="w9_q6" type="radio" value="Never" /> Never use paint again</label><br />
+              <label><input name="w9_q6" type="radio" value="Rushing" /> Rushing is fine</label>
+            </li>
+            <li><p>Example of a constructive improvement?</p>
+              <label data-correct="true"><input name="w9_q7" type="radio" value="Tray" /> Add a removable tray for shavings</label><br />
+              <label><input name="w9_q7" type="radio" value="Nothing" /> Nothing to change</label><br />
+              <label><input name="w9_q7" type="radio" value="Color" /> Random color change</label><br />
+              <label><input name="w9_q7" type="radio" value="Magic" /> Magically build itself</label>
+            </li>
+            <li><p>Carl’s joint came loose after a week. What should he note?</p>
+              <label data-correct="true"><input name="w9_q8" type="radio" value="Reglue" /> Note the joint failed due to insufficient glue and re-glue it</label><br />
+              <label><input name="w9_q8" type="radio" value="Hide" /> Not admit it broke</label><br />
+              <label><input name="w9_q8" type="radio" value="New" /> Make a new project</label><br />
+              <label><input name="w9_q8" type="radio" value="Nothing" /> Nothing to learn</label>
+            </li>
+            <li><p>Why evaluate a finished project?</p>
+              <label data-correct="true"><input name="w9_q9" type="radio" value="Improve" /> Helps you improve skills and designs in future</label><br />
+              <label><input name="w9_q9" type="radio" value="Useless" /> Not useful</label><br />
+              <label><input name="w9_q9" type="radio" value="Fill" /> Just to fill week 9</label><br />
+              <label><input name="w9_q9" type="radio" value="Industry" /> Only for industry</label>
+            </li>
+            <li><p>How does industry use evaluation?</p>
+              <label data-correct="true"><input name="w9_q10" type="radio" value="Test" /> They test products and gather feedback to refine designs</label><br />
+              <label><input name="w9_q10" type="radio" value="Perfect" /> They assume first design is perfect</label><br />
+              <label><input name="w9_q10" type="radio" value="Schools" /> Only schools evaluate</label><br />
+              <label><input name="w9_q10" type="radio" value="Ignore" /> Sell and ignore feedback</label>
+            </li>
+          </ol>
+          <button class="check-btn" type="button" onclick="submitQuiz(this, 'Main Theory Content - Week 9')">Check Answers</button>
+          <span class="quiz-msg"></span>
+        </fieldset>
+      </form>
+    </article>
+  </details>
+
+  <details>
+    <summary><b>Week 10: Conclusion and Future Directions</b></summary>
+    <article>
+      <p>Review the skills learned: safety awareness, measuring, tool handling, planning, problem-solving, attention to detail. These apply beyond this project and can lead to further study or hobbies in design and technology.</p>
+      <form class="quiz" data-week="10" id="main-week10-quiz">
+        <fieldset>
+          <legend><b>Week 10 Quiz</b></legend>
+          <ol>
+            <li><p>Where else is careful measuring and planning useful?</p>
+              <label data-correct="true"><input name="w10_q1" type="radio" value="Any" /> Almost any project or task</label><br />
+              <label><input name="w10_q1" type="radio" value="Wood" /> Only in woodworking</label><br />
+              <label><input name="w10_q1" type="radio" value="Math" /> Just in math class</label><br />
+              <label><input name="w10_q1" type="radio" value="One" /> A one-time skill</label>
+            </li>
+            <li><p>How does this project relate to manufacturing?</p>
+              <label data-correct="true"><input name="w10_q2" type="radio" value="Steps" /> Industry still follows design, measure, cut, join, finish, and check</label><br />
+              <label><input name="w10_q2" type="radio" value="None" /> It doesn’t relate</label><br />
+              <label><input name="w10_q2" type="radio" value="Magic" /> Factories make things by magic</label><br />
+              <label><input name="w10_q2" type="radio" value="Unrelated" /> Manufacturing is unrelated</label>
+            </li>
+            <li><p>Alex enjoyed woodworking. Good next step?</p>
+              <label data-correct="true"><input name="w10_q3" type="radio" value="Develop" /> Try more advanced projects or take further courses</label><br />
+              <label><input name="w10_q3" type="radio" value="Stop" /> Stop doing projects</label><br />
+              <label><input name="w10_q3" type="radio" value="House" /> Build a house immediately</label><br />
+              <label><input name="w10_q3" type="radio" value="Throw" /> Throw away tools</label>
+            </li>
+            <li><p>Why keep safety first even after gaining experience?</p>
+              <label data-correct="true"><input name="w10_q4" type="radio" value="Accidents" /> Accidents can happen anytime; don’t get complacent</label><br />
+              <label><input name="w10_q4" type="radio" value="Ignore" /> Ignore safety once experienced</label><br />
+              <label><input name="w10_q4" type="radio" value="Begin" /> Safety only for beginners</label><br />
+              <label><input name="w10_q4" type="radio" value="Different" /> Future projects have different rules</label>
+            </li>
+            <li><p>Advice for a friend struggling with their first project?</p>
+              <label data-correct="true"><input name="w10_q5" type="radio" value="Take time" /> Take your time, plan carefully, don’t rush</label><br />
+              <label><input name="w10_q5" type="radio" value="Cut" /> Don’t plan, just cut</label><br />
+              <label><input name="w10_q5" type="radio" value="Glue" /> Use lots of glue and nails</label><br />
+              <label><input name="w10_q5" type="radio" value="Give up" /> Give up if not perfect</label>
+            </li>
+            <li><p>Which skill improved during the project and is valuable?</p>
+              <label data-correct="true"><input name="w10_q6" type="radio" value="Patience" /> Patience and perseverance</label><br />
+              <label><input name="w10_q6" type="radio" value="Effortless" /> Getting things done without effort</label><br />
+              <label><input name="w10_q6" type="radio" value="Avoid" /> Avoid following instructions</label><br />
+              <label><input name="w10_q6" type="radio" value="Only" /> Patience only for school</label>
+            </li>
+            <li><p>If making 10 desk tidies, what might you do differently?</p>
+              <label data-correct="true"><input name="w10_q7" type="radio" value="Templates" /> Create templates or jigs for consistency</label><br />
+              <label><input name="w10_q7" type="radio" value="Separate" /> Do each separately with no time-saving</label><br />
+              <label><input name="w10_q7" type="radio" value="Luck" /> Hope they turn out the same by luck</label><br />
+              <label><input name="w10_q7" type="radio" value="Refuse" /> Refuse to make more</label>
+            </li>
+            <li><p>How does evaluating your own work help you?</p>
+              <label data-correct="true"><input name="w10_q8" type="radio" value="Self" /> Helps you self-improve in future tasks</label><br />
+              <label><input name="w10_q8" type="radio" value="Reports" /> Only for school reports</label><br />
+              <label><input name="w10_q8" type="radio" value="Waste" /> Waste of time</label><br />
+              <label><input name="w10_q8" type="radio" value="Others" /> Only others should evaluate</label>
+            </li>
+            <li><p>Which attitude was most helpful?</p>
+              <label data-correct="true"><input name="w10_q9" type="radio" value="Learn" /> Willingness to learn from mistakes</label><br />
+              <label><input name="w10_q9" type="radio" value="Know" /> Assuming you know everything</label><br />
+              <label><input name="w10_q9" type="radio" value="Rush" /> Rushing to finish</label><br />
+              <label><input name="w10_q9" type="radio" value="No help" /> Not asking for help</label>
+            </li>
+            <li><p>What was emphasized above all during the project?</p>
+              <label data-correct="true"><input name="w10_q10" type="radio" value="Safety" /> Safety at all times</label><br />
+              <label><input name="w10_q10" type="radio" value="Speed" /> Speed</label><br />
+              <label><input name="w10_q10" type="radio" value="Perfection" /> Perfection</label><br />
+              <label><input name="w10_q10" type="radio" value="Profit" /> Profit</label>
+            </li>
+          </ol>
+          <button class="check-btn" type="button" onclick="submitQuiz(this, 'Main Theory Content - Week 10')">Check Answers</button>
+          <span class="quiz-msg"></span>
+        </fieldset>
+      </form>
+    </article>
+  </details>
+
+</section>
 
   <!-- ======================= SUPPORT THEORY CONTENT EXAMPLE ======================= -->
   <section class="content-section" id="support-activities" tabindex="0">
