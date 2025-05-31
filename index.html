@@ -2726,7 +2726,7 @@ function submitQuiz(btn, quizType) {
     radios.forEach(radio => {
       if (radio.checked) {
         answered = true;
-        if (radio.hasAttribute('data-correct')) userCorrect = true;
+        if (radio.getAttribute('data-correct') === 'true') userCorrect = true;
       }
       // Reset label
       radio.parentElement.removeAttribute('data-result');
