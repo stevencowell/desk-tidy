@@ -640,118 +640,280 @@ summary { font-weight: bold; }
   <section class="content-section" id="support-activities" tabindex="0">
     <h2>Support Theory Content (Optional)</h2>
     <details open>
-      <summary><b>Week 1: Support Content</b></summary>
-        <article>
-          <p>Staying safe in the workshop is very important – think of safety gear as your superhero armor! Here are the safety points in simpler terms:</p>
-          <ul>
-            <li>Protect your eyes: Always wear your safety goggles like a hero’s mask. They shield your eyes from wood chips and dust.</li>
-            <li>Dress for safety: Wear an apron and closed shoes. Tie back long hair and keep loose clothes tucked in.</li>
-            <li>Calm and careful: Walk slowly in the workshop and never swing tools around.</li>
-            <li>Use tools correctly: Only use a tool after the teacher shows you how.</li>
-            <li>Keep things tidy: Put your bag and stool away and clean up spills.</li>
-            <li>Ask and report: Tell the teacher right away if something goes wrong.</li>
-          </ul>
-          <p>Remember, even grown-ups follow these safety rules. Safety first, then creativity!</p>
-        <form class="quiz" data-week="s1" id="support-week1-quiz">
+      <summary><b>Week 1: Safety and Measuring Wood</b></summary>
+      <article>
+        <h4>Safety first!</h4>
+        <p>Always be safe when working with wood. Wear safety glasses and sturdy closed shoes. Keep the workshop tidy and put away pencils and tools after use. This keeps everyone safe and prevents trips or spills.</p>
+        <h4>Measuring wood</h4>
+        <p>We use a pencil and straight tools to mark wood before cutting. First, mark a "face" side and edge on your wood so all measurements start from the same spot. Remember: <strong>measure twice, cut once</strong>. When you saw, cut on the waste side of the line so the piece stays the right size.</p>
+        <form class="quiz" data-week="s1" id="support-week1-quiz" style="margin-top: 1.5rem;">
           <fieldset>
             <legend><b>Support Quiz – Week 1</b></legend>
             <ol>
               <li>
-                <p>What should you always wear in the workshop? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <p>What should you wear in the workshop? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
                 <label><input data-correct="true" name="support_q1_1" type="radio" value="Safety glasses" /> Safety glasses <button aria-label="Read answer Safety glasses" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
-                <label><input name="support_q1_1" type="radio" value="Sandals" /> Sandals <button aria-label="Read answer Sandals" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+                <label><input name="support_q1_1" type="radio" value="Sandals" /> Sandals <button aria-label="Read answer Sandals" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_1" type="radio" value="Hat" /> A hat <button aria-label="Read answer A hat" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_1" type="radio" value="No shirt" /> No shirt <button aria-label="Read answer No shirt" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>Which tool checks that your angle is 90°? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q1_2" type="radio" value="Try square" /> Try square <button aria-label="Read answer Try square" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_2" type="radio" value="Hammer" /> Hammer <button aria-label="Read answer Hammer" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_2" type="radio" value="Spoon" /> Spoon <button aria-label="Read answer Spoon" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_2" type="radio" value="Book" /> A book <button aria-label="Read answer A book" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>Why mark a "face" side of the wood? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q1_3" type="radio" value="Same spot" /> To measure and mark from the same spot every time <button aria-label="Read answer To measure and mark from the same spot every time" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_3" type="radio" value="Decoration" /> Because it looks decorative <button aria-label="Read answer Because it looks decorative" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_3" type="radio" value="Tree name" /> To write the tree’s name <button aria-label="Read answer To write the tree’s name" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_3" type="radio" value="Safety plan" /> It’s part of a safety plan <button aria-label="Read answer It’s part of a safety plan" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>Where should you cut relative to your mark line? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q1_4" type="radio" value="Waste side" /> On the waste side of the line <button aria-label="Read answer On the waste side of the line" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_4" type="radio" value="Directly on" /> Directly on the line <button aria-label="Read answer Directly on the line" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_4" type="radio" value="Far away" /> Far from the line <button aria-label="Read answer Far from the line" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_4" type="radio" value="Does not matter" /> It does not matter <button aria-label="Read answer It does not matter" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>What should you use to hold wood when cutting? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q1_5" type="radio" value="Clamps" /> Clamps or vices <button aria-label="Read answer Clamps or vices" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_5" type="radio" value="Hands" /> Your hands only <button aria-label="Read answer Your hands only" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_5" type="radio" value="Glue" /> Glue it first <button aria-label="Read answer Glue it first" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q1_5" type="radio" value="Feet" /> Your feet <button aria-label="Read answer Your feet" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
               </li>
             </ol>
             <button class="check-btn" type="button" onclick="submitQuiz(this, 'Support Content - Week 1')">Check Answers</button>
             <span class="quiz-msg"></span>
           </fieldset>
         </form>
+        <h4>Conclusion</h4>
+        <p>We learned to wear safety gear like glasses and to measure wood carefully. Mark one side of the wood and use clamps when cutting. Keep your area clean and be careful!</p>
       </article>
     </details>
     <details>
-      <summary><b>Week 2: Measuring and Marking</b></summary>
+      <summary><b>Week 2: Wood Types and Drilling Holes</b></summary>
       <article>
-        <p>Learn about using rulers, tape measures, and squares to mark timber accurately.</p>
-        <form class="quiz" data-week="s2" id="support-week2-quiz">
+        <h4>Hard and soft wood</h4>
+        <p>Wood can come from many trees. Hardwoods (like oak or mahogany) are strong and heavy. Softwoods (like pine or cedar) grow fast and are easier to cut. For example, pine is a softwood and is lighter and easier to saw than oak.</p>
+        <h4>Drilling holes</h4>
+        <p>We use a drill press to make holes for parts of the desk tidy. The drill spins a bit very fast through the wood. Always clamp the wood down, keep fingers away, and wear safety glasses when drilling.</p>
+        <form class="quiz" data-week="s2" id="support-week2-quiz" style="margin-top: 1.5rem;">
           <fieldset>
             <legend><b>Support Quiz – Week 2</b></legend>
             <ol>
               <li>
-                <p>Which tool is best for drawing a 90-degree line across timber? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
-                <label><input data-correct="true" name="support_q2_1" type="radio" value="Combination square" /> Combination square <button aria-label="Read answer Combination square" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
-                <label><input name="support_q2_1" type="radio" value="Hammer" /> Hammer <button aria-label="Read answer Hammer" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+                <p>Which wood is easier to cut by hand? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q2_1" type="radio" value="Pine" /> Pine <button aria-label="Read answer Pine" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_1" type="radio" value="Oak" /> Oak <button aria-label="Read answer Oak" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_1" type="radio" value="Mahogany" /> Mahogany <button aria-label="Read answer Mahogany" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_1" type="radio" value="Dark hardwood" /> A dark hardwood <button aria-label="Read answer A dark hardwood" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>Why do we clamp wood when drilling? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q2_2" type="radio" value="No movement" /> To hold the wood still so it doesn’t move <button aria-label="Read answer To hold the wood still so it doesn’t move" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_2" type="radio" value="Keep away hands" /> To keep our hands away from the drill bit <button aria-label="Read answer To keep our hands away from the drill bit" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_2" type="radio" value="Faster" /> To drill faster <button aria-label="Read answer To drill faster" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_2" type="radio" value="Holds bit" /> It holds the drill bit <button aria-label="Read answer It holds the drill bit" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>What tool did we use to drill holes? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q2_3" type="radio" value="Drill press" /> A drill press <button aria-label="Read answer A drill press" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_3" type="radio" value="Hand drill" /> A hand drill <button aria-label="Read answer A hand drill" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_3" type="radio" value="Saw" /> A saw <button aria-label="Read answer A saw" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_3" type="radio" value="Chisel" /> A chisel <button aria-label="Read answer A chisel" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>What is a key difference between hardwood and softwood? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q2_4" type="radio" value="Weight" /> Hardwoods are usually heavier <button aria-label="Read answer Hardwoods are usually heavier" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_4" type="radio" value="Same" /> They are the same type <button aria-label="Read answer They are the same type" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_4" type="radio" value="Color" /> Softwoods are always white <button aria-label="Read answer Softwoods are always white" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_4" type="radio" value="No difference" /> There is no difference <button aria-label="Read answer There is no difference" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>Which of these is a softwood? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q2_5" type="radio" value="Pine" /> Pine <button aria-label="Read answer Pine" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_5" type="radio" value="Oak" /> Oak <button aria-label="Read answer Oak" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_5" type="radio" value="Mahogany" /> Mahogany <button aria-label="Read answer Mahogany" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q2_5" type="radio" value="Cherry" /> Cherry <button aria-label="Read answer Cherry" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
               </li>
             </ol>
             <button class="check-btn" type="button" onclick="submitQuiz(this, 'Support Content - Week 2')">Check Answers</button>
             <span class="quiz-msg"></span>
           </fieldset>
         </form>
+        <h4>Conclusion</h4>
+        <p>We learned that pine is softer and easier to cut than hardwoods. Clamping the wood and wearing safety glasses kept us safe while drilling.</p>
       </article>
     </details>
-
     <details>
-      <summary><b>Week 3: Timber Types</b></summary>
+      <summary><b>Week 3: Tree Rings and Drawings</b></summary>
       <article>
-        <p>Timber can be hardwood or softwood. Hardwoods come from deciduous trees and are usually denser.</p>
-        <form class="quiz" data-week="s3" id="support-week3-quiz">
+        <h4>Wood grain</h4>
+        <p>Wood comes from trees. You can see rings in a tree cross-section; each ring is one year of growth. Knots are dark spots where branches grew. These patterns, called grain, can make wood pretty but also affect how easy it is to cut.</p>
+        <h4>Drawing our plan</h4>
+        <p>Before building, we make drawings of our desk tidy. Drawing helps us see the shape and size of pieces. We use rulers and triangles to draw straight lines. This way we know what to build before we start cutting.</p>
+        <form class="quiz" data-week="s3" id="support-week3-quiz" style="margin-top: 1.5rem;">
           <fieldset>
             <legend><b>Support Quiz – Week 3</b></legend>
             <ol>
               <li>
-                <p>Which of these is a hardwood? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
-                <label><input data-correct="true" name="support_q3_1" type="radio" value="Oak" /> Oak <button aria-label="Read answer Oak" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
-                <label><input name="support_q3_1" type="radio" value="Pine" /> Pine <button aria-label="Read answer Pine" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+                <p>What is a knot in wood? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q3_1" type="radio" value="Branch spot" /> A spot where a branch grew <button aria-label="Read answer A spot where a branch grew" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_1" type="radio" value="Hole" /> A hole in the wood <button aria-label="Read answer A hole in the wood" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_1" type="radio" value="Picture" /> A painted picture <button aria-label="Read answer A painted picture" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_1" type="radio" value="Leaf" /> A leaf stuck in the wood <button aria-label="Read answer A leaf stuck in the wood" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>Why do we draw our design first? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q3_2" type="radio" value="Guide" /> To guide our building and plan sizes <button aria-label="Read answer To guide our building and plan sizes" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_2" type="radio" value="Fun" /> Just for fun <button aria-label="Read answer Just for fun" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_2" type="radio" value="Hide" /> To hide mistakes later <button aria-label="Read answer To hide mistakes later" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_2" type="radio" value="None" /> No reason at all <button aria-label="Read answer No reason at all" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>What tool do we use for drawing straight lines? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q3_3" type="radio" value="Ruler" /> A ruler <button aria-label="Read answer A ruler" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_3" type="radio" value="Paintbrush" /> A paintbrush <button aria-label="Read answer A paintbrush" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_3" type="radio" value="Hammer" /> A hammer <button aria-label="Read answer A hammer" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_3" type="radio" value="Glue gun" /> A glue gun <button aria-label="Read answer A glue gun" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>How many rings does a tree usually get each year? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q3_4" type="radio" value="One" /> One ring per year <button aria-label="Read answer One ring per year" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_4" type="radio" value="Two" /> Two rings per year <button aria-label="Read answer Two rings per year" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_4" type="radio" value="None" /> Trees have no rings <button aria-label="Read answer Trees have no rings" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_4" type="radio" value="Many" /> Many rings per year <button aria-label="Read answer Many rings per year" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>What tool keeps corners at right angles in your drawing? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q3_5" type="radio" value="Triangle" /> A triangle or set square <button aria-label="Read answer A triangle or set square" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_5" type="radio" value="Bucket" /> A paint bucket <button aria-label="Read answer A paint bucket" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_5" type="radio" value="Glasses" /> A pair of glasses <button aria-label="Read answer A pair of glasses" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q3_5" type="radio" value="Coffee" /> A cup of coffee <button aria-label="Read answer A cup of coffee" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
               </li>
             </ol>
             <button class="check-btn" type="button" onclick="submitQuiz(this, 'Support Content - Week 3')">Check Answers</button>
             <span class="quiz-msg"></span>
           </fieldset>
         </form>
+        <h4>Conclusion</h4>
+        <p>Wood grain patterns help us identify the best way to cut wood. Sketching first gives us a clear plan before we start building.</p>
       </article>
     </details>
-
     <details>
-      <summary><b>Week 4: Hand Tools</b></summary>
+      <summary><b>Week 4: Putting Pieces Together</b></summary>
       <article>
-        <p>Common hand tools include saws, chisels, and hammers. Each tool has a specific purpose.</p>
-        <form class="quiz" data-week="s4" id="support-week4-quiz">
+        <h4>Joining wood pieces</h4>
+        <p>This week we put the sides, front, and back of the desk tidy together. We cut small grooves so pieces fit neatly. We used glue and clamps to hold everything square and tight.</p>
+        <h4>Tools and safety</h4>
+        <p>We keep our tools sharp and clean so cuts are smooth and safe. After using a tool, we turn it off or unplug it. By taking care of our tools, we stay safe and the work looks better.</p>
+        <form class="quiz" data-week="s4" id="support-week4-quiz" style="margin-top: 1.5rem;">
           <fieldset>
             <legend><b>Support Quiz – Week 4</b></legend>
             <ol>
               <li>
-                <p>Which tool cuts along the grain of wood? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
-                <label><input data-correct="true" name="support_q4_1" type="radio" value="Rip saw" /> Rip saw <button aria-label="Read answer Rip saw" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
-                <label><input name="support_q4_1" type="radio" value="Claw hammer" /> Claw hammer <button aria-label="Read answer Claw hammer" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+                <p>What do we use to hold pieces while glue dries? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q4_1" type="radio" value="Clamps" /> Clamps <button aria-label="Read answer Clamps" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_1" type="radio" value="Tape" /> Tape <button aria-label="Read answer Tape" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_1" type="radio" value="Hands" /> Hands only <button aria-label="Read answer Hands only" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_1" type="radio" value="Rubber" /> Rubber bands <button aria-label="Read answer Rubber bands" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>Why do we check corners are square? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q4_2" type="radio" value="Stand straight" /> So the desk tidy will stand straight <button aria-label="Read answer So the desk tidy will stand straight" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_2" type="radio" value="Decorate" /> Because it looks decorative <button aria-label="Read answer Because it looks decorative" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_2" type="radio" value="Faster glue" /> To make the glue dry faster <button aria-label="Read answer To make the glue dry faster" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_2" type="radio" value="Avoid nails" /> To avoid using nails <button aria-label="Read answer To avoid using nails" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>What should you do with a tool after using it? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q4_3" type="radio" value="Turn off" /> Turn it off and put it away <button aria-label="Read answer Turn it off and put it away" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_3" type="radio" value="Leave on" /> Leave it on <button aria-label="Read answer Leave it on" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_3" type="radio" value="Drop" /> Drop it on the floor <button aria-label="Read answer Drop it on the floor" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_3" type="radio" value="Throw" /> Throw it away <button aria-label="Read answer Throw it away" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>What is a rebate cut used for? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q4_4" type="radio" value="Fit pieces" /> To make a groove so another piece fits <button aria-label="Read answer To make a groove so another piece fits" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_4" type="radio" value="Make hole" /> To drill a hole <button aria-label="Read answer To drill a hole" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_4" type="radio" value="Polish" /> To polish the wood <button aria-label="Read answer To polish the wood" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_4" type="radio" value="Measure" /> To measure thickness <button aria-label="Read answer To measure thickness" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>Which tool keeps wood from splintering when sawing? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q4_5" type="radio" value="Bench hook" /> A bench hook or vise <button aria-label="Read answer A bench hook or vise" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_5" type="radio" value="Sandpaper" /> Sandpaper <button aria-label="Read answer Sandpaper" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_5" type="radio" value="Rope" /> Rope <button aria-label="Read answer Rope" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q4_5" type="radio" value="Laser" /> Laser guidance <button aria-label="Read answer Laser guidance" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
               </li>
             </ol>
             <button class="check-btn" type="button" onclick="submitQuiz(this, 'Support Content - Week 4')">Check Answers</button>
             <span class="quiz-msg"></span>
           </fieldset>
         </form>
+        <h4>Conclusion</h4>
+        <p>We fit the pieces together and used glue with clamps so everything stays square. Turning off and storing tools keeps the workspace safe.</p>
       </article>
     </details>
-
     <details>
-      <summary><b>Week 5: Joining Methods</b></summary>
+      <summary><b>Week 5: Smoothing Edges and Gluing</b></summary>
       <article>
-        <p>Joints such as the butt joint and dowel joint hold pieces of timber together.</p>
-        <form class="quiz" data-week="s5" id="support-week5-quiz">
+        <h4>Smoothing edges</h4>
+        <p>We plane the top and bottom edges of the desk tidy parts at a 45° angle, making a chamfer. This means the edges are slanted and smooth. We always plane with the grain of the wood to avoid rough spots.</p>
+        <h4>Gluing the desk tidy</h4>
+        <p>Now we dry-fit all pieces and apply wood glue along the edges. We clamp the pieces together and check that everything is lined up before the glue dries. Once clamped, we let the glue harden so the desk tidy becomes one strong piece.</p>
+        <form class="quiz" data-week="s5" id="support-week5-quiz" style="margin-top: 1.5rem;">
           <fieldset>
             <legend><b>Support Quiz – Week 5</b></legend>
             <ol>
               <li>
-                <p>Which joint is easiest for beginners? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
-                <label><input data-correct="true" name="support_q5_1" type="radio" value="Butt joint" /> Butt joint <button aria-label="Read answer Butt joint" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
-                <label><input name="support_q5_1" type="radio" value="Dovetail joint" /> Dovetail joint <button aria-label="Read answer Dovetail joint" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+                <p>What does "chamfer" mean? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q5_1" type="radio" value="Slanted edge" /> A slanted and smooth edge <button aria-label="Read answer A slanted and smooth edge" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_1" type="radio" value="Rough" /> A rough edge <button aria-label="Read answer A rough edge" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_1" type="radio" value="Rounded" /> A rounded edge <button aria-label="Read answer A rounded edge" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_1" type="radio" value="Painted" /> A painted edge <button aria-label="Read answer A painted edge" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>What should we do before the glue dries? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q5_2" type="radio" value="Align pieces" /> Check that all pieces are aligned <button aria-label="Read answer Check that all pieces are aligned" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_2" type="radio" value="Wipe" /> Wipe away all glue <button aria-label="Read answer Wipe away all glue" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_2" type="radio" value="Walk" /> Walk away and leave it <button aria-label="Read answer Walk away and leave it" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_2" type="radio" value="Hammer" /> Hammer it in place <button aria-label="Read answer Hammer it in place" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>Which tool makes the edges smooth? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q5_3" type="radio" value="Hand plane" /> A hand plane <button aria-label="Read answer A hand plane" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_3" type="radio" value="Hammer" /> Hammer <button aria-label="Read answer Hammer" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_3" type="radio" value="Saw" /> Saw <button aria-label="Read answer Saw" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_3" type="radio" value="Chisel" /> Chisel <button aria-label="Read answer Chisel" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>Why do we clamp the desk tidy after gluing? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q5_4" type="radio" value="Hold tight" /> To hold parts tightly while the glue dries <button aria-label="Read answer To hold parts tightly while the glue dries" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_4" type="radio" value="Add weight" /> To add extra weight <button aria-label="Read answer To add extra weight" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_4" type="radio" value="Mark lines" /> To mark lines with clamps <button aria-label="Read answer To mark lines with clamps" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_4" type="radio" value="Decorate" /> To decorate the desk tidy <button aria-label="Read answer To decorate the desk tidy" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
+              </li>
+              <li>
+                <p>What is the shape of the edge after chamfering? <button aria-label="Read question aloud" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></p>
+                <label><input data-correct="true" name="support_q5_5" type="radio" value="45-degree" /> A 45-degree angled edge <button aria-label="Read answer A 45-degree angled edge" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_5" type="radio" value="90-degree" /> A 90-degree edge <button aria-label="Read answer A 90-degree edge" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_5" type="radio" value="Round" /> A round edge <button aria-label="Read answer A round edge" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label><br />
+                <label><input name="support_q5_5" type="radio" value="Zigzag" /> A zigzag edge <button aria-label="Read answer A zigzag edge" onclick="event.preventDefault(); speakText(this)" type="button">🔊</button></label>
               </li>
             </ol>
             <button class="check-btn" type="button" onclick="submitQuiz(this, 'Support Content - Week 5')">Check Answers</button>
             <span class="quiz-msg"></span>
           </fieldset>
         </form>
+        <h4>Conclusion</h4>
+        <p>We made the edges smooth and glued all pieces to form the desk tidy body. Checking alignment before it dries helps us build a strong organiser.</p>
       </article>
     </details>
-
     <details>
       <summary><b>Week 6: Finishing</b></summary>
       <article>
