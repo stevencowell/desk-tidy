@@ -2351,6 +2351,19 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('resultPopup').classList.remove('active');
     });
   }
+  // Add audio buttons after each quiz answer if missing
+  document.querySelectorAll('form.quiz label').forEach(label => {
+    if (!label.querySelector('button')) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = '🔊';
+      const answerText = label.textContent.trim();
+      btn.setAttribute('aria-label', 'Read answer ' + answerText);
+      btn.addEventListener('click', e => { e.preventDefault(); speakText(btn); });
+      label.appendChild(document.createTextNode(' '));
+      label.appendChild(btn);
+    }
+  });
 });
 
 function submitQuiz(btn, quizType) {
