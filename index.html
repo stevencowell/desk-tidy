@@ -2350,6 +2350,12 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('resultPopup').classList.remove('active');
     });
   }
+  // Ensure all quiz question buttons have an aria-label
+  document.querySelectorAll('form.quiz li > p button').forEach(btn => {
+    if (!btn.hasAttribute('aria-label')) {
+      btn.setAttribute('aria-label', 'Read question aloud');
+    }
+  });
   // Add audio buttons after each quiz answer if missing
   document.querySelectorAll('form.quiz label').forEach(label => {
     if (!label.querySelector('button')) {
