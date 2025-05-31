@@ -2370,7 +2370,25 @@ function askForName() {
   });
 }
 
+function shuffleQuizAnswers() {
+  document.querySelectorAll('form.quiz li').forEach(li => {
+    const labels = Array.from(li.querySelectorAll('label'));
+    if (labels.length <= 1) return;
+    li.querySelectorAll('br').forEach(br => br.remove());
+    labels.forEach(l => l.remove());
+    for (let i = labels.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [labels[i], labels[j]] = [labels[j], labels[i]];
+    }
+    labels.forEach((label, idx) => {
+      li.appendChild(label);
+      if (idx < labels.length - 1) li.appendChild(document.createElement('br'));
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  shuffleQuizAnswers();
   const closeBtn = document.querySelector('#resultPopup .close-popup');
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {
