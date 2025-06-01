@@ -2541,9 +2541,17 @@ summary { font-weight: bold; }
   <div class="popup-box">
     <button class="close-popup" aria-label="Close">&times;</button>
     <h3>Results Submitted</h3>
-    <p>You can now visit Google Classroom to record your work.</p>  
+    <p>You can now visit Google Classroom to record your work.</p>
     <!-- STAFF: Replace href with the project link when available -->
   <a id="popupClassroomLink" href="https://classroom.google.com/c/MTQ4MzIyMzI3Nzla/m/Nzg1NTgyOTE4NDIx/details" target="_blank">Open Google Classroom</a>
+  </div>
+</div>
+
+<!-- Popup confirming submission before Google Classroom link -->
+<div id="submittedPopup" class="popup-overlay" role="dialog" aria-modal="true">
+  <div class="popup-box">
+    <p>Your results have been submitted.</p>
+    <button id="submittedOkBtn">OK</button>
   </div>
 </div>
 
@@ -2653,6 +2661,17 @@ function showResultPopup(url) {
   if (overlay) overlay.classList.add('active');
 }
 
+function showSubmittedPopup(url) {
+  const overlay = document.getElementById('submittedPopup');
+  const btn = document.getElementById('submittedOkBtn');
+  if (!overlay || !btn) { showResultPopup(url); return; }
+  overlay.classList.add('active');
+  btn.onclick = () => {
+    overlay.classList.remove('active');
+    showResultPopup(url);
+  };
+}
+
 function askForName() {
   return new Promise(resolve => {
     const overlay = document.getElementById('namePopup');
@@ -2760,8 +2779,9 @@ function submitQuiz(btn, quizType) {
         studentName: name,
         timestamp: new Date().toISOString()
       })
+    }).then(() => {
+      showSubmittedPopup(CLASSROOM_LINK);
     });
-    showResultPopup(CLASSROOM_LINK);
   });
 }
 
@@ -2792,8 +2812,9 @@ function submitAdvancedQuiz(btn, quizType) {
       responses,
       timestamp: new Date().toISOString()
     })
+  }).then(() => {
+    showSubmittedPopup(CLASSROOM_LINK);
   });
-  showResultPopup(CLASSROOM_LINK);
 }
 </script>
 </body>
