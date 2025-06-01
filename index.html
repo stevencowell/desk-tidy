@@ -2768,12 +2768,20 @@ function submitQuiz(btn, quizType) {
   form.querySelector('.quiz-msg').textContent = msg;
 
   askForName().then(name => {
+    const numMatch = quizType.match(/Week\s*(\d+)/i);
+    const prefix = /Support/i.test(quizType)
+      ? 'S'
+      : /Advanced/i.test(quizType)
+      ? 'A'
+      : 'M';
+    const quizNumber = prefix + (numMatch ? numMatch[1] : '');
     fetch(SCRIPT_URL, {
       method: "POST",
       mode: "no-cors",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         quizType,
+        quizNumber,
         quiz: results,
         score: correct + "/" + total,
         studentName: name,
@@ -2802,12 +2810,20 @@ function submitAdvancedQuiz(btn, quizType) {
   form.querySelector('.quiz-msg').textContent =
     'Responses submitted. Your teacher will review them.';
 
+  const numMatch = quizType.match(/Week\s*(\d+)/i);
+  const prefix = /Support/i.test(quizType)
+    ? 'S'
+    : /Advanced/i.test(quizType)
+    ? 'A'
+    : 'M';
+  const quizNumber = prefix + (numMatch ? numMatch[1] : '');
   fetch(SCRIPT_URL, {
     method: 'POST',
     mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       quizType,
+      quizNumber,
       studentName: studentName.trim(),
       responses,
       timestamp: new Date().toISOString()
