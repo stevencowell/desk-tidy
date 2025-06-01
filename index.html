@@ -2770,7 +2770,7 @@ function submitQuiz(btn, quizType) {
   askForName().then(name => {
     fetch(SCRIPT_URL, {
       method: "POST",
-      mode: "cors",
+      mode: "no-cors",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         quizType,
@@ -2804,7 +2804,7 @@ function submitAdvancedQuiz(btn, quizType) {
 
   fetch(SCRIPT_URL, {
     method: 'POST',
-    mode: 'cors',
+    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       quizType,
