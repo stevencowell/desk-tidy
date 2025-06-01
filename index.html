@@ -2769,7 +2769,12 @@ function submitQuiz(btn, quizType) {
 
   askForName().then(name => {
     const numMatch = quizType.match(/Week\s*(\d+)/i);
-    const quizNumber = numMatch ? numMatch[1] : '';
+    const prefix = /Support/i.test(quizType)
+      ? 'S'
+      : /Advanced/i.test(quizType)
+      ? 'A'
+      : 'M';
+    const quizNumber = prefix + (numMatch ? numMatch[1] : '');
     fetch(SCRIPT_URL, {
       method: "POST",
       mode: "no-cors",
@@ -2806,7 +2811,12 @@ function submitAdvancedQuiz(btn, quizType) {
     'Responses submitted. Your teacher will review them.';
 
   const numMatch = quizType.match(/Week\s*(\d+)/i);
-  const quizNumber = numMatch ? numMatch[1] : '';
+  const prefix = /Support/i.test(quizType)
+    ? 'S'
+    : /Advanced/i.test(quizType)
+    ? 'A'
+    : 'M';
+  const quizNumber = prefix + (numMatch ? numMatch[1] : '');
   fetch(SCRIPT_URL, {
     method: 'POST',
     mode: 'no-cors',
