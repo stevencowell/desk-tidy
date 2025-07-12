@@ -25,22 +25,22 @@ function loadSections() {
   }));
 }
 
-function loadWeeks() {
+async function loadWeeks() {
+  async function fetchWeekSequential(section, count) {
+    const container = document.getElementById(section + '-weeks');
+    if (!container) return;
+    for (let i = 1; i <= count; i++) {
+      const resp = await fetch(`sections/${section}/week${i}.html`);
+      const html = await resp.text();
+      const div = document.createElement('div');
+      div.innerHTML = html;
+      container.appendChild(div);
+    }
+  }
+
   const promises = [];
   for (const [section, count] of Object.entries(weekCounts)) {
-    const container = document.getElementById(section + '-weeks');
-    if (!container) continue;
-    for (let i = 1; i <= count; i++) {
-      promises.push(
-        fetch(`sections/${section}/week${i}.html`)
-          .then(resp => resp.text())
-          .then(html => {
-            const div = document.createElement('div');
-            div.innerHTML = html;
-            container.appendChild(div);
-          })
-      );
-    }
+    promises.push(fetchWeekSequential(section, count));
   }
   return Promise.all(promises);
 }
