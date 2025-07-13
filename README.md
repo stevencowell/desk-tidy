@@ -4,13 +4,30 @@ This repository contains HTML pages that send quiz results to a Google Sheet usi
 
 1. Create a new Google Sheet.
 2. In Google Sheets, go to **Extensions -> Apps Script** and create a new project.
-3. Replace the default code in `Code.gs` with:
+3. Replace the default code in `Code.gs` with the following, which separates
+   main, support, and advanced quiz results into different sheets:
 
 ```javascript
 function doPost(e) {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   const data = JSON.parse(e.postData.contents);
-  sheet.appendRow([data.name || '', data.quizNumber || '', data.score || '', new Date()]);
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+
+  // Determine which sheet to use based on the quiz number prefix
+  let sheetName = 'Main Theory Page';
+  if (data.quizNumber && data.quizNumber.startsWith('S')) {
+    sheetName = 'Support Quizzes';
+  } else if (data.quizNumber && data.quizNumber.startsWith('A')) {
+    sheetName = 'Advanced Quizzes';
+  }
+
+  const sheet = ss.getSheetByName(sheetName) || ss.insertSheet(sheetName);
+  sheet.appendRow([
+    data.studentName || '',
+    data.quizNumber || '',
+    data.score || '',
+    new Date(),
+  ]);
+
   return ContentService.createTextOutput('Success');
 }
 ```
