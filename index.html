@@ -593,13 +593,18 @@ function submitQuiz(btn, quizType) {
   form.querySelector('.quiz-msg').textContent = msg;
 
   askForName().then(name => {
-    const numMatch = quizType.match(/Week\s*(\d+)/i);
-    const prefix = /Support/i.test(quizType)
-      ? 'S'
-      : /Advanced/i.test(quizType)
-      ? 'A'
-      : 'M';
-    const quizNumber = prefix + (numMatch ? numMatch[1] : '');
+    let quizNumber = '';
+    if (/^[MSA]\d+/i.test(quizType)) {
+      quizNumber = quizType.toUpperCase();
+    } else {
+      const numMatch = quizType.match(/Week\s*(\d+)/i);
+      const prefix = /Support/i.test(quizType)
+        ? 'S'
+        : /Advanced/i.test(quizType)
+        ? 'A'
+        : 'M';
+      quizNumber = prefix + (numMatch ? String(numMatch[1]).padStart(3, '0') : '');
+    }
     fetch(SCRIPT_URL, {
       method: "POST",
       mode: "no-cors",
@@ -635,13 +640,18 @@ function submitAdvancedQuiz(btn, quizType) {
   form.querySelector('.quiz-msg').textContent =
     'Responses submitted. Your teacher will review them.';
 
-  const numMatch = quizType.match(/Week\s*(\d+)/i);
-  const prefix = /Support/i.test(quizType)
-    ? 'S'
-    : /Advanced/i.test(quizType)
-    ? 'A'
-    : 'M';
-  const quizNumber = prefix + (numMatch ? numMatch[1] : '');
+  let quizNumber = '';
+  if (/^[MSA]\d+/i.test(quizType)) {
+    quizNumber = quizType.toUpperCase();
+  } else {
+    const numMatch = quizType.match(/Week\s*(\d+)/i);
+    const prefix = /Support/i.test(quizType)
+      ? 'S'
+      : /Advanced/i.test(quizType)
+      ? 'A'
+      : 'M';
+    quizNumber = prefix + (numMatch ? String(numMatch[1]).padStart(3, '0') : '');
+  }
   fetch(SCRIPT_URL, {
     method: 'POST',
     mode: 'no-cors',
