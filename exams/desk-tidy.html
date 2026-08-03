@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Stage 4 Desk Tidy end-of-year digital examination">
+  <title>Stage 4 Technology – Desk Tidy | End-of-Year Digital Examination</title>
+  <link rel="stylesheet" href="exam.css">
+</head>
+<body>
+  <div class="password-gate" id="passwordGate">
+    <form class="gate-card" id="gateForm">
+      <p class="exam-kicker" style="color:var(--brand)">Teacher-controlled access</p>
+      <h1>Unlock exam</h1>
+      <p>Enter the password supplied by your teacher. Your answers will save only in this browser on this device.</p>
+      <label for="gatePassword"><strong>Exam password</strong></label>
+      <input id="gatePassword" type="password" inputmode="numeric" autocomplete="off" required>
+      <button class="btn" type="submit">Open exam</button>
+      <p class="gate-error" id="gateError" role="alert"></p>
+    </form>
+  </div>
+  <div id="examPage" hidden>
+    <header class="exam-header">
+      <div class="exam-shell">
+        <p><a id="backLink" href="../index.html">Back to course home</a></p>
+        <p class="exam-kicker" id="courseName"></p>
+        <h1 id="examTitle"></h1>
+        <p id="examSubtitle"></p>
+      </div>
+    </header>
+    <main class="exam-main">
+      <div class="exam-shell">
+        <section class="exam-card">
+          <h2>Exam information</h2>
+          <div class="notice-grid">
+            <div class="notice-item"><span>Course stage</span><strong id="metaStage"></strong></div>
+            <div class="notice-item"><span>Recommended time</span><strong id="metaTime"></strong></div>
+            <div class="notice-item"><span>Total marks</span><strong id="metaMarks"></strong></div>
+            <div class="notice-item"><span>Assessment status</span><strong id="metaStatus"></strong></div>
+            <div class="notice-item"><span>Task</span><strong id="metaTask"></strong></div>
+            <div class="notice-item"><span>Scheduled date</span><strong id="metaDate"></strong></div>
+            <div class="notice-item notice-wide"><span>Assessed outcomes</span><strong id="metaOutcomes"></strong></div>
+          </div>
+          <p class="exam-note" id="examDirections"></p>
+          <p><strong>PDF submission:</strong> When finished, use <em>Print / Save PDF</em>, choose <em>Save as PDF</em>, and name the file <strong id="pdfFilename"></strong>. Check the saved PDF before turning it in.</p>
+        </section>
+        <form id="examForm" novalidate>
+          <section class="exam-card">
+            <h2>Student details</h2>
+            <div class="student-grid">
+              <label>Student name<input data-student id="studentName" name="studentName" autocomplete="name"></label>
+              <label>Class<input data-student name="studentClass" autocomplete="off"></label>
+              <label>Teacher<input data-student name="teacherName" autocomplete="off"></label>
+              <label>Date completed<input data-student name="completedDate" type="date"></label>
+            </div>
+          </section>
+          <div class="exam-toolbar screen-only">
+            <div class="exam-progress">
+              <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+              <span class="progress-label" id="progressLabel"></span>
+            </div>
+            <button class="btn secondary" id="saveBtn" type="button">Save now</button>
+            <button class="btn" id="printBtn" type="button">Print / Save PDF</button>
+            <button class="btn secondary" id="lockBtn" type="button">Lock exam</button>
+            <button class="btn danger" id="clearBtn" type="button">Clear saved work</button>
+            <div class="save-status" id="saveStatus">Answers autosave on this device.</div>
+          </div>
+          <div id="examSections"></div>
+        </form>
+        <p class="exam-footer">This page stores work locally in this browser and device. Saving a PDF is the submission copy; local autosave is not a cloud submission.</p>
+      </div>
+    </main>
+  </div>
+  <script>window.EXAM_CONFIG = {"id":"wwhs-stage4-desk-tidy-eoy-2026","course":"Stage 4 Technology – Desk Tidy","title":"End-of-Year Digital Examination","subtitle":"Design, materials, safe production, assembly, finishing and evaluation","stage":"Stage 4","time":"50 minutes","status":"School-based examination · teacher confirms formal use","backHref":"../index.html","backLabel":"Desk Tidy Guided Course","pdfFilename":"Surname_Firstname_Desk_Tidy_Exam.pdf","directions":"Answer every question. Select one response for each multiple-choice question and type concise, specific answers for written questions. Apply the design and workshop knowledge developed through the Desk Tidy project. No sketches are required.","sections":[{"label":"Section A","title":"Multiple choice","instructions":"Select the best answer for each question.","questions":[{"kind":"choice","marks":1,"prompt":"What is the main purpose of a design brief?","options":["To provide a finished solution and fixed dimensions","To identify the need, intended user and required outcome while allowing design decisions","To list only the available tools","To replace testing and evaluation"]},{"kind":"choice","marks":1,"prompt":"Which criterion is most useful for testing a finished Desk Tidy?","options":["It looks cool","It has the same layout as another student’s","It uses the most timber","It stores the intended items, remains stable and allows easy access"]},{"kind":"choice","marks":1,"prompt":"What is a hazard?","options":["A source or situation with the potential to cause harm","The combination of likelihood and consequence","A piece of PPE","A completed safety quiz"]},{"kind":"choice","marks":1,"prompt":"Which is normally the strongest option in the hierarchy of controls?","options":["Wearing safety glasses","Adding a reminder sign","Eliminating the hazard where reasonably possible","Working faster"]},{"kind":"choice","marks":1,"prompt":"Which comparison between radiata pine and MDF is accurate?","options":["Both have identical natural grain","Radiata pine has natural grain; MDF has a uniform manufactured surface and different edge behaviour","MDF always requires less dust control","Radiata pine needs no accurate finishing"]},{"kind":"choice","marks":1,"prompt":"Which action best reduces avoidable material waste?","options":["Marking parts randomly","Discarding every offcut","Selecting the most decorative board regardless of component needs","Planning the component layout, checking measurements and retaining useful offcuts"]},{"kind":"choice","marks":1,"prompt":"Why are measurements taken from a datum or approved reference edge?","options":["To keep related measurements consistent and reduce accumulated error","To identify the finish colour","To replace the cutting list","To make timber softer"]},{"kind":"choice","marks":1,"prompt":"Where should a tenon-saw cut begin relative to the marked line?","options":["Through the centre of the wanted line","On either side without checking","On the waste side, leaving the line to protect the finished dimension","Several millimetres inside the wanted component"]},{"kind":"choice","marks":1,"prompt":"What is a useful advantage of a rebate joint in a Desk Tidy?","options":["It requires no accurate marking","It provides a locating shoulder and increased contact area","It is automatically removable","It prevents all glue squeeze-out"]},{"kind":"choice","marks":1,"prompt":"What should happen before PVA glue is applied?","options":["The finish should be applied","The timber should be wetted","The parts should be forced together","The assembly should be dry fitted, checked and approved"]}]},{"label":"Section B","title":"Short responses","instructions":"Use complete sentences and relevant design or workshop terminology.","questions":[{"kind":"short","marks":3,"prompt":"Choose one Desk Tidy process. Identify a hazard, describe the risk and explain two controls from different levels of the hierarchy."},{"kind":"short","marks":3,"prompt":"Compare radiata pine and MDF using appearance, edge behaviour, shaping or sanding, and suitability for a small organiser."},{"kind":"short","marks":3,"prompt":"Explain how user research, measurable criteria and a decision matrix can support selection of a design idea."},{"kind":"short","marks":3,"prompt":"Explain how an approved drawing, cutting list, datum and waste-side marking work together before the first cut."},{"kind":"short","marks":3,"prompt":"Compare a butt joint, rebate joint and dowel joint in terms of location, accuracy and likely suitability."},{"kind":"short","marks":3,"prompt":"Explain how surface preparation, clear finishing and functional testing provide evidence for the final evaluation."}]},{"label":"Section C","title":"Applied project scenarios","instructions":"Apply safe, practical reasoning and justify each improvement.","questions":[{"kind":"long","marks":6,"prompt":"During dry fitting, two compartments are not square and one joint has a visible gap. Analyse possible causes in drawing interpretation, cutting-list information, datum-based marking, sawing and joint preparation. Recommend a controlled correction and checking sequence before glue-up."},{"kind":"long","marks":6,"prompt":"The finished Desk Tidy has visible sanding scratches, a run in the clear coating and one compartment does not fit the intended stationery. Explain likely causes, how each issue should have been detected, and one realistic improvement to preparation, finishing or testing."}]}]};</script>
+  <script>Object.assign(window.EXAM_CONFIG, {"taskLabel":"End-of-year class test","scheduledDate":"Teacher to confirm","outcomes":"TE4-SDP-01, TE4-PDP-01, TE4-MSC-01, TE4-DES-01, TE4-PPM-01, TE4-SAF-01","status":"Informal class test · no weighting · not a formal handbook task","title":"End-of-Year Digital Class Test"});</script>
+  <script src="exam.js"></script>
+</body>
+</html>
