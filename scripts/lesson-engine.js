@@ -523,7 +523,63 @@
     if (classInput) classInput.value = state.studentClass;
   }
 
+  function emphasiseFirstPhrase(section, phrase) {
+    const paragraphs = Array.from(section.querySelectorAll('p:not(.kicker)'));
+    for (const paragraph of paragraphs) {
+      const walker = document.createTreeWalker(paragraph, NodeFilter.SHOW_TEXT);
+      const textNodes = [];
+      while (walker.nextNode()) textNodes.push(walker.currentNode);
+      for (const textNode of textNodes) {
+        if (textNode.parentElement.closest('strong')) continue;
+        const index = textNode.data.toLowerCase().indexOf(phrase.toLowerCase());
+        if (index === -1) continue;
+        const match = textNode.splitText(index);
+        const remainder = match.splitText(phrase.length);
+        const strong = document.createElement('strong');
+        strong.textContent = match.data;
+        match.replaceWith(strong);
+        if (!remainder.data) remainder.remove();
+        return;
+      }
+    }
+  }
+
+  function enhanceTheoryReadability() {
+    const keyTerms = {
+      'design-brief': ['design brief', 'design criteria'],
+      'workshop-safety': ['hazard', 'risk', 'hierarchy of controls'],
+      materials: ['material properties', 'Radiata pine', 'MDF'],
+      'research-concepts': ['Purposeful research', 'four genuinely different concepts', 'approximate dimensions'],
+      'compare-concepts': ['design criteria', 'decision matrix', 'trade-offs'],
+      'respectful-design': ['authoritative sources', 'Indigenous Cultural and Intellectual Property', 'permission'],
+      'working-drawings': ['working drawing', 'orthogonal views', 'dimensions'],
+      'cutting-schedule': ['cutting list', 'production schedule', 'quality-control points'],
+      'accurate-markout': ['datum', 'knife wall', 'waste side'],
+      'cutting-shaping': ['kerf', 'cutting allowance', 'reference face'],
+      'joint-choices': ['butt joint', 'rebate joint', 'dowel joint'],
+      'dry-fit-glue': ['dry fit', 'PVA', '80, 120 and 240 grit'],
+      'clear-finish': ['water-based clear varnish', 'drying', 'curing'],
+      'functional-testing': ['design criteria', 'evidence', 'opinion'],
+      'evaluation-reflection': ['evaluation', 'trade-off', 'reflection']
+    };
+    const chunkHeadings = ['Understand the idea', 'Apply it to the Desk Tidy', 'Check before moving on'];
+
+    document.querySelectorAll('.textbook-section').forEach((section) => {
+      const paragraphs = Array.from(section.querySelectorAll('p:not(.kicker)'));
+      [0, Math.floor(paragraphs.length / 2), paragraphs.length - 1].forEach((paragraphIndex, headingIndex) => {
+        const paragraph = paragraphs[paragraphIndex];
+        if (!paragraph || paragraph.previousElementSibling?.classList.contains('theory-chunk-heading')) return;
+        const heading = document.createElement('h3');
+        heading.className = 'theory-chunk-heading';
+        heading.textContent = chunkHeadings[headingIndex];
+        paragraph.before(heading);
+      });
+      (keyTerms[section.id] || []).forEach((term) => emphasiseFirstPhrase(section, term));
+    });
+  }
+
   function initialise() {
+    enhanceTheoryReadability();
     bindStudentFields();
     renderMcQuestions();
     renderWrittenQuestions();
