@@ -105,6 +105,7 @@ window.WRITTEN_QUESTIONS = [
   {
     "title": "1. Turn a user need into design criteria",
     "prompt": "Describe an intended user and the items they need organised. Write at least three measurable criteria that would allow the finished Desk Tidy to be tested.",
+    "clarification": "Who is the Desk Tidy for? What needs to fit in it? Write three things you can check.",
     "minWords": 75,
     "concepts": [
       {"label":"user identified","terms":["user","person","student","teacher"]},
@@ -114,11 +115,12 @@ window.WRITTEN_QUESTIONS = [
     ],
     "scaffold": ["The intended user is...", "They need to organise...", "The finished Desk Tidy will be successful if...", "I could test these criteria by..."],
     "prompts": ["Name the person or type of user.", "Identify the real items and workspace problem.", "Write criteria that can be observed or measured.", "Explain how the final product would be tested."],
-    "model": "The intended user is a student who needs quick access to pens and pencils while keeping a charging cable and loose paperclips under control. The Desk Tidy must store those selected items without blocking normal desk work. It must allow each item to be removed and returned easily, remain stable when items are taken out, and fit the intended desk area. I would test the product by placing the selected items into their compartments, using them in a normal work sequence, checking whether the organiser moves or tips, and confirming that useful desk space remains clear."
+    "model": "My user is a student who needs to organise pens, pencils, a charging cable and paperclips. The Desk Tidy should hold these items, fit the desk space and stay stable when something is removed. I would test it by placing the items inside, taking each one out and checking that the organiser does not tip or block the work area."
   },
   {
     "title": "2. Explain a hazard, risk and control set",
     "prompt": "Choose one Desk Tidy workshop process such as cutting, drilling or sanding. Identify a hazard, describe the risk and explain at least three controls from different levels of the hierarchy.",
+    "clarification": "Pick one process. What could hurt someone? What could happen? Explain three safety controls from different levels.",
     "minWords": 85,
     "concepts": [
       {"label":"hazard","terms":["hazard","sharp","moving","dust","tool"]},
@@ -129,11 +131,12 @@ window.WRITTEN_QUESTIONS = [
     ],
     "scaffold": ["The hazard is...", "This creates a risk because...", "A strong physical control is...", "The required instruction or procedure is...", "PPE supports these controls by..."],
     "prompts": ["Name the actual source of harm.", "Describe what could happen to a person.", "Include a physical or engineering control.", "Include teacher instruction, authorisation, OnGuard or an SOP.", "Explain why PPE is not the only control."],
-    "model": "During drilling, the moving tool and an unsecured workpiece are hazards. If the timber catches or moves, it could strike a hand or send material towards the eyes. The work should be secured using the teacher-approved method, and guards or other provided engineering controls must remain in place. I would use the process only after instruction, the required OnGuard or SOP checks and teacher authorisation. Required eye protection provides a final layer against chips, but it does not replace secure work, correct guarding or supervision. If the tool, guard or work-holding setup appeared damaged or unfamiliar, I would stop and report it before continuing."
+    "model": "For drilling, the moving tool and loose timber are hazards. A hand could be hurt or a chip could reach an eye. I would secure the timber using the teacher-approved method, keep guards in place, and follow the required OnGuard or SOP instructions and teacher authorisation. Safety glasses add a final layer of protection."
   },
   {
     "title": "3. Compare radiata pine and MDF samples",
     "prompt": "Compare radiata pine and MDF using appearance, edge behaviour, shaping or sanding, and suitability for a small organiser. Explain why a sample investigation does not automatically decide the final material.",
+    "clarification": "How do radiata pine and MDF compare in looks, edges, shaping or sanding, and suitability? Why don’t the samples decide the final material?",
     "minWords": 90,
     "concepts": [
       {"label":"pine properties","terms":["radiata pine","grain","solid timber","shape","sand"]},
@@ -143,11 +146,12 @@ window.WRITTEN_QUESTIONS = [
     ],
     "scaffold": ["Radiata pine has...", "MDF differs because...", "For a small organiser I would compare...", "The sample test does not decide the final material because..."],
     "prompts": ["Describe the visible grain and working qualities of pine.", "Describe MDF's uniform surface and different edge behaviour.", "Link properties to accurate manufacture and everyday use.", "Explain that teacher and project requirements still control the final choice."],
-    "model": "Radiata pine is solid timber with visible natural grain. It is generally easy to shape and sand, although its natural structure affects appearance and edge quality. MDF has a smooth, uniform face with no natural grain, and its edges behave differently from solid timber. For a small organiser, I would compare whether each sample has suitable strength, can be marked and shaped accurately, and can be finished neatly. The investigation provides evidence about properties, but it does not automatically select a material. The final choice must suit the approved design, available stock, intended workshop processes and the teacher's project requirements."
+    "model": "Radiata pine has natural grain and is generally easy to shape and sand. MDF has a smooth face with no grain, and its edges behave differently. I would compare strength, accuracy and finish for the organiser. Sample tests give useful evidence, but the final material must still match the approved design and teacher requirements."
   },
   {
     "title": "4. Plan for responsible material use",
     "prompt": "Explain how you would reduce material waste when preparing to make your Desk Tidy. Include stock selection, layout and marking out, usable offcuts and responsible sourcing.",
+    "clarification": "How will you waste less material? Think about choosing stock, planning the layout, marking out, keeping useful offcuts and where the timber comes from.",
     "minWords": 85,
     "concepts": [
       {"label":"suitable stock","terms":["suitable stock","material","defect","available"]},
@@ -157,6 +161,6 @@ window.WRITTEN_QUESTIONS = [
     ],
     "scaffold": ["Before marking, I would...", "I would arrange the components so...", "Useful offcuts could...", "Responsible sourcing matters because..."],
     "prompts": ["Choose stock that suits the component rather than the most decorative piece.", "Explain how a planned component layout reduces unnecessary cuts.", "Describe how usable offcuts should be managed.", "Connect renewable timber with responsible sourcing and careful use."],
-    "model": "Before marking out, I would inspect the available stock and choose pieces that suit the required components. I would use the approved drawings and cutting list to arrange parts efficiently, measure from reliable references and confirm the layout before any cutting begins. This reduces mistakes and avoids creating unnecessary offcuts. Larger usable offcuts should be kept and managed for later components or approved future work rather than discarded automatically. I would also consider whether the timber comes from responsibly managed sources. Timber can be renewable, but it is only used sustainably when suitable stock is selected, planned carefully and not wasted through poor decisions or inaccurate work."
+    "model": "I would choose suitable stock and plan the part layout before marking out. Careful measuring would reduce mistakes and waste. I would keep larger usable offcuts for later work instead of throwing them away. I would also check that the timber comes from a responsibly managed source."
   }
 ];

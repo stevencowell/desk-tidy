@@ -41,7 +41,7 @@
   let migratedLegacyGuidance = false;
   Object.values(state.written).forEach((saved) => {
     if (typeof saved.guidance === 'string' && /genuine attempt first|at least 55 words|check your response twice/i.test(saved.guidance)) {
-      saved.guidance = '<strong>Start with a short attempt.</strong> Write about 15 words, or use Check my response once, then compare your ideas with the model response.';
+      saved.guidance = '<strong>Start with a short attempt.</strong> Write about 15 words, or use Check my response once, then compare your ideas with the appropriate response example.';
       migratedLegacyGuidance = true;
     }
   });
@@ -247,27 +247,34 @@
       const selfScore = Number.isInteger(saved.selfScore) ? saved.selfScore : null;
       const wc = wordCount(response);
       const met = conceptMatches(response, item.concepts);
+      const clarification = item.clarification
+        ? `<div class="question-clarification screen-only">
+            <button class="clarification-button" type="button" data-action="toggle-clarification" aria-expanded="false" aria-controls="written-clarification-${index}">What is this asking?</button>
+            <div class="clarification-panel" id="written-clarification-${index}" hidden><strong>In simpler words:</strong> ${escapeHtml(item.clarification)}</div>
+          </div>`
+        : '';
 
       return `
         <article class="written-card ${checked ? 'reviewed' : ''}" data-written-index="${index}">
           <h3>${escapeHtml(item.title)}</h3>
-          <p>${escapeHtml(item.prompt)}</p>
+          <p class="written-prompt">${escapeHtml(item.prompt)}</p>
+          ${clarification}
           <div class="scaffold">
             <strong>Sentence starters</strong>
             <ul>${item.scaffold.map(line => `<li>${escapeHtml(line)}</li>`).join('')}</ul>
           </div>
           <label class="visually-hidden" for="written-${index}">Response to ${escapeHtml(item.title)}</label>
-          <textarea id="written-${index}" data-action="written-input" placeholder="Write your response here before viewing the model answer…">${escapeHtml(response)}</textarea>
+          <textarea id="written-${index}" data-action="written-input" placeholder="Write your response here before viewing the appropriate response example…">${escapeHtml(response)}</textarea>
           <div class="response-meta">
             <span data-word-count>Word count: ${wc} words</span>
             <span>${checked ? 'Guidance reviewed' : 'Not yet reviewed'}</span>
           </div>
           <div class="written-actions screen-only">
             <button class="check-button" type="button" data-action="check-written">Check my response</button>
-            <button class="model-button" type="button" data-action="model-written">${modelVisible ? 'Hide model response' : 'Compare with model response'}</button>
+            <button class="model-button" type="button" data-action="model-written">${modelVisible ? 'Hide appropriate response example' : 'Appropriate response example'}</button>
           </div>
           <div class="response-guidance ${saved.guidance ? 'show' : ''} ${saved.ready ? 'ready' : ''}" role="status" aria-live="polite">${saved.guidance || ''}</div>
-          <div class="model-panel ${modelVisible ? 'show' : ''}"><strong>Model response:</strong> ${escapeHtml(item.model)}</div>
+          <div class="model-panel ${modelVisible ? 'show' : ''}"><strong>Appropriate response example:</strong> ${escapeHtml(item.model)}</div>
           <div class="self-score ${modelVisible ? 'show' : ''}">
             <strong>Self-assess after comparing:</strong>
             <div class="score-buttons screen-only">
@@ -384,6 +391,17 @@
     const saved = state.written[index] || {};
     const action = event.target.dataset.action;
 
+    if (action === 'toggle-clarification') {
+      const button = event.target;
+      const panel = card.querySelector(`#${button.getAttribute('aria-controls')}`);
+      if (!panel) return;
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!isExpanded));
+      button.textContent = isExpanded ? 'What is this asking?' : 'Hide simpler wording';
+      panel.hidden = isExpanded;
+      return;
+    }
+
     if (action === 'check-written') {
       const response = saved.response || '';
       const wc = wordCount(response);
@@ -395,14 +413,14 @@
       if (wc < 15) {
         const remaining = 15 - wc;
         saved.ready = false;
-        saved.guidance = `<strong>Good start.</strong> Add about ${remaining} more word${remaining === 1 ? '' : 's'} for a short attempt. You can then compare your ideas with the model response.`;
+        saved.guidance = `<strong>Good start.</strong> Add about ${remaining} more word${remaining === 1 ? '' : 's'} for a short attempt. You can then compare your ideas with the appropriate response example.`;
       } else if (missingIndexes.length) {
         saved.ready = false;
         const prompts = missingIndexes.map(i => `<li>${escapeHtml(item.prompts[i])}</li>`).join('');
         saved.guidance = `<strong>You have part of the answer.</strong> Strengthen it by adding:<ul>${prompts}</ul>`;
       } else {
         saved.ready = true;
-        saved.guidance = '<strong>Strong response.</strong> You have included the main concepts. Compare it with the model, improve any unclear wording, then self-assess honestly.';
+        saved.guidance = '<strong>Strong response.</strong> You have included the main concepts. Compare it with the appropriate response example, improve any unclear wording, then self-assess honestly.';
       }
       state.written[index] = saved;
       saveState();
@@ -416,7 +434,7 @@
       if (!saved.modelVisible && !canReveal) {
         saved.checked = true;
         saved.ready = false;
-        saved.guidance = '<strong>Start with a short attempt.</strong> Write about 15 words, or use Check my response once, then compare your ideas with the model response.';
+        saved.guidance = '<strong>Start with a short attempt.</strong> Write about 15 words, or use Check my response once, then compare your ideas with the appropriate response example.';
       } else {
         saved.modelVisible = !saved.modelVisible;
         if (saved.modelVisible) saved.checked = true;
