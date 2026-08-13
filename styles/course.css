@@ -821,3 +821,13 @@ footer p { margin: 3px; }
 .outcomes-details[open] summary { border-bottom: 1px solid var(--line); }
 .outcome-list { margin: 0; padding: 17px 24px 20px 42px; }
 .outcome-list li { margin-bottom: 10px; line-height: 1.55; }
+
+/* Module 1 parity with the Riv Burger benchmark. This follows legacy course styles deliberately. */
+.course-bar { display: none !important; }
+.lesson-hero { min-height: 355px; background: linear-gradient(110deg, #edf3e4, #fff7d6) !important; color: #153e2a !important; }
+.lesson-hero .hero-copy { padding: 72px 0 !important; text-shadow: none !important; }
+.lesson-hero .eyebrow { color: #c44935 !important; }
+.lesson-hero h1 { color: #153e2a !important; font-size: clamp(3.1rem, 6vw, 5rem) !important; line-height: 1.05; }
+.lesson-hero .hero-subtitle { color: #244538 !important; max-width: 60ch; }
+.lesson-overview { border: 2px solid #b8cbaa; border-left: .55rem solid #2b6a40; background: linear-gradient(135deg, #e7efe2, #fff7d8); }
+.lesson-overview .overview-heading h2 { color: #153e2a; font-size: clamp(1.65rem, 3vw, 2.2rem); }
