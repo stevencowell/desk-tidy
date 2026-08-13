@@ -831,3 +831,24 @@ footer p { margin: 3px; }
 .lesson-hero .hero-subtitle { color: #244538 !important; max-width: 60ch; }
 .lesson-overview { border: 2px solid #b8cbaa; border-left: .55rem solid #2b6a40; background: linear-gradient(135deg, #e7efe2, #fff7d8); }
 .lesson-overview .overview-heading h2 { color: #153e2a; font-size: clamp(1.65rem, 3vw, 2.2rem); }
+
+/* Exact Riv Burger module-shell geometry. */
+.lesson-hero { min-height: 295px !important; background: linear-gradient(135deg, #e9f0e3, #fff4d6) !important; }
+.lesson-hero .hero-inner { width: min(1180px, calc(100% - 36px)) !important; min-height: 295px !important; }
+.lesson-hero .hero-copy { padding: 0 !important; }
+.lesson-hero h1 { font-size: 76.8px !important; line-height: 88.32px !important; margin-bottom: 16px; }
+.module-layout { width: min(1180px, calc(100% - 36px)) !important; padding: 72px 0 0 !important; gap: 32px !important; grid-template-columns: minmax(0, 1fr) 290px !important; }
+.lesson-hero + main, #lesson-content { width: 100% !important; max-width: none !important; margin: 0 !important; }
+.lesson-overview { display: grid !important; grid-template-columns: minmax(0, 1fr) auto !important; gap: 24px !important; min-height: 260px; padding: 21.6px !important; border-color: #b8cbaa !important; border-left-color: #315d3a !important; box-shadow: 0 14px 38px rgba(32, 54, 34, .12) !important; }
+.lesson-overview .roadmap { margin: 0 !important; align-content: center; }
+.lesson-overview .primary-button { align-self: center; min-width: 220px; text-align: center; }
+.lesson-overview .overview-heading { display: block !important; }
+.module-aside { padding: 21.6px !important; border-color: #d9ddcf !important; box-shadow: 0 14px 38px rgba(32, 54, 34, .12) !important; }
+
+@media (max-width: 680px) {
+  .lesson-hero h1 { font-size: 40px !important; line-height: 46px !important; }
+  .module-layout { grid-template-columns: minmax(0, 1fr) !important; width: min(1180px, calc(100% - 32px)) !important; padding: 72px 0 0 !important; }
+  .module-aside { order: -1; position: static; width: 100%; }
+  .lesson-overview { grid-template-columns: minmax(0, 1fr) !important; min-height: 0; }
+  .lesson-overview .primary-button { width: 100%; }
+}
