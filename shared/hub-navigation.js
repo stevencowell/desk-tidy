@@ -37,6 +37,7 @@
     { label: "Course", href: "index.html", current: isCourseHome },
     { label: "Modules", href: "index.html#course-map-title", current: /\/weeks\d+-\d+\//.test(path) || path.includes("/sections/main-theory/") },
     { label: "Video learning", href: "youtube-library/video-library.html", current: path.includes("/youtube-library/") },
+    { label: "Busy Work", href: "https://stevencowell.github.io/busy-worksheets/?library=timber", external: true },
     { label: "My folio", href: "desk-tidy-folio.html", current: path.endsWith("/desk-tidy-folio.html") },
     { label: "Assessment", href: "assessment-pathway-2026.html", current: path.includes("assessment-pathway") || path.includes("/exams/") },
     { label: "Teacher resources", href: "sections/program.html", current: path.endsWith("/sections/program.html") },
