@@ -306,7 +306,7 @@ input[type="text"]:focus, textarea:focus { outline: 3px solid rgba(11,95,173,.18
 }
 
 .textbook-section#design-brief .design-brief-description p {
-  max-width: none;
+  max-width: none !important;
 }
 .textbook-section h2 { margin-bottom: 22px; }
 .textbook-section p { max-width: 78ch; text-wrap: pretty; }
