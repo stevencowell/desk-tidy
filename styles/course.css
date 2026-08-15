@@ -142,6 +142,7 @@ button { cursor: pointer; }
 .lesson-hero .hero-subtitle { color: #244538; }
 .module-layout { width: min(1160px, calc(100% - 36px)); margin: 0 auto; padding: 48px 0 90px; display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 32px; align-items: start; }
 .module-main { min-width: 0; }
+.module-layout.module-layout-single { grid-template-columns: minmax(0, 1fr) !important; }
 .module-aside { position: sticky; top: 92px; padding: 24px; }
 .module-aside h2 { font-size: clamp(1.75rem, 3vw, 2.3rem); }
 .module-aside h3 { margin-top: 28px; }
