@@ -199,6 +199,37 @@
     overview.insertAdjacentElement('beforebegin', support);
   }
 
+  if (location.pathname.includes('/weeks9-10/')) {
+    const visualReplacements = {
+      'functional-testing': {
+        src: '../assets/desk-tidy-design-criteria.png',
+        alt: 'Finished Desk Tidy arranged with stationery for capacity, access and stability testing',
+        caption: 'Test the intended items, access, stability and desk fit against the agreed design criteria.'
+      },
+      'evaluation-reflection': {
+        src: '../assets/folio/desk-tidy-folio-cards.png',
+        alt: 'Desk Tidy folio evidence sequence from design decisions to evaluation and reflection',
+        caption: 'Organise project evidence in sequence, then explain what it proves about the final result.'
+      }
+    };
+    Object.entries(visualReplacements).forEach(([sectionId, replacement]) => {
+      const figure = document.querySelector(`#${sectionId} .lesson-visual`);
+      const image = figure && figure.querySelector('img');
+      const caption = figure && figure.querySelector('figcaption');
+      if (image) {
+        image.src = replacement.src;
+        image.alt = replacement.alt;
+      }
+      if (caption) caption.textContent = replacement.caption;
+    });
+
+    const finalNext = document.querySelector('.completion-card .week-switcher .next');
+    if (finalNext) {
+      finalNext.href = '../index.html#modules';
+      finalNext.textContent = 'All modules →';
+    }
+  }
+
   data.sections.forEach(section => {
     const theory = document.getElementById(section.id);
     if (!theory || !section.video) return;
