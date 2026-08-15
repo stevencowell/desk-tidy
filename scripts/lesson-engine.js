@@ -622,6 +622,7 @@
         heading.className = 'theory-chunk-heading';
         heading.textContent = chunkHeadings[headingIndex];
         paragraph.before(heading);
+        if (headingIndex === 1) paragraph.classList.add('apply-it-copy');
       });
       (keyTerms[section.id] || []).forEach((term) => emphasiseFirstPhrase(section, term));
     });

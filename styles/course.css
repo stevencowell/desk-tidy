@@ -300,6 +300,17 @@ input[type="text"]:focus, textarea:focus { outline: 3px solid rgba(11,95,173,.18
   max-width: 100% !important;
 }
 
+.textbook-section#design-brief .plan-figure {
+  width: min(100%, 360px);
+  justify-self: end;
+}
+
+.textbook-section#workshop-safety .plan-figure {
+  width: min(100%, 360px);
+  justify-self: start;
+  order: -1;
+}
+
 .textbook-section#design-brief .design-brief-description {
   max-width: 100%;
   width: 100%;
@@ -308,8 +319,18 @@ input[type="text"]:focus, textarea:focus { outline: 3px solid rgba(11,95,173,.18
 .textbook-section#design-brief .design-brief-description p {
   max-width: none !important;
 }
+
+.textbook-section > p:not(.kicker) {
+  max-width: none;
+}
 .textbook-section h2 { margin-bottom: 22px; }
 .textbook-section p { max-width: 78ch; text-wrap: pretty; }
+.textbook-section .apply-it-copy {
+  clear: both;
+  width: 100%;
+  max-width: none !important;
+  box-sizing: border-box;
+}
 .textbook-section .theory-chunk-heading {
   margin: 24px 0 8px;
   padding-left: 11px;
@@ -332,14 +353,24 @@ input[type="text"]:focus, textarea:focus { outline: 3px solid rgba(11,95,173,.18
 }
 .textbook-section aside strong { color: var(--brand-dark); }
 .module-support-panel {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
   gap: 28px;
+  min-height: 287px;
   border-left: 6px solid var(--brand);
 }
-.module-support-panel > div:first-child { max-width: 66ch; }
-.module-support-panel .button-row { flex: 0 0 auto; }
+.module-support-panel > div:first-child { max-width: 580px; }
+.module-support-panel .button-row { margin: 0; gap: 12px; }
+.module-support-panel .primary-button,
+.module-support-panel .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 18px;
+  white-space: nowrap;
+}
 .section-video {
   clear: both;
   display: grid !important;
@@ -615,7 +646,7 @@ footer p { margin: 3px; }
 @media (max-width: 680px) {
   .module-layout { grid-template-columns: 1fr; width: calc(100% - 22px); padding: 30px 0 64px; }
   .module-aside { position: static; order: -1; }
-  .module-support-panel { display: block; }
+  .module-support-panel { display: block; min-height: 0; }
   .module-support-panel .button-row { margin-top: 18px; }
   .section-video { grid-template-columns: 1fr; padding: 18px !important; }
   .video-shell { min-height: 170px; }
@@ -881,6 +912,12 @@ footer p { margin: 3px; }
 .lesson-hero h1 { font-size: 76.8px !important; line-height: 88.32px !important; margin-bottom: 16px; }
 .module-layout { width: min(1180px, calc(100% - 36px)) !important; padding: 72px 0 0 !important; gap: 32px !important; grid-template-columns: minmax(0, 1fr) 290px !important; }
 .lesson-hero + main, #lesson-content { width: 100% !important; max-width: none !important; margin: 0 !important; }
+#lesson-content > .card,
+#lesson-content > .student-strip {
+  width: min(1180px, calc(100% - 36px));
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 .lesson-overview { display: grid !important; grid-template-columns: minmax(0, 1fr) auto !important; gap: 24px !important; min-height: 260px; padding: 21.6px !important; border-color: #b8cbaa !important; border-left-color: #315d3a !important; box-shadow: 0 14px 38px rgba(32, 54, 34, .12) !important; }
 .lesson-overview .roadmap { margin: 0 !important; align-content: center; }
 .lesson-overview .primary-button { align-self: center; min-width: 220px; text-align: center; }

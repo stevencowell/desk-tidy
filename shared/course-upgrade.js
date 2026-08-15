@@ -151,6 +151,18 @@
   const data = moduleData[moduleKey];
   if (!data || !Array.isArray(window.MC_QUESTIONS)) return;
 
+  const usedVideoIds = new Set();
+  Object.values(moduleData).forEach(module => {
+    module.sections.forEach(section => {
+      if (!section.video) return;
+      if (usedVideoIds.has(section.video[0])) {
+        section.video = null;
+        return;
+      }
+      usedVideoIds.add(section.video[0]);
+    });
+  });
+
   function questionFromTuple(tuple, sectionId, index) {
     const [question, correctText, wrong, why] = tuple;
     const rotation = index % 4;
@@ -184,12 +196,12 @@
     const support = document.createElement('section');
     support.className = 'card module-support-panel screen-only';
     support.innerHTML = `<div><p class="section-kicker">Module learning pack</p><h2>Preview, learn and save evidence</h2><p>Download the eight-slide student presentation, then use the linked folio evidence card when your work is ready.</p></div><div class="button-row"><a class="primary-button" href="${data.presentation}" download>Download presentation</a><a class="secondary-button" href="${data.folio}">Open mapped folio evidence</a></div>`;
-    overview.insertAdjacentElement('afterend', support);
+    overview.insertAdjacentElement('beforebegin', support);
   }
 
   data.sections.forEach(section => {
     const theory = document.getElementById(section.id);
-    if (!theory) return;
+    if (!theory || !section.video) return;
     const [videoId, title, channel] = section.video;
     const video = document.createElement('aside');
     video.className = 'section-video screen-only';
