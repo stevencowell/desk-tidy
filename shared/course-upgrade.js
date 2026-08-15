@@ -193,7 +193,8 @@
     const [videoId, title, channel] = section.video;
     const video = document.createElement('aside');
     video.className = 'section-video screen-only';
-    video.innerHTML = `<div><p class="section-kicker">Watch, then check</p><h3>${title}</h3><p>This short explanation supports the theory above. The approved drawing, teacher demonstration and school workshop requirements still control practical work.</p><p class="video-source">YouTube · ${channel}</p></div><div class="video-shell" data-video-id="${videoId}"><button type="button" class="video-play" aria-label="Play ${title}"><span aria-hidden="true">▶</span> Play video</button><a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" rel="noopener">Open on YouTube</a></div>`;
+    const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+    video.innerHTML = `<div><p class="section-kicker">Watch, then check</p><h3>${title}</h3><p>This short explanation supports the theory above. The approved drawing, teacher demonstration and school workshop requirements still control practical work.</p><p class="video-source">YouTube · ${channel}</p></div><div class="video-shell" data-video-id="${videoId}"><img class="video-thumbnail" src="${thumbnailUrl}" alt="${title} video thumbnail"><div class="video-overlay"><button type="button" class="video-play" aria-label="Play ${title}"><span aria-hidden="true">▶</span> Play video</button><a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" rel="noopener">Open on YouTube</a></div></div>`;
     theory.append(video);
   });
 
