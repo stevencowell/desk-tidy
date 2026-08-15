@@ -294,6 +294,10 @@ input[type="text"]:focus, textarea:focus { outline: 3px solid rgba(11,95,173,.18
   font-weight: 750;
   line-height: 1.5;
 }
+.textbook-section#design-brief .plan-layout > div,
+.textbook-section#design-brief .plan-layout > div p {
+  max-width: none;
+}
 .textbook-section h2 { margin-bottom: 22px; }
 .textbook-section p { max-width: 78ch; text-wrap: pretty; }
 .textbook-section .theory-chunk-heading {
