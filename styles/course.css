@@ -185,7 +185,12 @@ main { width: min(1120px, calc(100% - 34px)); margin: -24px auto 60px; position:
 .lead { font-size: 1.1rem; color: #33465d; }
 .small-note { color: var(--muted); font-size: .88rem; margin-top: 18px !important; }
 
-.student-strip { display: grid; grid-template-columns: 1fr minmax(300px, 1.2fr) auto; gap: 22px; align-items: end; }
+.student-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-items: end;
+}
 .student-strip h2 { font-size: 1.35rem; margin-bottom: 4px; }
 .student-fields { display: grid; grid-template-columns: minmax(260px, 1.7fr) minmax(260px, 1.7fr) 1fr; gap: 12px; }
 .student-fields #student-class { width: 100%; }
