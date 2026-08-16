@@ -1,8 +1,39 @@
 (function () {
   "use strict";
-  if (document.querySelector(".course-family-nav")) return;
   const script = document.currentScript;
   const root = new URL("../", script && script.src ? script.src : location.href);
+
+  const loadSectionReferences = () => {
+    if (!document.querySelector("link[data-section-reference-styles]")) {
+      const stylesheet = document.createElement("link");
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = new URL("section-reference.css", root).href;
+      stylesheet.dataset.sectionReferenceStyles = "";
+      document.head.append(stylesheet);
+    }
+
+    const loadReferences = () => {
+      if (document.querySelector('script[src$="section-reference.js"]')) return;
+      const referenceScript = document.createElement("script");
+      referenceScript.src = new URL("section-reference.js", root).href;
+      document.head.append(referenceScript);
+    };
+
+    const existingCaptureScript = document.querySelector('script[src$="html2canvas.min.js"]');
+    if (existingCaptureScript) {
+      if (typeof window.html2canvas === "function") loadReferences();
+      else existingCaptureScript.addEventListener("load", loadReferences, { once: true });
+      return;
+    }
+
+    const captureScript = document.createElement("script");
+    captureScript.src = new URL("vendor/html2canvas.min.js", root).href;
+    captureScript.addEventListener("load", loadReferences, { once: true });
+    document.head.append(captureScript);
+  };
+
+  loadSectionReferences();
+  if (document.querySelector(".course-family-nav")) return;
   const stylesheetUrl = new URL("course-family-navigation.css?v=20260814", root).href;
   if (!document.querySelector("link[data-course-family-nav-styles]")) {
     const stylesheet = document.createElement("link");

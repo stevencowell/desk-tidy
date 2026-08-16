@@ -19,7 +19,7 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(1200px 700px at 15% -10%, color-mix(in srgb, var(--brand) 46%, transparent), transparent 60%),
+    radial-gradient(1200px 700px at 15% -10%, rgba(109, 99, 255, 0.46), transparent 60%),
     radial-gradient(1100px 800px at 90% 0%, rgba(56, 189, 248, 0.2), transparent 55%),
     radial-gradient(900px 700px at 50% 110%, rgba(34, 197, 94, 0.16), transparent 55%),
     var(--bg);
@@ -65,7 +65,7 @@ h1 { margin: 0 0 8px; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.15; }
 
 .topic-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
 .topic-nav a { padding: 7px 10px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); background: var(--panel); font-size: 0.78rem; text-decoration: none; }
-.topic-nav a:hover { color: var(--text); border-color: color-mix(in srgb, var(--brand) 62%, white); }
+.topic-nav a:hover { color: var(--text); border-color: #a49eff; }
 
 .table-card { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: linear-gradient(180deg, var(--panel), rgba(255, 255, 255, 0.035)); box-shadow: var(--shadow); backdrop-filter: blur(10px); }
 table { width: 100%; border-collapse: separate; border-spacing: 0; }
@@ -85,7 +85,7 @@ tbody tr:hover { background: rgba(255,255,255,.035); }
 .clip-overview { margin: 0; color: var(--muted); font-size: .86rem; line-height: 1.5; }
 .clip-source { margin: 8px 0 0; color: rgba(255,255,255,.62); font-size: .76rem; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-.button.primary { border-color: color-mix(in srgb, var(--brand) 62%, transparent); background: var(--brand-soft); }
+.button.primary { border-color: rgba(109, 99, 255, 0.62); background: var(--brand-soft); }
 .empty-state { margin: 0; padding: 28px 20px; color: var(--muted); text-align: center; }
 .source-note { margin: 14px 2px 0; color: var(--muted); font-size: .78rem; line-height: 1.45; }
 
