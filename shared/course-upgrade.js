@@ -198,7 +198,7 @@
     support.innerHTML = moduleKey === 'Weeks 1-2'
       ? `<div><p class="section-kicker">Project unit and evidence</p><h2>Use the project unit and save evidence</h2><p>Use the Desk Tidy Project Unit alongside the module, then open the folio when your evidence is ready.</p></div><div class="button-row"><a class="primary-button" href="../Desk-Tidy-Project-Unit.pdf" target="_blank" rel="noopener">Open Project Unit</a><a class="secondary-button" href="${data.folio}">Open mapped folio evidence</a></div>`
       : `<div><p class="section-kicker">Module learning pack</p><h2>Preview, learn and save evidence</h2><p>Download the eight-slide student presentation, then use the linked folio evidence card when your work is ready.</p></div><div class="button-row"><a class="primary-button" href="${data.presentation}" download>Download presentation</a><a class="secondary-button" href="${data.folio}">Open mapped folio evidence</a></div>`;
-    overview.insertAdjacentElement('beforebegin', support);
+    overview.insertAdjacentElement(moduleKey === 'Weeks 1-2' ? 'afterend' : 'beforebegin', support);
   }
 
   if (location.pathname.includes('/weeks9-10/')) {
