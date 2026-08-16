@@ -91,6 +91,12 @@
 
   const getTargets = () => {
     const selectors = [
+      "body > header",
+      "body > main",
+      "body > article",
+      "body > section",
+      "body > details",
+      "body > details article",
       "body > .hero",
       "main.page > .hero",
       "body > .desk-folio-hero",
@@ -111,7 +117,8 @@
     ];
 
     return Array.from(document.querySelectorAll(selectors.join(",")))
-      .filter((target) => target.id !== "folioCards");
+      .filter((target) => target.id !== "folioCards")
+      .filter((target) => target.tagName !== "MAIN" || target.querySelector("h1, h2, h3, p, img, form, table, article, section"));
   };
 
   const indexWithin = (target, selector) => {
@@ -128,6 +135,10 @@
   const getSectionKey = (target, index, parentTarget) => {
     if (target.tagName === "FOOTER") {
       return "FOOTER";
+    }
+
+    if (target.tagName === "HEADER" && target.parentElement === document.body) {
+      return "HERO";
     }
 
     if (target.classList.contains("question-card")) {
@@ -187,7 +198,7 @@
       return toCode(target.id, `SECTION-${index + 1}`);
     }
 
-    const heading = target.querySelector("h1, h2, h3, [aria-label]");
+    const heading = target.querySelector("h1, h2, h3, h4, summary, [aria-label]");
     const headingText = heading?.textContent || target.getAttribute("aria-label");
     return toCode(headingText, `SECTION-${String(index + 1).padStart(2, "0")}`);
   };
@@ -296,8 +307,12 @@
     const usedReferences = new Set();
 
     getTargets().forEach((target, index) => {
+      if (target.dataset.sectionReferenceTarget) {
+        usedReferences.add(target.dataset.sectionReferenceTarget);
+        return;
+      }
+
       let link = target.querySelector(":scope > .section-reference");
-      if (!link) link = target.querySelector(".section-reference");
 
       if (!link) {
         const parentTarget = target.parentElement?.closest("[data-section-reference-target]");
@@ -322,6 +337,10 @@
         ]
           .some((className) => target.classList.contains(className));
         const isOverlayTarget = target.matches(".hero, .desk-folio-hero, .library-header, .exam-header, footer");
+        const parentLayout = target.parentElement ? getComputedStyle(target.parentElement).display : "";
+        if (["grid", "inline-grid", "flex", "inline-flex"].includes(parentLayout)) {
+          target.classList.add("section-reference-layout-safe");
+        }
         const placement = target.tagName === "TR"
           ? target.firstElementChild
           : target.classList.contains("folio-card")
@@ -348,4 +367,12 @@
   } else {
     init();
   }
+
+  let initTimer;
+  const observer = new MutationObserver((mutations) => {
+    if (!mutations.some((mutation) => mutation.addedNodes.length)) return;
+    window.clearTimeout(initTimer);
+    initTimer = window.setTimeout(init, 80);
+  });
+  observer.observe(document.documentElement, { childList: true, subtree: true });
 })();
