@@ -25,9 +25,9 @@
   flex-direction: column !important;
   justify-content: center !important;
   width: 100% !important;
-  height: 124px !important;
-  min-height: 124px !important;
-  max-height: 124px !important;
+  height: auto !important;
+  min-height: 148px !important;
+  max-height: none !important;
   margin: 0 !important;
   padding: 16px 54px 16px 78px !important;
   overflow: hidden !important;
@@ -172,9 +172,9 @@
   :where(.week-grid, .module-grid, .module-map, #module-grid, [data-module-grid], #pathway .grid)
     > :where(.week-card, .phase-card, .module-card, .module-tile, article, a),
   :where(.module-grid, .module-map) > li > :where(.module-card, .module-tile, a) {
-    height: 124px !important;
-    min-height: 124px !important;
-    max-height: 124px !important;
+    height: auto !important;
+    min-height: 148px !important;
+    max-height: none !important;
     padding: 16px 50px 16px 72px !important;
   }
 
