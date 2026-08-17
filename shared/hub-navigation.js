@@ -60,7 +60,7 @@
     ["Course", "index.html", isHome],
     ["Modules", "index.html#course-map-title", /\/weeks\d+-\d+\//.test(path)],
     ["Video learning", "youtube-library/video-library.html", path.includes("/youtube-library/")],
-    ["Busy Work", "https://stevencowell.github.io/busy-worksheets/?library=timber", false, true],
+    ["Puzzles", "https://stevencowell.github.io/busy-worksheets/?library=timber", false, true],
     ["My folio", "desk-tidy-folio.html", path.endsWith("/desk-tidy-folio.html")],
     ["Project unit", "Desk-Tidy-Project-Unit.pdf", false],
     ["Teacher resources", "teacher-resources.html", path.endsWith("/teacher-resources.html")],

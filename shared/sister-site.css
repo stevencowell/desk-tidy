@@ -90,24 +90,7 @@
   color: #173f28;
 }
 
-/* Match the Riv Burger course navigation geometry. */
-.course-family-nav { box-sizing: border-box; height: 67px; }
-.course-family-nav__inner { height: 66px; max-width: 1180px; min-height: 66px; padding: .5rem 1rem; gap: 1rem; }
-.course-family-nav__brand { font-size: 1rem; gap: .65rem; }
-.course-family-nav__mark { height: 2.2rem; width: 2.2rem; font-size: .72rem; }
-.course-family-nav__links { gap: .3rem; }
-.course-family-nav__links a { padding: .5rem .7rem; border-radius: 10px; font-size: 1rem; font-weight: 700; }
-
 .has-course-family-nav .site-header { display: none; }
-
-@media (max-width: 780px) {
-  .course-family-nav { position: relative; }
-  .course-family-nav__inner { display: grid; gap: 0.6rem; min-height: 0; padding: 0.7rem 0.8rem 0.55rem; }
-  .course-family-nav__brand { font-size: 1rem; }
-  .course-family-nav__mark { height: 36px; width: 36px; }
-  .course-family-nav__links { flex-wrap: nowrap; margin-inline: -0.8rem; overflow-x: auto; padding: 0 0.8rem 0.45rem; scrollbar-width: thin; }
-  .course-family-nav__links a { flex: 0 0 auto; font-size: 0.92rem; padding: 0.62rem 0.72rem; }
-}
 
 @media print {
   .course-family-nav { display: none !important; }
