@@ -37,19 +37,19 @@
     'Weeks 3-4': {
       presentation: '../presentations/desk-tidy-weeks-3-4.pptx', folio: '../desk-tidy-folio.html#folio-3', slices: [[0, 3], [3, 8], [8, 12]], sections: [
         { id: 'research-concepts', video: ['BiwmJ4t2KWM', 'Turning ideas into clear design communication', 'Riaan Meeser'], items: [
-          ['Why analyse existing organisers without copying them?', 'To identify useful principles and shortcomings for an original response', ['To reproduce the same layout', 'To avoid generating alternatives', 'To replace the design brief'], 'Research should inform decisions while the final concept remains the student\'s own response.'],
+          ['What should research reveal about how an organiser was created?', 'How designer, producer and manufacturer decisions shaped the product or system', ['Only its retail price', 'Only the final colour', 'Only the product name'], 'Research should connect design decisions with the materials, processes and production roles used to make the product.'],
           ['What should annotations beside a concept sketch explain?', 'How features respond to the user, criteria and manufacture', ['Only the colour name', 'The final mark', 'Another student\'s opinion'], 'Annotations make the reasoning behind features visible and testable.'],
           ['Why generate four genuinely different concepts?', 'Different arrangements allow meaningful comparison before commitment', ['Four copies prove accuracy', 'It removes teacher approval', 'It fixes exact dimensions'], 'Variation expands the solution space and exposes trade-offs.'],
           ['Which change creates a genuine alternative?', 'Reorganising compartment relationships for a different user priority', ['Redrawing the same form darker', 'Changing only the title', 'Tracing the reference image'], 'A genuine alternative changes how the solution responds to the problem.'],
           ['Why include quick dimensions or proportions in concept development?', 'They help test whether the arrangement is realistic', ['They make working drawings unnecessary', 'They permit scaling from a picture', 'They guarantee material choice'], 'Early proportion checks expose impractical layouts before detailed development.'],
           ['What is the best use of feedback during concept development?', 'Revise a feature and record why the change improves the response', ['Accept every suggestion automatically', 'Erase all earlier evidence', 'Use feedback only after finishing'], 'Feedback is useful when it is evaluated against the brief and documented.'],
-          ['Which research note is most useful?', 'This divider improves access but may reduce space for larger items', ['This one is nice', 'Copy this exactly', 'Blue is best'], 'Useful research identifies a feature, benefit and possible trade-off.']
+          ['What is the safest ethical and legal response before reusing an online image, plan or design?', 'Record the source, check copyright or licence conditions and ask when permission is unclear', ['Assume public access means permission', 'Remove the creator name', 'Reuse it if it looks educational'], 'Public access is not automatic permission; attribution, copyright, licences and permission must be considered.']
         ]},
-        { id: 'compare-concepts', video: ['BiwmJ4t2KWM', 'Presenting and comparing design information', 'Riaan Meeser'], items: [
+        { id: 'compare-concepts', video: ['xO7xJ1sTyPI', 'Decision Matrix Analysis', 'Mindtools Kineo'], items: [
           ['Why should a decision matrix use the same criteria for every concept?', 'A common basis makes the comparison fair', ['It guarantees the teacher\'s favourite wins', 'It removes the need for judgement', 'It hides trade-offs'], 'Consistent criteria make scores comparable across alternatives.'],
           ['What should a high score in a decision matrix represent?', 'Strong evidence that the concept meets the named criterion', ['The concept drawn first', 'The most colourful page', 'The largest number of features'], 'Scores need evidence and must connect directly to the criterion.'],
           ['Why may the highest total still need discussion?', 'Weighting, evidence quality and serious weaknesses can affect the decision', ['Totals are never useful', 'The matrix should be ignored', 'The lowest score always wins'], 'A matrix supports judgement; it does not replace reasoned interpretation.'],
-          ['What is a sound reason to combine features from two concepts?', 'The combined features better satisfy different criteria without creating new conflicts', ['It makes the drawing busier', 'It avoids explaining the choice', 'It copies both concepts unchanged'], 'Development should improve the response while checking new trade-offs.'],
+          ['Why create a prototype, model or sample before final drawings?', 'To test an uncertain feature and refine the concept using evidence', ['To replace all research', 'To avoid teacher approval', 'To make the final product immediately'], 'A focused prototype, model or sample makes an idea testable before final decisions are locked in.'],
           ['What should be recorded after teacher feedback?', 'The decision, the reason and any approved design change', ['Only the teacher\'s initials', 'A new mark estimate', 'Nothing once a concept is selected'], 'A clear decision trail shows how evidence and feedback shaped the approved design.']
         ]},
         { id: 'respectful-design', video: ['W6zGG6tYGr0', 'Protecting Indigenous Cultural and Intellectual Property rights', 'Australian Government'], items: [
@@ -152,15 +152,13 @@
   if (!data || !Array.isArray(window.MC_QUESTIONS)) return;
 
   const usedVideoIds = new Set();
-  Object.values(moduleData).forEach(module => {
-    module.sections.forEach(section => {
-      if (!section.video) return;
-      if (usedVideoIds.has(section.video[0])) {
-        section.video = null;
-        return;
-      }
-      usedVideoIds.add(section.video[0]);
-    });
+  data.sections.forEach(section => {
+    if (!section.video) return;
+    if (usedVideoIds.has(section.video[0])) {
+      section.video = null;
+      return;
+    }
+    usedVideoIds.add(section.video[0]);
   });
 
   function questionFromTuple(tuple, sectionId, index) {
@@ -189,7 +187,9 @@
     expanded.push(...group);
   });
   window.MC_QUESTIONS = expanded;
-  window.LESSON_CONFIG.storageKey = window.LESSON_CONFIG.storageKey.replace(/-v1$/, '-v2');
+  window.LESSON_CONFIG.storageKey = moduleKey === 'Weeks 3-4'
+    ? window.LESSON_CONFIG.storageKey.replace(/-v\d+$/, '-v3')
+    : window.LESSON_CONFIG.storageKey.replace(/-v1$/, '-v2');
 
   const overview = document.querySelector('main .lesson-overview');
   if (overview) {

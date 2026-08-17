@@ -222,8 +222,8 @@ window.MC_QUESTIONS=[
 ];
 window.WRITTEN_QUESTIONS=[
   {
-    "title": "1. Research two organisers",
-    "prompt": "Compare two organiser examples without copying them. Record what each teaches you about function, access, stability or manufacture.",
+    "title": "1. Research products, systems and production roles",
+    "prompt": "Compare two organiser examples. Identify evidence of designer, producer or manufacturer decisions, then explain one ethical or legal responsibility when using the research.",
     "minWords": 70,
     "concepts": [
       {
@@ -236,47 +236,47 @@ window.WRITTEN_QUESTIONS=[
         ]
       },
       {
-        "label": "comparison",
+        "label": "production roles",
         "terms": [
-          "compare",
-          "different",
-          "whereas"
+          "designer",
+          "producer",
+          "manufacturer"
         ]
       },
       {
-        "label": "design lesson",
+        "label": "ethical or legal responsibility",
         "terms": [
-          "function",
-          "access",
-          "stable",
-          "manufacture"
+          "attribution",
+          "copyright",
+          "licence",
+          "permission"
         ]
       }
     ],
     "scaffold": [
-      "Source A shows...",
-      "Source B differs because...",
-      "A general lesson I could transform is..."
+      "The designer shaped...",
+      "A producer or manufacturer would...",
+      "My ethical or legal responsibility is..."
     ],
     "prompts": [
-      "Source A shows...",
-      "Source B differs because...",
-      "A general lesson I could transform is..."
+      "The designer shaped...",
+      "A producer or manufacturer would...",
+      "My ethical or legal responsibility is..."
     ],
-    "model": "One organiser uses open compartments for quick access, while another contains small loose items. I would record both sources and apply the general lesson of matching storage type to item size. I would create my own layout for the intended user rather than copying either product."
+    "model": "Product A uses removable dividers, showing a designer response to changing storage needs. Its repeated grooves suggest that a manufacturer planned a consistent machining process. I would record the creator and link, check the image licence and seek permission if reuse conditions were unclear rather than treating public access as permission."
   },
   {
-    "title": "2. Compare four concepts",
-    "prompt": "Explain how your four concepts differ and identify the strongest evidence for one preferred direction.",
+    "title": "2. Compare concepts and test a model",
+    "prompt": "Use evidence to select one concept. Propose a teacher-approved prototype, model or sample, explain what it will test and state how the result could refine the concept.",
     "minWords": 70,
     "concepts": [
       {
-        "label": "four concepts",
+        "label": "design and creative thinking",
         "terms": [
-          "concept 1",
-          "concept 2",
-          "concept 3",
-          "concept 4"
+          "alternative",
+          "combine",
+          "creative",
+          "develop"
         ]
       },
       {
@@ -289,25 +289,26 @@ window.WRITTEN_QUESTIONS=[
         ]
       },
       {
-        "label": "trade-off",
+        "label": "prototype evidence",
         "terms": [
-          "trade-off",
-          "however",
-          "although"
+          "prototype",
+          "model",
+          "sample",
+          "test"
         ]
       }
     ],
     "scaffold": [
-      "My four concepts differ by...",
-      "Against the criteria...",
-      "The main trade-off is..."
+      "My selected concept is... because...",
+      "The uncertainty I need to test is...",
+      "My prototype, model or sample will..."
     ],
     "prompts": [
-      "My four concepts differ by...",
-      "Against the criteria...",
-      "The main trade-off is..."
+      "My selected concept is... because...",
+      "The uncertainty I need to test is...",
+      "My prototype, model or sample will..."
     ],
-    "model": "The four concepts vary in layout, access and overall form. Concept 3 best meets the user's storage and stability criteria while using material efficiently. It is less decorative than Concept 2, but its simpler construction is realistic for the available time and skills."
+    "model": "I would develop Concept 2 because it gives the best access and stability, although its angled front requires accurate marking. With teacher approval, I would make a full-size card model of the front and compartments. I would photograph an access test, measure whether the intended items fit and refine the angle or spacing before completing the working drawing."
   },
   {
     "title": "3. Justify a preferred design",
