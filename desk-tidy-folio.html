@@ -25,6 +25,16 @@
       <div><p class="section-kicker">Evidence first</p><h2>Show the decisions, process and result</h2><p>A strong folio shows what you planned, the evidence you collected, what changed and what the finished Desk Tidy proves. Honest, specific evidence beats perfect-sounding waffle.</p></div>
       <ol class="folio-routine"><li><strong>1. Collect</strong><span>Take a useful photo, sketch or note.</span></li><li><strong>2. Explain</strong><span>Say what it proves and why it matters.</span></li><li><strong>3. Back up</strong><span>Download your ZIP before changing devices.</span></li></ol>
     </section>
+    <nav class="folio-pathway card" aria-label="Folio evidence pathway">
+      <div><p class="section-kicker">Jump to current evidence</p><h2>Five module checkpoints</h2><p>Open the first relevant card, then continue through the evidence sequence.</p></div>
+      <div class="folio-pathway-links">
+        <a href="#folio-1">Module 1 · Brief</a>
+        <a href="#folio-2">Module 2 · Concepts</a>
+        <a href="#folio-5">Module 3 · Drawings</a>
+        <a href="#folio-8">Module 4 · Production</a>
+        <a href="#folio-11">Module 5 · Finish and test</a>
+      </div>
+    </nav>
     <section class="folio-controls card" aria-labelledby="student-details-heading">
       <div><p class="section-kicker">Your session</p><h2 id="student-details-heading">Student details and saving</h2><p id="folioStatus" role="status">Ready. Autosave is on.</p></div>
       <div class="folio-details"><label>First name<input id="studentFirst" type="text" autocomplete="given-name"></label><label>Last name<input id="studentLast" type="text" autocomplete="family-name"></label><label>Class<input id="studentClass" type="text"></label><label>Date<input id="sessionDate" type="date"></label></div>
@@ -32,7 +42,13 @@
       <div class="folio-progress" aria-label="Folio progress"><div><strong id="progressCount">0 of 12 evidence cards complete</strong><span id="progressHint">Add a response and evidence note to complete a card.</span></div><div class="progress-track"><span id="progressBar"></span></div></div>
     </section>
     <section class="folio-submission card"><div><p class="section-kicker">When your teacher asks</p><h2>Submit your evidence</h2><p>Download the ZIP backup containing your answers and attached photos, then submit it using the method your teacher provides.</p></div><div class="submission-badge">ZIP<br><span>answers + photos</span></div></section>
-    <section id="folioCards" class="folio-cards" aria-label="Desk Tidy project folio evidence cards"></section>
+    <section id="folioCards" class="folio-cards" aria-label="Desk Tidy project folio evidence cards">
+      <!-- Static link targets are replaced by the complete interactive cards when JavaScript loads. -->
+      <article id="folio-1" hidden></article><article id="folio-2" hidden></article><article id="folio-3" hidden></article>
+      <article id="folio-4" hidden></article><article id="folio-5" hidden></article><article id="folio-6" hidden></article>
+      <article id="folio-7" hidden></article><article id="folio-8" hidden></article><article id="folio-9" hidden></article>
+      <article id="folio-10" hidden></article><article id="folio-11" hidden></article><article id="folio-12" hidden></article>
+    </section>
   </main>
   <footer><p>Desk Tidy Guided Course | Stage 4 Technology Mandatory</p></footer>
   <script src="scripts/desk-tidy-folio.js"></script>

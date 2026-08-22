@@ -59,9 +59,10 @@
   const items = [
     ["Course", "index.html", isHome],
     ["Modules", "index.html#course-map-title", /\/weeks\d+-\d+\//.test(path)],
+    ["Activities", "activities/index.html", path.includes("/activities/")],
     ["Video learning", "youtube-library/video-library.html", path.includes("/youtube-library/")],
-    ["Puzzles", "https://stevencowell.github.io/busy-worksheets/?library=timber", false, true],
     ["My folio", "desk-tidy-folio.html", path.endsWith("/desk-tidy-folio.html")],
+    ["Assessment", "assessment/index.html", path.includes("/assessment/") || path.endsWith("/assessment-pathway-2026.html")],
     ["Project unit", "Desk-Tidy-Project-Unit.pdf", false],
     ["Teacher resources", "teacher-resources.html", path.endsWith("/teacher-resources.html")],
     ["Main Menu", "https://stevencowell.github.io/Main-Page/", false, true]

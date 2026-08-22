@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Source-grounded formative activities for the Desk Tidy guided course.">
+  <title>Applied Learning Activities | Desk Tidy</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../shared/hub-navigation.js" defer></script>
+</head>
+<body data-page="bank">
+  <a class="skip-link" href="#main-content">Skip to activities</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Desk Tidy activity navigation">
+      <a class="course-mark" href="../index.html"><span aria-hidden="true">DT</span><strong>Desk Tidy</strong></a>
+      <div class="nav-links">
+        <a href="../index.html">Course home</a>
+        <a href="index.html" aria-current="page">Activities</a>
+        <a href="../desk-tidy-folio.html">Project folio</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="bank-hero">
+      <div class="bank-hero__inner">
+        <p class="eyebrow">Applied learning · formative practice only</p>
+        <h1>Desk Tidy activity bank</h1>
+        <p class="hero-lede">Short, practical rehearsals for the decisions students make across the complete Desk Tidy project—from the brief and material evidence to production planning, testing and reflection.</p>
+        <div class="hero-actions">
+          <a class="button button--light" href="#activity-bank">Choose an activity</a>
+          <button class="button button--ghost" id="print-bank" type="button">Print activity list</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="notice" aria-labelledby="practice-notice-title">
+      <div>
+        <p class="section-kicker">What these records mean</p>
+        <h2 id="practice-notice-title">Practice stays in this browser</h2>
+      </div>
+      <p>Progress is saved only on this device and browser. It is formative practice—not formal assessment, folio submission, teacher-observed evidence or a VET competency decision.</p>
+    </section>
+
+    <section class="bank-section" id="activity-bank" aria-labelledby="bank-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Five modules · fifteen activities</p>
+          <h2 id="bank-title">Choose the rehearsal you need</h2>
+        </div>
+        <div class="progress-summary" aria-live="polite">
+          <strong id="bank-progress">0 of 15</strong>
+          <span>mastered in this browser</span>
+        </div>
+      </div>
+
+      <div class="bank-toolbar screen-only">
+        <div class="filter-group" role="group" aria-label="Filter activities by module" id="module-filters"></div>
+        <button class="text-button danger-link" id="reset-bank" type="button">Reset all activity records</button>
+      </div>
+
+      <div id="activity-grid" class="activity-grid" aria-live="polite"></div>
+      <noscript><p class="error-panel">JavaScript is needed for the interactive bank. Use your browser's print command to print this page, or ask your teacher for the low-tech activity version.</p></noscript>
+    </section>
+
+    <section class="low-tech-callout">
+      <div>
+        <p class="section-kicker">No device or limited access?</p>
+        <h2>Every activity has a printable version</h2>
+        <p>Open an activity and choose <strong>Printable / low-tech version</strong>. The printable sheet keeps the same concept and leaves space to sort, order, match or explain by hand.</p>
+      </div>
+      <a class="button button--dark" href="activity.html?id=brief-to-criteria">See an example</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Desk Tidy Applied Learning Activities · browser-local formative practice</p>
+    <a href="../index.html">Return to course home</a>
+  </footer>
+
+  <script src="activity-data.js"></script>
+  <script src="bank.js"></script>
+</body>
+</html>

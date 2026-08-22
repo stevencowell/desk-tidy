@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive formative practice for the Desk Tidy guided course.">
+  <title>Activity | Desk Tidy</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../shared/hub-navigation.js" defer></script>
+</head>
+<body data-page="activity">
+  <a class="skip-link" href="#main-content">Skip to activity</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Desk Tidy activity navigation">
+      <a class="course-mark" href="../index.html"><span aria-hidden="true">DT</span><strong>Desk Tidy</strong></a>
+      <div class="nav-links">
+        <a href="../index.html">Course home</a>
+        <a href="index.html" aria-current="page">Activities</a>
+        <a href="../desk-tidy-folio.html">Project folio</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="activity-shell">
+    <p id="loading-message" class="loading-panel">Loading activity…</p>
+    <section id="activity-root" hidden>
+      <nav class="breadcrumbs" aria-label="Activity breadcrumbs">
+        <a href="index.html">Activity bank</a>
+        <span aria-hidden="true">/</span>
+        <a id="module-breadcrumb" href="../index.html">Module</a>
+      </nav>
+
+      <header class="activity-hero">
+        <p class="eyebrow" id="activity-module"></p>
+        <h1 id="activity-title"></h1>
+        <p class="activity-goal" id="activity-goal"></p>
+        <div class="activity-meta" id="activity-meta"></div>
+      </header>
+
+      <section class="lesson-placement" aria-labelledby="lesson-placement-title">
+        <div>
+          <p class="section-kicker">Where it belongs</p>
+          <h2 id="lesson-placement-title">Use this before applying the idea</h2>
+        </div>
+        <p id="activity-placement"></p>
+      </section>
+
+      <section class="practice-notice-inline" aria-label="Formative practice record">
+        <strong>Formative practice only.</strong>
+        <span>This browser-local record is not a submission, teacher observation, formal assessment or competency decision.</span>
+      </section>
+
+      <section class="activity-card" aria-labelledby="instructions-title">
+        <div class="activity-card__heading">
+          <div>
+            <p class="section-kicker">Instructions</p>
+            <h2 id="instructions-title">Practise the decision</h2>
+          </div>
+          <p class="save-indicator" id="save-indicator" role="status">Autosave is on</p>
+        </div>
+        <ol id="activity-instructions" class="instruction-list"></ol>
+        <details class="support-panel">
+          <summary>Need a nudge?</summary>
+          <p id="activity-support"></p>
+        </details>
+      </section>
+
+      <section class="activity-card workspace-card" aria-labelledby="workspace-title">
+        <div class="activity-card__heading">
+          <div>
+            <p class="section-kicker">Interactive workspace</p>
+            <h2 id="workspace-title">Your practice</h2>
+          </div>
+          <span class="mechanic-chip" id="mechanic-label"></span>
+        </div>
+        <div id="activity-workspace"></div>
+      </section>
+
+      <section id="activity-result" class="result-panel" aria-live="polite" hidden></section>
+
+      <div class="activity-actions screen-only">
+        <button class="button button--primary" id="check-activity" type="button">Check my practice</button>
+        <a class="button button--secondary" id="print-activity" href="print.html">Printable / low-tech version</a>
+        <button class="text-button danger-link" id="reset-activity" type="button">Reset this activity</button>
+      </div>
+
+      <nav class="activity-return" aria-label="Return links">
+        <a id="return-module" href="../index.html">Return to module</a>
+        <a href="index.html">Return to activity bank</a>
+      </nav>
+    </section>
+
+    <section id="activity-error" class="error-panel" hidden>
+      <h1>Activity not found</h1>
+      <p>The activity link is missing or no longer matches this bank.</p>
+      <a class="button button--primary" href="index.html">Open the activity bank</a>
+    </section>
+  </main>
+
+  <script src="activity-data.js"></script>
+  <script src="activity.js"></script>
+</body>
+</html>

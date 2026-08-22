@@ -110,40 +110,58 @@
 
   function downloadPdf() {
     const lines = [];
-    const add = (text = '', style = 'body') => lines.push({ text, style });
+    const add = (text = '', style = 'body', group = '') => lines.push({ text, style, group });
     add(config.title || document.title, 'title');
     add(`Student: ${state.studentName || 'Not provided'}`);
     add(`Class: ${state.studentClass || 'Not provided'}`);
     add(`Downloaded: ${new Date().toLocaleDateString('en-AU')}`);
     add('');
-    add('Knowledge checks', 'heading');
+    add('Knowledge checks', 'heading', 'mc-0');
     mcQuestions.forEach((item, index) => {
+      const group = `mc-${index}`;
       const saved = state.mc[index] || {};
       const answer = Number.isInteger(saved.selected) ? item.options[saved.selected] : 'No answer recorded';
-      add(`${index + 1}. ${item.question}`, 'label');
-      wrapPdfText(`Response: ${answer}`).forEach(text => add(text));
+      add(`${index + 1}. ${item.question}`, 'label', group);
+      wrapPdfText(`Response: ${answer}`).forEach(text => add(text, 'body', group));
     });
     add('');
-    add('Extended responses', 'heading');
+    add('Extended responses', 'heading', 'written-0');
     writtenQuestions.forEach((item, index) => {
+      const group = `written-${index}`;
       const saved = state.written[index] || {};
-      add(item.title, 'label');
-      wrapPdfText(item.prompt).forEach(text => add(text));
-      wrapPdfText(`Student response: ${saved.response || 'No response recorded.'}`).forEach(text => add(text));
-      add(`Self-assessment: ${Number.isInteger(saved.selfScore) ? `${saved.selfScore}/3` : 'Not selected'}`);
-      add('');
+      add(item.title, 'label', group);
+      wrapPdfText(item.prompt).forEach(text => add(text, 'body', group));
+      wrapPdfText(`Student response: ${saved.response || 'No response recorded.'}`).forEach(text => add(text, 'body', group));
+      add(`Self-assessment: ${Number.isInteger(saved.selfScore) ? `${saved.selfScore}/3` : 'Not selected'}`, 'body', group);
+      add('', 'body', group);
     });
 
     const pages = [[]];
     let lineCount = 0;
+    const blocks = [];
     lines.forEach(line => {
-      const cost = line.style === 'title' ? 2 : 1;
-      if (lineCount + cost > 48) {
+      const previous = blocks[blocks.length - 1];
+      if (line.group && previous?.group === line.group) {
+        previous.lines.push(line);
+      } else {
+        blocks.push({ group: line.group, lines: [line] });
+      }
+    });
+    blocks.forEach(block => {
+      const blockCost = block.lines.reduce((total, line) => total + (line.style === 'title' ? 2 : 1), 0);
+      if (lineCount > 0 && blockCost <= 48 && lineCount + blockCost > 48) {
         pages.push([]);
         lineCount = 0;
       }
-      pages[pages.length - 1].push(line);
-      lineCount += cost;
+      block.lines.forEach(line => {
+        const cost = line.style === 'title' ? 2 : 1;
+        if (lineCount + cost > 48) {
+          pages.push([]);
+          lineCount = 0;
+        }
+        pages[pages.length - 1].push(line);
+        lineCount += cost;
+      });
     });
 
     const objects = [null, '<< /Type /Catalog /Pages 2 0 R >>', ''];
@@ -639,5 +657,3 @@
 
   document.addEventListener('DOMContentLoaded', initialise);
 }());
-
-(() => { const script = document.createElement('script'); script.src = '/desk-tidy/shared/hub-navigation.js'; document.head.append(script); })();
