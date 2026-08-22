@@ -385,7 +385,7 @@ input[type="text"]:focus, textarea:focus { outline: 3px solid rgba(11,95,173,.18
   background: #f4f9fd !important;
 }
 
-.section-activity-link {
+.textbook-section .section-activity-link {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 18px;
@@ -770,8 +770,8 @@ footer p { margin: 3px; }
   .module-support-panel { display: block; min-height: 0; }
   .module-support-panel .button-row { margin-top: 18px; }
   .section-video { grid-template-columns: 1fr; padding: 18px !important; }
-  .section-activity-link { grid-template-columns: 1fr; padding: 16px; }
-  .section-activity-link .secondary-button { width: 100%; text-align: center; }
+  .textbook-section .section-activity-link { display: flex; flex-direction: column; align-items: stretch; padding: 16px; }
+  .section-activity-link .secondary-button { width: 100%; margin-top: 18px; text-align: center; }
   .video-shell[data-playing="true"] { min-height: 170px; }
   body { font-size: 16px; }
   .course-bar-inner { display: block; padding: 10px 0; }
