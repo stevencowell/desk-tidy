@@ -1,0 +1,169 @@
+{
+  "manifestType": "source-map",
+  "version": "1.0.0",
+  "issuedAt": "2026-08-23T00:00:00+10:00",
+  "verificationDate": "2026-08-23",
+  "course": {
+    "title": "Desk Tidy Guided Course",
+    "project": "Desk Tidy",
+    "cohort": "Years 7-8 / Stage 4",
+    "focusArea": "Materials and production processes",
+    "plannedDeliveryYear": 2027,
+    "sequence": "Five two-week modules across a ten-week, 25-period project"
+  },
+  "candidate": {
+    "repository": "https://github.com/stevencowell/desk-tidy.git",
+    "liveTarget": "https://stevencowell.github.io/desk-tidy/",
+    "branch": "main",
+    "head": "f8ff75e64663f5545df8ed92446de2e411b969c9",
+    "tree": "bfd6f8ecd5367d6c2a3a2fd02a73839883838fdf"
+  },
+  "canonicalBuildRecord": {
+    "artifact": "course-build/01-source-map/source-map-v1.0.0.json",
+    "sha256": "99D05C9395336A06E495E41A6BA6E0B1B5864F2E8CD8662301B515E042D8C883",
+    "issuedAt": "2026-08-22T00:00:00+10:00",
+    "role": "Controlling source contract for the accepted initial build; this Stage 20 record revalidates it against the current candidate without changing source authority."
+  },
+  "syllabusPathway": {
+    "authorityId": "SRC-NESA-TECH78-2023-LIVE",
+    "title": "Technology 7-8 Syllabus (2023)",
+    "status": "Current syllabus; implementation commenced in 2026",
+    "officialOverview": "https://curriculum.nsw.edu.au/learning-areas/tas/technology-7-8-2023/overview",
+    "officialOutcomes": "https://curriculum.nsw.edu.au/learning-areas/tas/technology-7-8-2023/outcomes",
+    "implementationAdvice": "https://education.nsw.gov.au/teaching-and-learning/curriculum/tas/planning-programming-and-assessing-tas-7-10/technology-7-8",
+    "outcomeCodeFamily": "TE4-*",
+    "selectedOutcomes": [
+      "TE4-SDP-01",
+      "TE4-PDP-01",
+      "TE4-MSC-01",
+      "TE4-PPM-01",
+      "TE4-DES-01",
+      "TE4-SAF-01"
+    ],
+    "decision": "Use the 2023 Technology 7-8 syllabus for the 2027 Desk Tidy delivery. Do not mix the outgoing 2017 outcome-code family into this course."
+  },
+  "authorities": [
+    {
+      "id": "SRC-PROJECT-UNIT-2025",
+      "title": "Stage 4 Technology Mandatory - desk tidy",
+      "locations": [
+        "Stage 4 Technology Mandatory - desk tidy (1).pdf",
+        "Desk-Tidy-Project-Unit.pdf"
+      ],
+      "sha256": "9D6B032846F458FF1AA517D2A080D48F19358296F5BA0E31C06B4D686ED706E7",
+      "revision": "Date/revision not printed in the supplied filename; stable source ID retained for existing activity traceability",
+      "authorityDomain": "Ten-week project sequence and the explicitly stated project requirements: orthographic and isometric working drawings; scale 1:10 orthographic views with dimensions; a cutting-list table containing part name, quantity, material and exact dimensions; teacher accuracy checking before production; and the stated material, joint, practice-slat, sanding, finish and functional-test facts",
+      "factBoundary": "Does not supply or authorise an actual construction drawing, component names or values, finished dimensions, completed component schedule, tolerances, fixed joint locations or current local workshop controls"
+    },
+    {
+      "id": "SRC-NESA-SYLLABUS-LOCAL-2025",
+      "title": "NESA Technology 7-8 Syllabus (2023) local copy",
+      "locations": [
+        "NESA - technology_7_8_2023 (S4).docx"
+      ],
+      "sha256": "447E1816FD87BF272999681BDECE572677E67F3840C2E9650FDBEE36E7727029",
+      "authorityDomain": "Stage 4 outcome wording and course requirements",
+      "liveCrossCheck": "SRC-NESA-TECH78-2023-LIVE"
+    },
+    {
+      "id": "SRC-NESA-SUPPORT-LOCAL-2025",
+      "title": "NESA Technology 7-8 syllabus support local copy",
+      "locations": [
+        "NESA - technology_7_8_2023 syllabus support (S4).docx"
+      ],
+      "sha256": "4A68AEFF524025C60CD8DC39172D586E5D141A587CA379551F23D609840EA516",
+      "authorityDomain": "Syllabus support and teaching/programming context",
+      "factBoundary": "Does not override the syllabus or create local practical and assessment decisions"
+    },
+    {
+      "id": "SRC-WWHS-Y8-HANDBOOK-2026",
+      "title": "Wagga Wagga High School Year 8 Assessment Handbook 2026 - Mandatory Technology schedule, page 14",
+      "sourceHub": "https://sites.google.com/education.nsw.gov.au/wwhsstudentparentinformation/curriculum-information/assessment-handbooks",
+      "sourceUrl": "https://drive.google.com/file/d/1CB0zF0ebeWrS2istL6cT7RX8tcgW6pae/view",
+      "retrievedLocation": "course-build source-audit/Year-8-Assessment-Booklet-2026.pdf",
+      "relevantPage": 14,
+      "sha256": "33D4275C3F773C96E66BEBEA7B84B4E740ED686232D46C20D82766FDBFB99C4C",
+      "verificationState": "Retrieved and verified on 2026-08-22; stable digest retained in the canonical source record",
+      "authorityDomain": "Latest verified 2026 subject-level weighting: Project and Practical 60%, Folio 25%, Design Knowledge 15%",
+      "factBoundary": "Not a 2027 Desk Tidy formal notification and not authority for dates, marks, criteria, conditions, adjustments, submission or unit contribution"
+    },
+    {
+      "id": "SRC-HERO-REFERENCE",
+      "title": "Original Desk Tidy reference image",
+      "locations": [
+        "desk tidy picture.png",
+        "assets/desk-tidy-reference.png"
+      ],
+      "sha256": "9F320B470AFDAFDA78C6EAEBFA48EBE354ABCB07FB24A2390BAD5182232BCBF0",
+      "authorityDomain": "Project identity and visual context only",
+      "factBoundary": "Not a dimensioned construction drawing, component schedule or design to copy"
+    },
+    {
+      "id": "SRC-PROGRAM-V1.3",
+      "title": "Desk Tidy 25-Period Teaching Program v1.3",
+      "locations": [
+        "resources/teacher/Desk-Tidy-25-Period-Teaching-Program-v1.3-Website-Complete-10pt.docx",
+        "resources/teacher/Desk-Tidy-25-Period-Teaching-Program-v1.3-Website-Complete-10pt.pdf"
+      ],
+      "sha256": {
+        "docx": "D6DC695B87B28559AA042977B0142B859EA1A75E6EEFF8D46960443C91173DC4",
+        "pdf": "82542869e83a8186528ecbfd1fc250186eac2f61a9ae4d83f5b2c3a1d571c2a6"
+      },
+      "authorityDomain": "Provisional 25-period delivery map and the existing website learning coverage used as an input to the accepted build",
+      "factBoundary": "School-developed teacher-review copy; does not independently authorise local practical or formal assessment decisions"
+    }
+  ],
+  "derivedOutputsAndUnclassifiedInputs": [
+    {
+      "path": "resources/teacher/Desk-Tidy-25-Period-Teaching-Program-v2.0-Plugin-Build.*",
+      "state": "Current backward-mapped teacher-review output produced from the integrated course and controlling sources; it does not retroactively replace SRC-PROGRAM-V1.3 as the activity build input or create new fact authority"
+    },
+    {
+      "path": "resources/teacher/Desk-Tidy-25-Period-Teaching-Program-v1.2-Website-Complete-10pt.*",
+      "state": "Superseded legacy material; retained and not controlling current integration"
+    },
+    {
+      "path": "Desk Tidy Tracking.xlsx",
+      "state": "Legacy tracking artefact; not used as curriculum, practical or assessment authority in this upgrade"
+    },
+    {
+      "path": "sections/",
+      "state": "Legacy site routes; not linked from the current course and excluded from parity evidence"
+    }
+  ],
+  "namedTheorySections": [
+    "Designing for an organised workspace",
+    "Hazards, risks and controls in the timber workshop",
+    "Choosing materials responsibly",
+    "Researching organisers and generating four concepts",
+    "Comparing concepts and justifying a preferred design",
+    "Learning respectfully from Aboriginal and Torres Strait Islander design knowledge",
+    "Communicating the selected design with working drawings",
+    "Cutting lists and a realistic production schedule",
+    "Datums and accurate marking out",
+    "Cutting and shaping components accurately",
+    "Butt, rebate and dowel joints in a Desk Tidy",
+    "Dry fitting, PVA assembly and surface preparation",
+    "Applying a clear finish safely and evenly",
+    "Functional testing against the design criteria",
+    "Evaluation, presentation and reflection"
+  ],
+  "visualCoverage": {
+    "target": 24,
+    "rationale": "The canonical source contract fixed a proportional target of 24 for this ten-week course with 15 named theory sections; add no filler and count each distinct substantive teaching visual once",
+    "acceptedCandidateCount": 24,
+    "exclusions": "Hero/reference duplication, video thumbnails, presentation decoration, legacy assets, alternate encodings and unplaced files do not count"
+  },
+  "teacherToConfirm": [
+    "2027 assessment schedule, Desk Tidy task applicability, formal notifications, dates, marks, criteria, conditions, adjustments and submission method",
+    "Approved construction drawing, component schedule, dimensions, tolerances, joint choices and variations",
+    "Current induction, OnGuard, SOP, SWMS, PPE, tools, supervision and workshop risk controls",
+    "Finish product instructions, SDS, finishing area, drying and storage",
+    "Submission, presentation and class-support arrangements"
+  ],
+  "publicationAuthority": {
+    "state": "not authorised",
+    "allowed": "Local preparation, testing and acceptance only",
+    "notAllowed": "Commit, push, deploy, live-site mutation or Main Page mutation"
+  }
+}

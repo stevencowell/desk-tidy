@@ -237,11 +237,89 @@
       const group = document.createElement('section');
       const headingId = `interleaved-check-title-${index + 1}`;
       group.className = 'card activity-section interleaved-check-group';
+      group.dataset.theorySection = theories[index].id;
       group.setAttribute('aria-labelledby', headingId);
       group.innerHTML = `<div class="activity-heading"><div><p class="section-kicker">Guided practice</p><h2 id="${headingId}">${escapeHtml(theories[index].querySelector('h2')?.textContent || `Theory ${index + 1}`)} knowledge checks</h2></div></div><div class="question-list"></div>`;
       group.querySelector('.question-list').append(...groupCards);
-      theories[index].insertAdjacentElement('afterend', group);
+      const activity = document.querySelector(`.section-activity-embed[data-activity-section="${theories[index].id}"]`);
+      (activity || theories[index]).insertAdjacentElement('afterend', group);
     });
+  }
+
+  function assertLearningPackageOrder(learningPackage) {
+    learningPackage.capstones.forEach(entry => {
+      const ordered = [
+        document.getElementById(entry.sectionId),
+        document.querySelector(`.section-activity-embed[data-activity-section="${entry.sectionId}"]`),
+        document.querySelector(`.interleaved-check-group[data-theory-section="${entry.sectionId}"]`),
+        document.querySelector(`.interleaved-written-group[data-theory-section="${entry.sectionId}"]`)
+      ];
+      if (ordered.some(element => !element)) {
+        throw new Error(`${learningPackage.moduleKey || config.resetLabel || 'This module'} has an incomplete learning package for ${entry.sectionId}.`);
+      }
+      if (ordered[2].querySelectorAll('.question-card').length !== 10) {
+        throw new Error(`${learningPackage.moduleKey || config.resetLabel || 'This module'} must place exactly 10 checks after ${entry.sectionId}.`);
+      }
+      const renderedWrittenIndices = [...ordered[3].querySelectorAll('.written-card')].map(card => Number(card.dataset.writtenIndex));
+      if (JSON.stringify(renderedWrittenIndices) !== JSON.stringify(entry.writtenIndices)) {
+        throw new Error(`${learningPackage.moduleKey || config.resetLabel || 'This module'} changed the mapped written indices for ${entry.sectionId}.`);
+      }
+      for (let index = 0; index < ordered.length - 1; index += 1) {
+        if (!(ordered[index].compareDocumentPosition(ordered[index + 1]) & Node.DOCUMENT_POSITION_FOLLOWING)) {
+          throw new Error(`${learningPackage.moduleKey || config.resetLabel || 'This module'} learning package order is invalid for ${entry.sectionId}.`);
+        }
+      }
+    });
+  }
+
+  function interleaveWrittenQuestions() {
+    const source = document.getElementById('written-questions');
+    const learningPackage = window.DESK_TIDY_LEARNING_PACKAGE;
+    if (!source || !Array.isArray(learningPackage?.capstones)) return;
+
+    const existingGroups = [...document.querySelectorAll('.interleaved-written-group')];
+    const freshCards = [...source.querySelectorAll(':scope > .written-card')];
+    const cards = freshCards.length ? freshCards : existingGroups.flatMap(group => [...group.querySelectorAll('.written-card')]);
+    existingGroups.forEach(group => group.remove());
+
+    const cardByIndex = new Map(cards.map(card => [Number(card.dataset.writtenIndex), card]));
+    const mappedIndices = learningPackage.capstones.flatMap(entry => entry.writtenIndices);
+    const expectedIndices = writtenQuestions.map((_, index) => index);
+    if (new Set(mappedIndices).size !== mappedIndices.length ||
+        JSON.stringify(mappedIndices.slice().sort((a, b) => a - b)) !== JSON.stringify(expectedIndices) ||
+        cardByIndex.size !== expectedIndices.length) {
+      throw new Error(`${learningPackage.moduleKey || config.resetLabel || 'This module'} must place every written capstone exactly once by its original index.`);
+    }
+
+    learningPackage.capstones.forEach((entry, groupIndex) => {
+      const theory = document.getElementById(entry.sectionId);
+      if (!theory) throw new Error(`No theory section found for written capstone mapping ${entry.sectionId}.`);
+      const group = document.createElement('section');
+      const headingId = `interleaved-written-title-${groupIndex + 1}`;
+      const paired = entry.writtenIndices.length > 1;
+      group.className = 'card activity-section interleaved-written-group';
+      group.dataset.theorySection = entry.sectionId;
+      group.setAttribute('aria-labelledby', headingId);
+      group.innerHTML = `<div class="activity-heading"><div><p class="section-kicker">${escapeHtml(entry.label || 'Written capstone')}</p><h2 id="${headingId}">${paired ? 'Complete these connected capstones' : 'Apply this section in a capstone'}</h2><p class="muted">${paired ? 'These two responses draw on the same theory section. Complete both in order.' : 'Use the theory, feedback and activity evidence above before writing.'} Your response autosaves under its original question number.</p></div></div><div class="written-list"></div>`;
+      group.querySelector('.written-list').append(...entry.writtenIndices.map(index => cardByIndex.get(index)));
+      const activity = document.querySelector(`.section-activity-embed[data-activity-section="${entry.sectionId}"]`);
+      const checks = document.querySelector(`.interleaved-check-group[data-theory-section="${entry.sectionId}"]`);
+      (checks || activity || theory).insertAdjacentElement('afterend', group);
+    });
+
+    source.hidden = true;
+    const summary = source.closest('#written-application');
+    if (summary && summary.dataset.interleavedSummary !== 'true') {
+      summary.dataset.interleavedSummary = 'true';
+      summary.classList.add('module-written-summary');
+      const kicker = summary.querySelector('.section-kicker');
+      const heading = summary.querySelector('h2');
+      const copy = summary.querySelector('.muted');
+      if (kicker) kicker.textContent = 'Written evidence progress';
+      if (heading) heading.textContent = 'Capstones are placed with the learning';
+      if (copy) copy.textContent = 'Complete the four autosaving capstones beside their mapped theory, applied activity and checks. This panel summarises progress only.';
+    }
+    assertLearningPackageOrder(learningPackage);
   }
 
   function renderMcQuestions() {
@@ -338,6 +416,7 @@
           </div>
         </article>`;
     }).join('');
+    interleaveWrittenQuestions();
     window.requestAnimationFrame(autoGrowAllTextareas);
   }
 
@@ -545,15 +624,12 @@
   }
 
   function bindGlobalActions() {
-    const mc = document.querySelector('main');
-    const written = document.getElementById('written-questions');
-    if (mc) {
-      mc.addEventListener('click', handleMcClick);
-      mc.addEventListener('change', handleMcChange);
-    }
-    if (written) {
-      written.addEventListener('input', handleWrittenInput);
-      written.addEventListener('click', handleWrittenClick);
+    const main = document.querySelector('main');
+    if (main) {
+      main.addEventListener('click', handleMcClick);
+      main.addEventListener('change', handleMcChange);
+      main.addEventListener('input', handleWrittenInput);
+      main.addEventListener('click', handleWrittenClick);
     }
 
     const printButton = document.getElementById('print-button');

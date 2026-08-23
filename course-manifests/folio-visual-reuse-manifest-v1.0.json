@@ -1,0 +1,139 @@
+{
+  "manifestType": "folio-visual-reuse-manifest",
+  "version": "1.0.0",
+  "issuedAt": "2026-08-23T00:00:00+10:00",
+  "courseVisualManifest": {
+    "artifact": "course-build/08-visuals/visual-production-manifest-v1.0.0.json",
+    "sha256": "3c1dc90618ec952e927f8653e846c616f9dbd791e339160061ed0faf8caea9b1",
+    "deduplicatedQualifyingCount": 24
+  },
+  "implementation": {
+    "script": "scripts/desk-tidy-folio-infographics.js",
+    "scriptSha256": "6b9411b476fa23997b179ef0f91a1686d19208dc73f8bc312a873406bddff786",
+    "style": "styles/desk-tidy-folio-infographics.css",
+    "styleSha256": "632e093ac470417d36477831e9f18618f2577512737d52c4f42c5a45b7697649"
+  },
+  "retiredPlacement": {
+    "asset": "assets/folio/desk-tidy-folio-cards.png",
+    "sha256": "e79eb70ef41d58475d32d4c66c64473d8acce5fc32380eabbdbd06954f993947",
+    "state": "Retained as an unplaced legacy file; the sprite preload, crop code and crop styling are removed",
+    "counting": "Does not count toward current teaching-visual coverage"
+  },
+  "reuseRule": "Each placement reuses an already approved course visual for a distinct folio evidence-support purpose. These placements do not increase the deduplicated course count above 24.",
+  "placements": [
+    {
+      "cardKey": "brief",
+      "visualId": "VIS-DT-016",
+      "asset": "assets/learning/support-user-storage-criteria.webp",
+      "purpose": "Connect the student's own user research to capacity, access and separation evidence.",
+      "alt": "Illustrative timber organiser holding pens, clips and a cable, shown only as a prompt for comparing storage needs.",
+      "caption": "Use the items as an evidence prompt: the student's own user notes and criteria, not this illustrative organiser, control the design.",
+      "notice": "Which intended items need quick access, containment or separation in the student's own brief?"
+    },
+    {
+      "cardKey": "concepts",
+      "visualId": "VIS-DT-004",
+      "asset": "assets/learning/section-04-four-concept-sketches.webp",
+      "purpose": "Check that the student's concept evidence shows genuine divergence rather than cosmetic variations.",
+      "alt": "Illustrative sketchbook with four different desk organiser concepts; none is approved or intended to copy.",
+      "caption": "The image models difference between early concepts only; it is not an approved design or a source to copy.",
+      "notice": "Does the evidence show meaningful differences in form, layout or use between all four original concepts?"
+    },
+    {
+      "cardKey": "selection",
+      "visualId": "VIS-DT-005",
+      "asset": "assets/learning/section-05-concept-comparison-matrix.webp",
+      "purpose": "Prompt a consistent evidence-led comparison without preselecting a design.",
+      "alt": "Four generic organiser concept cards beside a blank comparison matrix with no winner selected.",
+      "caption": "The blank matrix models consistent comparison only; the student's criteria, evidence and teacher approval determine the preferred direction.",
+      "notice": "Can each score or judgement be traced back to the same criteria?"
+    },
+    {
+      "cardKey": "culture",
+      "visualId": "VIS-DT-006",
+      "asset": "assets/learning/section-06-respectful-research-workflow.webp",
+      "purpose": "Check that the research record shows context, attribution and an original response.",
+      "alt": "Four-stage research, listening, attribution and original-response workflow with no cultural motifs.",
+      "caption": "Use this workflow to check source-record integrity; it does not authorise copying cultural imagery or knowledge.",
+      "notice": "Does the evidence name the source and context, record attribution and show an original response?"
+    },
+    {
+      "cardKey": "drawings",
+      "visualId": "VIS-DT-007",
+      "asset": "assets/learning/section-07-orthographic-view-relationship.webp",
+      "purpose": "Check alignment and consistency between the student's own approved drawing views.",
+      "alt": "Generic stepped block linked to matching front, top and side views; it is not a Desk Tidy plan.",
+      "caption": "The generic view relationship supplies no Desk Tidy geometry or dimensions; it only supports checking how the student's own views communicate one form.",
+      "notice": "Do corresponding edges align, and do written dimensions come from the teacher-approved design?"
+    },
+    {
+      "cardKey": "schedule",
+      "visualId": "VIS-DT-008",
+      "asset": "assets/learning/section-08-drawing-list-schedule-flow.webp",
+      "purpose": "Trace the student's part and sequence evidence back to approved design information.",
+      "alt": "Generic flow from a checked abstract drawing to a blank parts table and production-stage symbols.",
+      "caption": "This is a dependency prompt, not a cutting list or prescribed production schedule for the Desk Tidy.",
+      "notice": "Can every part and sequence entry be traced to an approved drawing or checkpoint?"
+    },
+    {
+      "cardKey": "whs",
+      "visualId": "VIS-DT-017",
+      "asset": "assets/learning/support-hazard-risk-control-relationship.webp",
+      "purpose": "Distinguish the hazard, possible exposure and teacher-authorised controls in the student's own evidence.",
+      "alt": "Generic hazard, exposure and layered-control diagram with a barrier, procedure and safety glasses.",
+      "caption": "The relationship diagram is not a local risk assessment, tool instruction or permission to begin practical work.",
+      "notice": "Which hazard, possible exposure and teacher-authorised controls does the evidence record?"
+    },
+    {
+      "cardKey": "markout",
+      "visualId": "VIS-DT-009",
+      "asset": "assets/learning/section-09-datum-square-marking.webp",
+      "purpose": "Explain the datum and checking evidence visible in the student's own mark-out record.",
+      "alt": "Generic practice board with a square seated against one edge, a fine pencil line and a steel rule nearby.",
+      "caption": "The generic practice setup provides no usable measurement and does not prescribe the local mark-out procedure.",
+      "notice": "Does the evidence identify the datum, show a fine line and explain a check made under teacher instruction?"
+    },
+    {
+      "cardKey": "joinery",
+      "visualId": "VIS-DT-011",
+      "asset": "assets/learning/section-11-butt-joint-principle.webp",
+      "purpose": "Provide one neutral joint-principle comparison that supports justification of the student's own approved joint evidence.",
+      "alt": "Top-view generic butt-joint principle showing one square timber end meeting another timber face.",
+      "caption": "This is one generic comparison example only; it does not select a joint, project location, size or manufacturing method.",
+      "notice": "What contact, alignment or fit evidence supports the teacher-approved joint choice?"
+    },
+    {
+      "cardKey": "assembly",
+      "visualId": "VIS-DT-012",
+      "asset": "assets/learning/section-12-dry-fit-square-check.webp",
+      "purpose": "Explain what the student's own dry-fit evidence revealed before permanent assembly.",
+      "alt": "Generic three-piece pine dry fit held lightly by a clamp with a square checking one corner.",
+      "caption": "The generic checking example does not approve component geometry, clamp placement, adhesive use or a practical procedure.",
+      "notice": "What did the teacher-authorised dry fit reveal before permanent assembly?"
+    },
+    {
+      "cardKey": "finish",
+      "visualId": "VIS-DT-024",
+      "asset": "assets/learning/support-finish-quality-comparison.webp",
+      "purpose": "Identify observable surface evidence when explaining preparation and finish quality.",
+      "alt": "Three generic clear-finished pine samples showing even coverage, one dried run and pooling in a corner.",
+      "caption": "These are comparison examples only; they do not specify a product, application method or approved response to a fault.",
+      "notice": "Which observable surface condition does the evidence show, and what teacher-approved response followed?"
+    },
+    {
+      "cardKey": "evaluation",
+      "visualId": "VIS-DT-015",
+      "asset": "assets/learning/section-15-evaluation-evidence-pathway.webp",
+      "purpose": "Link each evaluation judgement to a criterion, evidence and realistic improvement.",
+      "alt": "Five-step pathway from criterion to evidence, judgement, improvement and reflection.",
+      "caption": "The generic pathway structures an evidence-based evaluation; it does not certify product performance or practical competence.",
+      "notice": "Can each judgement link a criterion to visible evidence and one realistic improvement?"
+    }
+  ],
+  "placementRequirements": {
+    "openLarger": "Keyboard-accessible link adjacent to each caption; minimum 44 px touch target and visible focus",
+    "responsive": "No page or visual overflow at exactly 390 CSS px",
+    "print": "Images remain contained and explanatory text remains legible",
+    "authority": "No placement may imply a fixed construction plan, dimensions, procedure, joint selection, approval, competence or certified product performance"
+  }
+}

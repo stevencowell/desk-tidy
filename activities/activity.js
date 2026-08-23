@@ -4,6 +4,8 @@
   const bank = window.DESK_TIDY_ACTIVITIES;
   const params = new URLSearchParams(window.location.search);
   const activityId = params.get("id") || "";
+  const isEmbedded = params.get("embed") === "1";
+  if (isEmbedded) document.body.classList.add("activity-embed-page");
   const activity = bank?.activities.find((item) => item.id === activityId);
   const module = activity ? bank.modules.find((item) => item.id === activity.moduleId) : null;
   const root = document.getElementById("activity-root");
@@ -117,6 +119,33 @@
 
     loading.hidden = true;
     root.hidden = false;
+  }
+
+  function startEmbeddedResize() {
+    if (!isEmbedded || window.parent === window) return;
+    let resizeFrame = null;
+    const sendHeight = () => {
+      window.cancelAnimationFrame(resizeFrame);
+      resizeFrame = window.requestAnimationFrame(() => {
+        const height = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+        const targetOrigin = window.location.origin === "null" ? "*" : window.location.origin;
+        window.parent.postMessage({
+          type: "desk-tidy-activity-resize",
+          activityId: activity.id,
+          height
+        }, targetOrigin);
+      });
+    };
+
+    sendHeight();
+    window.addEventListener("load", sendHeight);
+    window.addEventListener("resize", sendHeight);
+    if (window.ResizeObserver) {
+      const observer = new ResizeObserver(sendHeight);
+      observer.observe(document.body);
+      observer.observe(root);
+    }
+    document.fonts?.ready.then(sendHeight);
   }
 
   function classifyItemHtml(item) {
@@ -403,6 +432,7 @@
   preparePage();
   renderWorkspace();
   showStoredResult();
+  startEmbeddedResize();
 
   document.getElementById("check-activity")?.addEventListener("click", assess);
   document.getElementById("reset-activity")?.addEventListener("click", resetActivity);

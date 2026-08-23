@@ -1,0 +1,48 @@
+{
+  "manifestType": "build-scope",
+  "version": "1.0.0",
+  "issuedAt": "2026-08-23T00:00:00+10:00",
+  "workflow": "New TAS Course Site Builder Stage 20 network-alignment pass",
+  "included": [
+    "Create a stable source map, core-artefact manifest and network-gap contract",
+    "Preserve the existing five modules, 15 theory sections, 150 checks, 20 scaffolded responses, 15 activities, five presentations, 24 placed learning visuals, video library, 12-card folio, assessment pathway and v2.0 teacher program",
+    "Add explicit prior-learning and next-action orientation to each module",
+    "Add usable in-page previews for the five existing eight-slide presentations after rendering and inspecting the decks",
+    "Place every existing written capstone beside its mapped theory, exact activity and ten-check sequence without changing prompt indices or saved records",
+    "Expose all 15 existing Applied Learning Activities through lazy expandable in-section embeds while retaining full-page and printable routes",
+    "Replace generic appended-check wrong-answer wrappers with misconception-specific option feedback",
+    "Add whole-course progress, resume cues and a guarded transferable course backup/restore workflow",
+    "Replace the unmanifested 12-crop folio sprite placement with 12 deliberate evidence-support reuses of already approved visuals; retain the legacy sprite file unplaced",
+    "Revalidate the canonical source contract against the current candidate while preserving the defined SRC-PROGRAM-V1.3 activity-build references and treating v2.0 as a derived teacher-review output",
+    "Fix bounded route/anchor defects and run focused desktop, exact-390 px, storage, backup, export, route, asset, keyboard and console checks",
+    "Freeze a local candidate and run independent Stage 24 parity acceptance"
+  ],
+  "excluded": [
+    "Whole-site rebuild or visual rebrand",
+    "Inventing or redrawing a construction plan, dimensions, tolerances, joint plan, local safety controls or formal assessment details",
+    "Replacing the honest clear-finish video gap unless a responsible source-checked clip is independently verified",
+    "Deleting the legacy sections tree, old program copies or other historical material",
+    "Changing the v2.0 teacher program unless the implemented teaching sequence or evidence map materially changes",
+    "Commit, push, deployment, Main Page changes or live publication"
+  ],
+  "ownership": {
+    "Stage01": "source and scope manifests",
+    "Stage03": "core practical artefact identity and fact boundaries",
+    "Stage06": "knowledge-check feedback",
+    "Stage07": "presentation render QA and preview assets",
+    "Stage09": "retain 14 matched clips plus one documented source-safe no-clip exception",
+    "Stage10": "activity source-reference revalidation; mechanics/content and stable SRC-PROGRAM-V1.3 traceability preserved",
+    "Stage11": "folio schema preserved; unmanifested composite crops replaced with authorised evidence-support visuals",
+    "Stage13": "shared progress, resume, backup and route integration",
+    "Stage22": "section-level activity, checks and original-index capstone proximity across all 15 learning packages",
+    "Stage23": "whole-course progress, resume, evidence separation and consolidated backup/restore",
+    "Stage24": "independent read-only parity decision"
+  },
+  "releaseState": {
+    "local": "in progress",
+    "committed": false,
+    "pushed": false,
+    "deployed": false,
+    "liveVerifiedAfterUpgrade": false
+  }
+}

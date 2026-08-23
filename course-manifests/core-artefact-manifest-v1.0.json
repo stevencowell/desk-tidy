@@ -1,0 +1,59 @@
+{
+  "manifestType": "core-artefact-manifest",
+  "version": "1.0.0",
+  "issuedAt": "2026-08-23T00:00:00+10:00",
+  "project": "Desk Tidy",
+  "artefacts": [
+    {
+      "id": "SRC-PROJECT-UNIT-2025",
+      "type": "production project unit",
+      "courseIdentity": "Stage 4 Technology / Desk Tidy",
+      "title": "Stage 4 Technology Mandatory - desk tidy",
+      "revision": "not printed in supplied filename",
+      "sha256": "9D6B032846F458FF1AA517D2A080D48F19358296F5BA0E31C06B4D686ED706E7",
+      "originalBytes": "Stage 4 Technology Mandatory - desk tidy (1).pdf",
+      "studentCopy": "Desk-Tidy-Project-Unit.pdf",
+      "byteIdentity": "confirmed",
+      "studentRoute": "Desk-Tidy-Project-Unit.pdf",
+      "presentationRequirement": "Complete PDF download/open route with course context; preserve original bytes",
+      "permittedFacts": "Only the explicitly stated ten-week sequence; orthographic and isometric working-drawing requirement; scale 1:10 orthographic views with dimensions; cutting-list fields for part name, quantity, material and exact dimensions; teacher accuracy check before production; 200 x 20 x 10 mm practice slat; named materials and joints; 80-120-240 grit sequence; one clear water-based varnish coat; and stated functional-test items",
+      "teacherToConfirm": "Actual approved construction drawing, component names and values, completed component schedule, final dimensions, tolerances, approved joint choices and locations, tools and current practical controls",
+      "invalidates": [
+        "project-specific theory and checks",
+        "activities",
+        "folio evidence prompts",
+        "assessment preparation briefs",
+        "teacher program"
+      ]
+    },
+    {
+      "id": "SRC-HERO-REFERENCE",
+      "type": "project identity/reference image",
+      "title": "Desk Tidy reference image",
+      "sha256": "9F320B470AFDAFDA78C6EAEBFA48EBE354ABCB07FB24A2390BAD5182232BCBF0",
+      "originalBytes": "desk tidy picture.png",
+      "studentCopy": "assets/desk-tidy-reference.png",
+      "byteIdentity": "confirmed",
+      "studentRoutes": [
+        "index.html",
+        "weeks1-2/index.html#design-brief"
+      ],
+      "presentationRequirement": "Accurate context caption and alt text; never present as a plan or design to copy",
+      "permittedFacts": "Project identity and visual context only",
+      "teacherToConfirm": "All fabrication geometry and approved construction information"
+    },
+    {
+      "id": "ARTEFACT-CONSTRUCTION-DRAWING",
+      "type": "dimensioned construction drawing and component schedule",
+      "applicability": "required before local production but not supplied to this public course",
+      "state": "Teacher to confirm",
+      "substitutePolicy": "Do not generate, redraw, infer from the reference image or copy from a sister course",
+      "dependentOutputs": [
+        "final component dimensions and tolerances",
+        "fixed joint plan",
+        "final cutting-list values and component schedule",
+        "tool/process authorisation"
+      ]
+    }
+  ]
+}

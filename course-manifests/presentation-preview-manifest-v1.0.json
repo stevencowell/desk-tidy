@@ -1,0 +1,59 @@
+{
+  "manifestType": "presentation-preview-manifest",
+  "version": "1.0.0",
+  "issuedAt": "2026-08-23T00:00:00+10:00",
+  "sourceDeckAudit": {
+    "artifact": "course-build/07-presentations/presentation-manifest-v1.0.0.json",
+    "sha256": "b2cbb21a59dc47d905f4d8d3abbcdb78295f9ce10118379c8b80fd3dcbbfd6e0",
+    "status": "All 40 slides previously rendered, visually inspected and overflow-tested; deck digests rechecked unchanged on 2026-08-23"
+  },
+  "renderRecheck": {
+    "date": "2026-08-23",
+    "result": "PASS",
+    "scope": "All five eight-slide decks rendered to complete montages and visually rechecked before extracting slide 1 previews",
+    "toolNote": "The rendering wrapper reported a non-zero diagnostic after returning all eight image paths, but all 40 expected slide images and five complete montages were produced and inspected. Existing deck-level overflow evidence remains controlling because every PPTX digest is unchanged."
+  },
+  "previews": [
+    {
+      "moduleId": "M01",
+      "deck": "presentations/desk-tidy-weeks-1-2.pptx",
+      "deckSha256": "2a23309cd9d99eca146ec351c4e59854b19954e46ceaaf9df618d2abcc54d7c7",
+      "preview": "assets/presentations/desk-tidy-weeks-1-2-preview.webp",
+      "previewSha256": "f46eb449d502aa4e87ecdf6ff514c09c2b541b9a52bef8b1609fda6b0dcb950a",
+      "dimensions": "960x540"
+    },
+    {
+      "moduleId": "M02",
+      "deck": "presentations/desk-tidy-weeks-3-4.pptx",
+      "deckSha256": "6992e5ee4236cd98351fae6b3f8821f0381a2b80c324bfbb919ee3b968cb4f80",
+      "preview": "assets/presentations/desk-tidy-weeks-3-4-preview.webp",
+      "previewSha256": "8f99f2c154ab5898a111e5f0fe4288f25ae28b70727725cedea68acd7dd31844",
+      "dimensions": "960x540"
+    },
+    {
+      "moduleId": "M03",
+      "deck": "presentations/desk-tidy-weeks-5-6.pptx",
+      "deckSha256": "5c2f4a7486a94d9041d50cc835d044aca3b2f50a1ff7993441771c9b6c696294",
+      "preview": "assets/presentations/desk-tidy-weeks-5-6-preview.webp",
+      "previewSha256": "d85a5fce985df44e456e4940f7ad0560c3e32b899e8f47f5d99a94358ee9b5a1",
+      "dimensions": "960x540"
+    },
+    {
+      "moduleId": "M04",
+      "deck": "presentations/desk-tidy-weeks-7-8.pptx",
+      "deckSha256": "102d83cde5e4e0a8b4793d3232484ee05c445d392543b507e6ff5ecfd167e936",
+      "preview": "assets/presentations/desk-tidy-weeks-7-8-preview.webp",
+      "previewSha256": "53f39d6421a5eeabf9c1d901896682baec1ea240cc67a99b77bcec4d41ff8a08",
+      "dimensions": "960x540"
+    },
+    {
+      "moduleId": "M05",
+      "deck": "presentations/desk-tidy-weeks-9-10.pptx",
+      "deckSha256": "b525deb433c17cee36239b390c558886e083fb39e7cfb0af634e635ab1a6adb3",
+      "preview": "assets/presentations/desk-tidy-weeks-9-10-preview.webp",
+      "previewSha256": "92f7674628589b3fc8477685ff78af181c3fc9ce7de3add5c3e328a102e7c7b7",
+      "dimensions": "960x540"
+    }
+  ],
+  "invalidationRule": "Any changed deck digest, preview file, presentation title or source boundary requires the affected preview and deck to be rerendered and rechecked."
+}

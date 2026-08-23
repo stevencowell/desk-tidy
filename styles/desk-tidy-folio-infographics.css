@@ -1,4 +1,6 @@
 .folio-card-graphic {
+  max-width: 100%;
+  min-width: 0;
   margin: 1.1rem 0 1.25rem;
   overflow: hidden;
   border: 1px solid #cfdceb;
@@ -6,41 +8,73 @@
   background: #fffdf7;
   box-shadow: 0 8px 18px rgba(12, 59, 99, 0.08);
 }
-.folio-card-graphic img {
+
+.folio-card-image {
   display: block;
   width: 100%;
+  max-width: 100%;
+  max-height: 430px;
   height: auto;
+  object-fit: contain;
   background: #edf4fb;
 }
 
-.folio-card-sprite {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-  width: 100%;
-  border-radius: 14px;
-}
-
-.folio-card-graphic .folio-card-sprite img {
-  position: absolute;
-  left: calc(var(--panel-column) * -100%);
-  top: calc(var(--panel-row) * -100%);
-  width: 400%;
-  max-width: none;
-  height: 300%;
-  border-radius: 0;
-}
-
 .folio-card-graphic figcaption {
-  padding: 0.65rem 0.85rem;
+  padding: 0.75rem 0.85rem 0.85rem;
   color: #51647a;
   font-size: 0.92rem;
-  line-height: 1.4;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.folio-card-caption,
+.folio-card-notice {
+  display: block;
+}
+
+.folio-card-notice {
+  margin-top: 0.55rem;
+  padding: 0.6rem 0.7rem;
+  border-left: 4px solid #0877ce;
+  border-radius: 0 8px 8px 0;
+  background: #edf6ff;
+  color: #25364a;
+}
+
+.folio-card-open-larger {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 0.55rem;
+  padding: 0 0.2rem;
+  color: #075dac;
+  font-weight: 800;
+  text-underline-offset: 0.18em;
+}
+
+.folio-card-open-larger:focus-visible {
+  border-radius: 5px;
+  outline: 3px solid #f0a51a;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .folio-card-graphic figcaption {
+    padding: 0.7rem;
+  }
 }
 
 @media print {
   .folio-card-graphic {
     break-inside: avoid;
     box-shadow: none;
+  }
+
+  .folio-card-image {
+    max-height: 290px;
+  }
+
+  .folio-card-open-larger {
+    display: none;
   }
 }

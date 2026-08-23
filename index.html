@@ -22,7 +22,7 @@
         <h1>Desk Tidy Guided Course</h1>
         <p class="hero-subtitle">Design an organiser for a real user. Build it safely. Prove every decision.</p>
         <div class="hero-actions">
-          <a class="button-link" href="weeks1-2/index.html">Start Module 1</a>
+          <a class="button-link" href="weeks1-2/index.html#design-brief" data-course-hero-resume>Start Module 1</a>
           <a class="button-link secondary" href="desk-tidy-folio.html">Open Project Folio</a>
         </div>
       </div>
@@ -51,7 +51,52 @@
       <article class="course-family-intro__card"><h4>4. Review and save</h4><p>Use the appropriate response examples, self-assess and save the completed evidence as a PDF.</p></article>
       </div>
     </div>
-    <p class="course-family-intro__evidence"><strong>Student evidence.</strong> Work saves in this browser. Save each completed module as a PDF before changing devices or clearing browser data.</p>
+    <p class="course-family-intro__evidence"><strong>Student evidence.</strong> Work saves in this browser. Download the course backup before changing devices or clearing browser data; module PDFs remain useful readable snapshots.</p>
+    </section>
+
+    <section id="course-progress" class="card course-progress" aria-labelledby="course-progress-title" data-course-progress-home>
+      <div class="course-progress__heading">
+        <div>
+          <p class="section-kicker">Saved on this device</p>
+          <h2 id="course-progress-title">Course progress and backup</h2>
+          <p>Your guided learning, formative activities and folio evidence stay separate and save in this browser. These progress records are <strong>not submitted work</strong>.</p>
+        </div>
+        <a class="button-link course-progress__primary" href="weeks1-2/index.html#design-brief" data-course-primary-resume>Start Module 1</a>
+      </div>
+
+      <div class="course-progress__grid" aria-label="Course progress summary">
+        <article class="course-progress__item">
+          <p class="course-progress__label">Guided modules</p>
+          <strong class="course-progress__count" data-course-module-count>0 of 5</strong>
+          <p data-course-module-detail>A module completes after 30 checks are mastered and 4 written responses are reviewed.</p>
+          <a href="weeks1-2/index.html#design-brief" data-course-module-resume>Start Module 1</a>
+        </article>
+        <article class="course-progress__item">
+          <p class="course-progress__label">Applied activities</p>
+          <strong class="course-progress__count" data-course-activity-count>0 of 15</strong>
+          <p>These are formative practice records only and are not a submission.</p>
+          <a href="activities/activity.html?id=brief-to-criteria" data-course-activity-resume>Start first practice activity</a>
+        </article>
+        <article class="course-progress__item">
+          <p class="course-progress__label">Project folio evidence</p>
+          <strong class="course-progress__count" data-course-folio-count>0 of 12</strong>
+          <p>Folio evidence remains separate from practice and is not submitted until your teacher asks.</p>
+          <a href="desk-tidy-folio.html#folio-1" data-course-folio-resume>Start folio evidence</a>
+        </article>
+      </div>
+
+      <div class="course-progress__backup" aria-labelledby="course-backup-title">
+        <div>
+          <h3 id="course-backup-title">Protect all course work in one file</h3>
+          <p>Download one Desk Tidy backup before changing devices or clearing browser data. It includes all five module records, all fifteen activity records and the folio record with attached photos.</p>
+        </div>
+        <div class="course-progress__backup-controls">
+          <button class="button-link" type="button" data-course-backup-download>Download course backup</button>
+          <button class="button-link secondary" type="button" data-course-backup-restore>Restore course backup</button>
+          <input type="file" accept=".json,application/json" hidden data-course-backup-input>
+        </div>
+        <p class="course-progress__status" role="status" aria-live="polite" data-course-backup-status>Ready to create or restore a course-scoped backup.</p>
+      </div>
     </section>
 
     <section id="DESK-HOME-MODULES" class="card" aria-labelledby="course-map-title">
@@ -117,5 +162,6 @@
     <p>Desk Tidy Guided Course</p>
     <p>Wagga Wagga High School | Stage 4 Technology Mandatory</p>
   </footer>
+  <script src="shared/course-progress.js?v=20260823"></script>
 </body>
 </html>

@@ -1,0 +1,154 @@
+{
+  "manifestType": "network-gap-contract",
+  "version": "1.0.0",
+  "issuedAt": "2026-08-23T00:00:00+10:00",
+  "target": {
+    "name": "Desk Tidy Guided Course",
+    "repository": "https://github.com/stevencowell/desk-tidy.git",
+    "liveRoute": "https://stevencowell.github.io/desk-tidy/",
+    "head": "f8ff75e64663f5545df8ed92446de2e411b969c9",
+    "tree": "bfd6f8ecd5367d6c2a3a2fd02a73839883838fdf"
+  },
+  "benchmark": {
+    "name": "The Riv Burger",
+    "reason": "Steve's nominated junior-course benchmark and the current strongest complete junior family reference. It is used for interaction and learning discipline only; Desk Tidy sources remain the sole authority for Desk Tidy facts.",
+    "repository": "https://github.com/stevencowell/Year-8-The-Riv-Burger.git",
+    "liveRoute": "https://stevencowell.github.io/Year-8-The-Riv-Burger/",
+    "head": "2d6aaaed233a931dc1edfb005d84c70c02399dbe",
+    "tree": "0ff485afa3cd156256ab6dd8a1191d66ac3b2b0b"
+  },
+  "preservedStrengths": [
+    "Five coherent two-week modules and 15 substantial project-specific theory sections",
+    "Five editable eight-slide presentations placed before theory as downloads",
+    "150 section-grouped knowledge checks and 20 scaffolded higher-order responses",
+    "24 distinct placed teaching visuals with accurate alt text, captions, Notice prompts and Open larger routes",
+    "14 matched section videos plus one honest clear-finish no-clip exception with an equivalent on-page pathway",
+    "15 section-matched Applied Learning Activities using five mechanics, saved feedback and printable low-tech alternatives",
+    "Twelve-card stage-based photo folio with autosave, progress, JSON/ZIP backup and PDF print",
+    "Current v2.0 25-period teacher program and source-safe assessment boundary"
+  ],
+  "gaps": [
+    {
+      "id": "GAP-SOURCE-01",
+      "priority": "P1",
+      "owner": "Stage 01 and Stage 10",
+      "affected": [
+        "course-manifests/"
+      ],
+      "evidence": "The accepted build has a canonical external source record, while this later candidate needs an in-repository Stage 20 revalidation record bound to the current baseline and network-gap contract.",
+      "acceptanceTest": "Versioned source/build/core manifests bind the current baseline to the canonical source-map digest, preserve defined SRC-PROGRAM-V1.3 activity traceability, classify v2.0 as a derived teacher-review output, and retain the exact handbook digest and 2027 Teacher-to-confirm boundary.",
+      "sourceLimitation": "The 2026 handbook is the latest verified planning reference, not authority for a 2027 formal task or notice."
+    },
+    {
+      "id": "GAP-LEARN-01",
+      "priority": "P1",
+      "owner": "Stage 22 / Stage 06 integration",
+      "affected": [
+        "weeks1-2 through weeks9-10",
+        "scripts/lesson-engine.js",
+        "shared/course-upgrade.js"
+      ],
+      "evidence": "The theory, visual, video, activity link and ten checks are section-linked, but all four written capstones are rendered together at the bottom of each module.",
+      "acceptanceTest": "Module 1, then all 15 sections, visibly follow theory -> visual -> matched video or recorded exception -> embedded activity -> ten checks -> mapped capstone. Existing prompts, indices, storage keys and saved work remain compatible; four capstones per module remain intact.",
+      "sourceLimitation": "Closely related capstones may remain combined only where the existing prompt authentically covers more than one related idea."
+    },
+    {
+      "id": "GAP-LEARN-02",
+      "priority": "P1",
+      "owner": "Stage 22 / Stage 10 integration",
+      "affected": [
+        "shared/course-upgrade.js",
+        "activities/activity.html",
+        "activities/activity.js",
+        "activities/styles.css"
+      ],
+      "evidence": "Every theory section has an excellent activity panel, but it opens a separate route rather than allowing the interaction within the section learning flow.",
+      "acceptanceTest": "Each section can expand and complete the existing activity in place, using the same saved record, feedback, keyboard/touch alternative and low-tech route as the activity bank. Full-page fallback remains available and no duplicate activity implementation is introduced.",
+      "sourceLimitation": "Do not replace the existing source-matched mechanics with a generic quiz or force a new activity count."
+    },
+    {
+      "id": "GAP-EXPERIENCE-01",
+      "priority": "P1",
+      "owner": "Stage 23 / Stage 13",
+      "affected": [
+        "index.html",
+        "shared/course-progress.js",
+        "styles/course.css"
+      ],
+      "evidence": "Module, activity-bank and folio progress exist separately, but the landing page has no whole-course summary or resume-next-useful-action route.",
+      "acceptanceTest": "A fresh browser shows Start Module 1. Seeded module, activity and folio records produce accurate separate counts and calm resume links for learning, formative practice and folio evidence. Reload and cross-tab storage updates remain accurate; formal submission is never implied.",
+      "sourceLimitation": "Completion must reflect meaningful saved actions and must not infer teacher observation or formal assessment completion."
+    },
+    {
+      "id": "GAP-EXPERIENCE-02",
+      "priority": "P1",
+      "owner": "Stage 23 / Stage 11 and Stage 13 integration",
+      "affected": [
+        "index.html",
+        "shared/course-progress.js"
+      ],
+      "evidence": "The folio ZIP/JSON backup covers only desk_tidy_folio_v1. Five module records and 15 activity records remain device-local and outside a transferable whole-course backup.",
+      "acceptanceTest": "Save a module check, capstone, activity record, folio response and folio photo; export one course backup; clear those test records; restore; verify every record, image and progress value returns. Wrong-course, malformed and unsupported files fail safely. Restore warns before overwriting existing work.",
+      "sourceLimitation": "Backup remains student-controlled browser data, not cloud submission or school storage."
+    },
+    {
+      "id": "GAP-CHECK-01",
+      "priority": "P2",
+      "owner": "Stage 06",
+      "affected": [
+        "shared/course-upgrade.js"
+      ],
+      "evidence": "The 90 appended checks are unique and have section-specific explanations, but each distractor was wrapped in the same generic wrong-answer sentence.",
+      "acceptanceTest": "Every added question retains four options and one correct answer, while each incorrect option receives non-empty misconception-specific feedback that explains why it does not fit and supports a return to the exact theory section.",
+      "sourceLimitation": "Feedback must explain existing theory and must not add new technical, safety or practical facts."
+    },
+    {
+      "id": "GAP-PRESENT-01",
+      "priority": "P2",
+      "owner": "Stage 07 / Stage 13",
+      "affected": [
+        "presentations/*.pptx",
+        "assets/presentations/",
+        "shared/course-upgrade.js"
+      ],
+      "evidence": "All five eight-slide decks are downloadable before theory, but the module pages provide no visual preview of the slides.",
+      "acceptanceTest": "Every deck is rendered and inspected slide by slide with no unresolved clipping/overflow; each module displays a useful accessible preview linked to a larger image and retains the PPTX download.",
+      "sourceLimitation": "This pass does not redesign accepted decks or introduce unsupported slide claims."
+    },
+    {
+      "id": "GAP-ORIENT-01",
+      "priority": "P2",
+      "owner": "Stage 22 / Stage 13",
+      "affected": [
+        "shared/course-upgrade.js"
+      ],
+      "evidence": "Module titles and purposes are clear, but prior learning and the immediate next action are not explicitly labelled at module entry.",
+      "acceptanceTest": "Each module entry identifies its source-safe prior learning and the next concrete learning action without inventing practical authority or adding a new teaching sequence."
+    },
+    {
+      "id": "GAP-ROUTE-01",
+      "priority": "P3",
+      "owner": "Stage 13",
+      "affected": [
+        "shared/course-upgrade.js"
+      ],
+      "evidence": "The final-module All modules link targets #modules, which does not exist on the Desk Tidy landing page.",
+      "acceptanceTest": "The link resolves to index.html#course-map-title and moves focus/navigation to the real course map without a missing-fragment target.",
+      "sourceLimitation": "None."
+    }
+  ],
+  "module1Pilot": {
+    "route": "weeks1-2/index.html",
+    "criteria": [
+      "All three section packages use the complete local learning flow",
+      "Four existing capstones remain saved under compatible indices and appear beside their mapped section",
+      "Three existing activities expand in place and retain full-page/print fallbacks",
+      "Presentation preview and download are usable",
+      "Progress, resume and full-course backup survive reload and restore",
+      "Laptop and exact innerWidth 390 rendering have no page overflow, broken assets or console errors"
+    ],
+    "scaleRule": "Apply the accepted implementation pattern to all 15 sections and five modules without copying facts or replacing the clear-finish video exception."
+  },
+  "decision": "REWORK",
+  "blocked": false
+}
