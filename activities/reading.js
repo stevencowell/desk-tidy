@@ -8,7 +8,7 @@
   const script = document.currentScript;
   const root = new URL('../', script ? script.src : new URL('reading.js', location.href));
   const bankURL = new URL('activities/reading.html', root);
-  bankURL.searchParams.set('v', 'read6');
+  bankURL.searchParams.set('v', 'read7');
   const modules = new Map(data.modules.map(module => [module.id, module]));
   const activities = data.activities.filter(activity => modules.has(activity.moduleId));
   const memory = new Map();
@@ -485,19 +485,6 @@
     if (selected) select.value = selected.moduleId;
     else if (modules.has(query.get('module'))) select.value = query.get('module');
     label.append(select);
-    const motionPreferenceKey = 'desk-tidy:reading-wheel-motion:v1';
-    const motionLabel = el('label', 'reading-wheel-motion');
-    const animateWheel = el('input');
-    animateWheel.type = 'checkbox';
-    animateWheel.checked = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    try {
-      const preference = localStorage.getItem(motionPreferenceKey);
-      if (preference === 'on' || preference === 'off') animateWheel.checked = preference === 'on';
-    } catch (_error) { /* This device preference is optional, separate from student work. */ }
-    animateWheel.addEventListener('change', () => {
-      try { localStorage.setItem(motionPreferenceKey, animateWheel.checked ? 'on' : 'off'); } catch (_error) { /* The choice still works for this page. */ }
-    });
-    motionLabel.append(animateWheel, el('span', '', 'Animate the wheel'));
     const live = el('p', 'reading-spin-result', 'Or choose a named activity from the list below.');
     live.setAttribute('role', 'status');
     live.setAttribute('aria-live', 'polite');
@@ -523,7 +510,6 @@
       spin.disabled = true;
       spin.textContent = 'Spinning…';
       select.disabled = true;
-      animateWheel.disabled = true;
       chooser.setAttribute('aria-busy', 'true');
       rows.querySelectorAll('.reading-choice').forEach(choice => choice.setAttribute('aria-disabled', 'true'));
       current.inert = true;
@@ -547,42 +533,38 @@
         spin.disabled = false;
         spin.textContent = 'Spin again';
         select.disabled = false;
-        animateWheel.disabled = false;
         chooser.removeAttribute('aria-busy');
         rows.querySelectorAll('.reading-choice').forEach(choice => choice.removeAttribute('aria-disabled'));
         current.inert = false;
         spinning = false;
         launch.hidden = false;
       };
-      if (!animateWheel.checked) finish();
-      else {
-        const duration = 4800 + Math.random() * 800;
-        const distance = angle - startAngle;
-        let startTime;
-        const pegAngle = 360 / Math.max(12, wheelActivities.length * 2);
-        let lastPeg = Math.floor(startAngle / pegAngle);
-        let lastClickTime = -Infinity;
-        const frame = (now) => {
-          if (startTime === undefined) startTime = now;
-          const progress = Math.min(1, (now - startTime) / duration);
-          // Cubic ease-out starts briskly and continuously loses speed down to a complete stop.
-          const position = startAngle + distance * (1 - Math.pow(1 - progress, 3));
-          wheel.style.transform = 'rotate(' + position + 'deg)';
-          const peg = Math.floor(position / pegAngle);
-          if (peg !== lastPeg) {
-            lastPeg = peg;
-            lastClickTime = now;
-          }
-          // The pointer flicks as each rim peg passes; the clicks spread out as the wheel slows.
-          const flick = Math.max(0, 1 - (now - lastClickTime) / 100);
-          pointer.style.transform = 'rotate(' + (-25 * flick) + 'deg)';
-          if (progress < 1) window.requestAnimationFrame(frame);
-          else finish();
-        };
-        window.requestAnimationFrame(frame);
-      }
+      const duration = 4800 + Math.random() * 800;
+      const distance = angle - startAngle;
+      let startTime;
+      const pegAngle = 360 / Math.max(12, wheelActivities.length * 2);
+      let lastPeg = Math.floor(startAngle / pegAngle);
+      let lastClickTime = -Infinity;
+      const frame = (now) => {
+        if (startTime === undefined) startTime = now;
+        const progress = Math.min(1, (now - startTime) / duration);
+        // Cubic ease-out starts briskly and continuously loses speed down to a complete stop.
+        const position = startAngle + distance * (1 - Math.pow(1 - progress, 3));
+        wheel.style.transform = 'rotate(' + position + 'deg)';
+        const peg = Math.floor(position / pegAngle);
+        if (peg !== lastPeg) {
+          lastPeg = peg;
+          lastClickTime = now;
+        }
+        // The pointer flicks as each rim peg passes; the clicks spread out as the wheel slows.
+        const flick = Math.max(0, 1 - (now - lastClickTime) / 100);
+        pointer.style.transform = 'rotate(' + (-25 * flick) + 'deg)';
+        if (progress < 1) window.requestAnimationFrame(frame);
+        else finish();
+      };
+      window.requestAnimationFrame(frame);
     });
-    controls.append(label, wheelCount, motionLabel, spin, live, launch);
+    controls.append(label, wheelCount, spin, live, launch);
     chooser.append(wheelWrap, controls);
     const current = el('section', 'reading-current');
     current.id = 'reading-current';
