@@ -3,11 +3,13 @@
 
   const COURSE_ID = "desk-tidy";
   const BACKUP_SCHEMA = "tas-course-backup";
-  const BACKUP_VERSION = 1;
+  const BACKUP_VERSION = 3;
   const FOLIO_KEY = "desk_tidy_folio_v1";
   const FOLIO_PROJECT = "Stage 4 Timber Desk Tidy Project Folio";
   const ACTIVITY_PREFIX = "desk-tidy:applied-learning:v1:";
   const ACTIVITY_SCHEMA = "1.0.0";
+  const READING_PREFIX = "desk-tidy:active-reading:v1:";
+  const READING_SCHEMA = "1.0";
   const MAX_BACKUP_BYTES = 50 * 1024 * 1024;
 
   const MODULES = [
@@ -98,7 +100,23 @@
 
   const MODULE_KEYS = MODULES.map((module) => module.key);
   const ACTIVITY_KEYS = ACTIVITIES.map((activity) => ACTIVITY_PREFIX + activity.id);
-  const EXPECTED_KEYS = MODULE_KEYS.concat(ACTIVITY_KEYS, FOLIO_KEY);
+  const ORIGINAL_READINGS = MODULES.flatMap((module) => module.sections.map((section) => ({
+    id: `read-${section.id}`,
+    title: section.label,
+    route: module.route
+  })));
+  const BONUS_READINGS = [
+    { id: "read-testable-criteria", title: "Can you test 'it looks good'?", module: "M01" },
+    { id: "read-stronger-controls", title: "Which control is stronger?", module: "M01" },
+    { id: "read-clear-workspace", title: "Why does a clear bench matter?", module: "M01" },
+    { id: "read-reduce-timber-waste", title: "How could you waste less timber?", module: "M01" }
+  ];
+  const READINGS = ORIGINAL_READINGS.concat(BONUS_READINGS);
+  const ORIGINAL_READING_KEYS = ORIGINAL_READINGS.map((reading) => READING_PREFIX + reading.id);
+  const READING_KEYS = READINGS.map((reading) => READING_PREFIX + reading.id);
+  const LEGACY_KEYS = MODULE_KEYS.concat(ACTIVITY_KEYS, FOLIO_KEY);
+  const V2_KEYS = LEGACY_KEYS.concat(ORIGINAL_READING_KEYS);
+  const EXPECTED_KEYS = LEGACY_KEYS.concat(READING_KEYS);
 
   function isPlainObject(value) {
     return Boolean(value) && typeof value === "object" && !Array.isArray(value);
@@ -187,6 +205,17 @@
     };
   }
 
+  function readingStatus(reading) {
+    const key = READING_PREFIX + reading.id;
+    const record = parseRecord(readRaw(key));
+    try {
+      validateReadingRecord(record, key);
+      return { reading, started: Boolean(record.answer.trim() || record.evidence.trim()), complete: record.reviewed };
+    } catch (_error) {
+      return { reading, started: false, complete: false };
+    }
+  }
+
   function folioStatus() {
     const record = parseRecord(readRaw(FOLIO_KEY));
     const recognisedRecord = record?.version === 1 && record?.project === FOLIO_PROJECT ? record : null;
@@ -235,15 +264,28 @@
     };
   }
 
+  function readingAction(statuses) {
+    const next = statuses.find((status) => status.started && !status.complete)
+      || statuses.find((status) => !status.complete);
+    if (!next) return { href: "activities/reading.html", label: "Review reading challenges" };
+    return {
+      href: `activities/reading.html?id=${encodeURIComponent(next.reading.id)}${next.reading.module ? `&module=${encodeURIComponent(next.reading.module)}` : ""}`,
+      label: next.started ? `Continue reading: ${next.reading.title}` : `Try reading: ${next.reading.title}`
+    };
+  }
+
   function getSummary() {
     const modules = MODULES.map(moduleStatus);
     const activities = ACTIVITIES.map(activityStatus);
+    const readings = READINGS.map(readingStatus);
     const folio = folioStatus();
     const moduleResume = moduleAction(modules);
     const activityResume = activityAction(activities);
     const folioResume = folioAction(folio);
+    const readingResume = readingAction(readings);
     const modulesComplete = modules.filter((status) => status.complete).length;
     const activitiesComplete = activities.filter((status) => status.complete).length;
+    const readingsComplete = readings.filter((status) => status.complete).length;
     const totalMcMastered = modules.reduce((sum, status) => sum + status.mcMastered, 0);
     const totalWrittenReviewed = modules.reduce((sum, status) => sum + status.writtenReviewed, 0);
     const primaryResume = modulesComplete < MODULES.length
@@ -257,14 +299,17 @@
     return {
       modules,
       activities,
+      readings,
       folio,
       modulesComplete,
       activitiesComplete,
+      readingsComplete,
       totalMcMastered,
       totalWrittenReviewed,
       moduleResume,
       activityResume,
       folioResume,
+      readingResume,
       primaryResume
     };
   }
@@ -286,6 +331,7 @@
     const summary = getSummary();
     setText("[data-course-module-count]", `${summary.modulesComplete} of ${MODULES.length}`);
     setText("[data-course-activity-count]", `${summary.activitiesComplete} of ${ACTIVITIES.length}`);
+    setText("[data-course-reading-count]", `${summary.readingsComplete} of ${READINGS.length}`);
     setText("[data-course-folio-count]", `${summary.folio.completed} of ${FOLIO_CARDS.length}`);
     setText(
       "[data-course-module-detail]",
@@ -299,6 +345,7 @@
     setAction("[data-course-hero-resume]", summary.primaryResume);
     setAction("[data-course-module-resume]", summary.moduleResume);
     setAction("[data-course-activity-resume]", summary.activityResume);
+    setAction("[data-course-reading-resume]", summary.readingResume);
     setAction("[data-course-folio-resume]", summary.folioResume);
     return summary;
   }
@@ -322,6 +369,25 @@
       || record.activityId !== activityId
       || typeof record.complete !== "boolean") {
       throw new Error(`The activity record ${key} is malformed.`);
+    }
+  }
+
+  function validateReadingRecord(record, key) {
+    const fields = ["schemaVersion", "activityId", "answer", "evidence", "feedbackOpen", "reviewed", "updatedAt"];
+    if (!isPlainObject(record)
+      || !arraysMatch(Object.keys(record).sort(), fields.slice().sort())
+      || record.schemaVersion !== READING_SCHEMA
+      || record.activityId !== key.slice(READING_PREFIX.length)
+      || typeof record.answer !== "string"
+      || typeof record.evidence !== "string"
+      || typeof record.feedbackOpen !== "boolean"
+      || typeof record.reviewed !== "boolean"
+      || (record.updatedAt !== null && (typeof record.updatedAt !== "string"
+        || !Number.isFinite(Date.parse(record.updatedAt))
+        || new Date(record.updatedAt).toISOString() !== record.updatedAt))
+      || (record.feedbackOpen && (!record.answer.trim() || !record.evidence.trim()))
+      || (record.reviewed && !record.feedbackOpen)) {
+      throw new Error(`The active-reading record ${key} is malformed.`);
     }
   }
 
@@ -352,6 +418,7 @@
     if (!record) throw new Error(`The record ${key} is not valid JSON data.`);
     if (MODULE_KEYS.includes(key)) validateModuleRecord(record, key);
     else if (ACTIVITY_KEYS.includes(key)) validateActivityRecord(record, key);
+    else if (READING_KEYS.includes(key)) validateReadingRecord(record, key);
     else if (key === FOLIO_KEY) validateFolioRecord(record);
   }
 
@@ -371,11 +438,13 @@
       recordManifest: {
         moduleKeys: MODULE_KEYS.slice(),
         activityKeys: ACTIVITY_KEYS.slice(),
-        folioKey: FOLIO_KEY
+        folioKey: FOLIO_KEY,
+        readingKeys: READING_KEYS.slice()
       },
       progressSnapshot: {
         modulesComplete: summary.modulesComplete,
         activitiesComplete: summary.activitiesComplete,
+        readingsComplete: summary.readingsComplete,
         folioCardsComplete: summary.folio.completed
       },
       records
@@ -385,28 +454,39 @@
   function validateBackup(candidate) {
     if (!isPlainObject(candidate)
       || candidate.schema !== BACKUP_SCHEMA
-      || candidate.version !== BACKUP_VERSION) {
+      || ![1, 2, BACKUP_VERSION].includes(candidate.version)) {
       throw new Error("That file is not a supported TAS course backup.");
     }
     if (candidate.courseId !== COURSE_ID) {
       throw new Error("That backup belongs to a different course. No Desk Tidy work was changed.");
     }
     if (!isPlainObject(candidate.recordManifest)
+      || !arraysMatch(Object.keys(candidate.recordManifest).sort(), (candidate.version === 1
+        ? ["moduleKeys", "activityKeys", "folioKey"]
+        : ["moduleKeys", "activityKeys", "folioKey", "readingKeys"]).sort())
       || !arraysMatch(candidate.recordManifest.moduleKeys, MODULE_KEYS)
       || !arraysMatch(candidate.recordManifest.activityKeys, ACTIVITY_KEYS)
-      || candidate.recordManifest.folioKey !== FOLIO_KEY) {
+      || candidate.recordManifest.folioKey !== FOLIO_KEY
+      || (candidate.version === 2 && !arraysMatch(candidate.recordManifest.readingKeys, ORIGINAL_READING_KEYS))
+      || (candidate.version === 3 && !arraysMatch(candidate.recordManifest.readingKeys, READING_KEYS))
+      || (candidate.version === 1 && Object.prototype.hasOwnProperty.call(candidate.recordManifest, "readingKeys"))) {
       throw new Error("That Desk Tidy backup has the wrong record manifest.");
     }
     if (!isPlainObject(candidate.records)) {
       throw new Error("That Desk Tidy backup does not contain course records.");
     }
     const actualKeys = Object.keys(candidate.records).sort();
-    const expectedKeys = EXPECTED_KEYS.slice().sort();
+    const keys = backupKeys(candidate.version);
+    const expectedKeys = keys.slice().sort();
     if (!arraysMatch(actualKeys, expectedKeys)) {
       throw new Error("That Desk Tidy backup is missing records or contains unexpected record keys.");
     }
-    EXPECTED_KEYS.forEach((key) => validateStoredRecord(key, candidate.records[key]));
+    keys.forEach((key) => validateStoredRecord(key, candidate.records[key]));
     return candidate.records;
+  }
+
+  function backupKeys(version) {
+    return version === 1 ? LEGACY_KEYS : version === 2 ? V2_KEYS : EXPECTED_KEYS;
   }
 
   function setBackupStatus(message) {
@@ -433,18 +513,25 @@
   }
 
   function restoreRecords(records) {
+    if (!isPlainObject(records)) throw new Error("That Desk Tidy backup does not contain course records.");
+    const actualKeys = Object.keys(records).sort();
+    const keys = [LEGACY_KEYS, V2_KEYS, EXPECTED_KEYS].find((supportedKeys) => arraysMatch(actualKeys, supportedKeys.slice().sort()));
+    if (!keys) {
+      throw new Error("That Desk Tidy backup is missing records or contains unexpected record keys.");
+    }
+    keys.forEach((key) => validateStoredRecord(key, records[key]));
     const before = {};
-    EXPECTED_KEYS.forEach((key) => {
+    keys.forEach((key) => {
       before[key] = readRawForBackup(key);
     });
     try {
-      EXPECTED_KEYS.forEach((key) => {
+      keys.forEach((key) => {
         if (records[key] === null) localStorage.removeItem(key);
         else localStorage.setItem(key, records[key]);
       });
     } catch (error) {
       try {
-        EXPECTED_KEYS.forEach((key) => {
+        keys.forEach((key) => {
           if (before[key] === null) localStorage.removeItem(key);
           else localStorage.setItem(key, before[key]);
         });
@@ -469,10 +556,16 @@
         throw new Error("That file is not valid JSON. No Desk Tidy work was changed.");
       }
       const records = validateBackup(candidate);
-      const existingCount = EXPECTED_KEYS.filter((key) => readRawForBackup(key) !== null).length;
-      const incomingCount = EXPECTED_KEYS.filter((key) => records[key] !== null).length;
+      const keys = backupKeys(candidate.version);
+      const existingCount = keys.filter((key) => readRawForBackup(key) !== null).length;
+      const incomingCount = keys.filter((key) => records[key] !== null).length;
+      const readingNotice = candidate.version === 1
+        ? "This older backup contains no active-reading responses. All current active-reading responses will be kept."
+        : candidate.version === 2
+          ? "The original 15 active-reading responses will be overwritten or removed to match this backup. The four newer Module 1 challenge responses will be kept."
+          : "This includes all 19 active-reading responses: they will be overwritten or removed to match the backup.";
       const confirmed = window.confirm(
-        `Restore this Desk Tidy course backup?\n\nThis will overwrite or remove all ${EXPECTED_KEYS.length} Desk Tidy record slots on this device. ${existingCount} currently contain saved data; the selected backup contains ${incomingCount}.\n\nDownload a current backup first if you may need to undo this restore.`
+        `Restore this Desk Tidy course backup?\n\nThis will overwrite or remove ${keys.length} Desk Tidy record slots on this device. ${existingCount} currently contain saved data; the selected backup contains ${incomingCount}.\n\n${readingNotice}\n\nDownload a current backup first if you may need to undo this restore.`
       );
       if (!confirmed) {
         setBackupStatus("Restore cancelled. Existing Desk Tidy work was not changed.");
@@ -480,14 +573,19 @@
       }
       restoreRecords(records);
       render();
-      setBackupStatus(`Course backup restored. ${incomingCount} saved records are now active on this device.`);
+      const restoredNotice = candidate.version === 1
+        ? " Current active-reading responses were kept."
+        : candidate.version === 2
+          ? " The original 15 active-reading responses now match the backup. The four newer Module 1 challenge responses were kept."
+          : " All 19 active-reading responses now match the backup.";
+      setBackupStatus(`Course backup restored with ${incomingCount} saved records.${restoredNotice}`);
     } catch (error) {
       setBackupStatus(error?.message || "That backup could not be read. No Desk Tidy work was changed.");
     }
   }
 
   function init() {
-    if (!document.querySelector("[data-course-progress-home], [data-course-progress-folio], [data-course-hero-resume]")) return;
+    if (!document.querySelector("[data-course-progress-home], [data-course-progress-folio], [data-course-hero-resume], [data-course-reading-count], [data-course-reading-resume]")) return;
     render();
 
     const downloadButton = document.querySelector("[data-course-backup-download]");
@@ -506,6 +604,7 @@
     window.addEventListener("storage", (event) => {
       if (EXPECTED_KEYS.includes(event.key)) render();
     });
+    document.addEventListener("desk-tidy-reading-updated", render);
 
     if (document.querySelector("[data-course-progress-folio]")) {
       let refreshTimer = null;
@@ -523,6 +622,7 @@
     storageKeys: Object.freeze(EXPECTED_KEYS.slice()),
     moduleKeys: Object.freeze(MODULE_KEYS.slice()),
     activityKeys: Object.freeze(ACTIVITY_KEYS.slice()),
+    readingKeys: Object.freeze(READING_KEYS.slice()),
     folioKey: FOLIO_KEY,
     getSummary,
     createBackup,

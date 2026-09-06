@@ -1,0 +1,56 @@
+{
+  "id": "desk-tidy-active-reading-20260905",
+  "date": "2026-09-05",
+  "workflow": "New TAS Course Site Builder: bounded Stage 10 and Stage 13 activity upgrade",
+  "baselineCommit": "f4b4ad81f450a9e2c606465b53828af910031182",
+  "repository": "https://github.com/stevencowell/desk-tidy",
+  "course": "Desk Tidy, Stage 4 Technology, five modules / fifteen sections",
+  "scope": "Optional active-reading layer across the existing unit; retain the accepted course and all original learning/evidence records.",
+  "included": [
+    "19 source-bound reading challenges: seven in Weeks 1–2 and three in each remaining module",
+    "3 activity types selected for pedagogical fit",
+    "module-filtered challenge wheel and direct choice",
+    "inline section placement",
+    "saved response and supporting text evidence",
+    "self-review and optional progress",
+    "printable complete reading and response sheet",
+    "backwards-compatible course backup",
+    "teacher facilitation guide",
+    "desktop and exact 390 px acceptance"
+  ],
+  "excluded": [
+    "new theory or factual practical advice",
+    "changes to formal assessment, outcome mapping, period allocation or folio requirements",
+    "whole-course redesign or initial-build rerun",
+    "new images or presentations",
+    "Main Page or central library edits",
+    "commit, push and deployment"
+  ],
+  "sourceAuthority": [
+    "course-manifests/source-map-v1.0.json",
+    "SOURCE-NOTES.md",
+    "Desk-Tidy-Project-Unit.pdf",
+    "existing fifteen theory sections at the baseline commit"
+  ],
+  "syllabus": {
+    "title": "Technology 7–8 Syllabus (2023)",
+    "officialUrl": "https://curriculum.nsw.edu.au/learning-areas/tas/technology-7-8-2023/overview",
+    "verified": "2026-09-05",
+    "implementation": "from 2026"
+  },
+  "familyShell": "Preserve and verify the existing Desk Tidy navigation, route order, presentation, content, storage and responsive shell. No new foundation domain.",
+  "programFamily": {
+    "existingVersion": "v2.1 Network Benchmark",
+    "decision": "retain canonical DOCX/PDF and period/evidence mapping; add optional teacher-method supplement only",
+    "reason": "Every new challenge is an alternative routine within an existing named lesson. No new required outcome, delivery period, formal evidence or assessment destination.",
+    "libraryRegistration": "unchanged; central library outside this task"
+  },
+  "releaseAuthority": {
+    "local": true,
+    "commit": false,
+    "push": false,
+    "deploy": false
+  },
+  "teacherToConfirm": "Existing source-map practical, finish and assessment gaps remain. New challenges do not fill them with invented facts.",
+  "extension": "Four additional M01 wheel/bank choices requested on 6 September 2026; original fifteen inline challenges retained."
+}
