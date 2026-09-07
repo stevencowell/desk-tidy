@@ -884,8 +884,572 @@
         "purpose": "Uses the verified material comparison as context for responsible use. It does not prescribe a material choice or show a mark-out plan; those remain subject to teacher and project requirements."
       },
       "task": "Choose a more responsible way to mark out the parts. Explain why timber being renewable does not make waste harmless."
+    },
+    {
+      "id": "read-research-notes",
+      "moduleId": "M02",
+      "theorySection": "Researching organisers and generating four concepts",
+      "mechanic": "hunt",
+      "source": "weeks3-4/index.html#research-concepts",
+      "sourceTextSha256": "12c3791b1f36ca8f8ff86f2612a702bc89a479aab129f8f622bb720fb9f17bbe",
+      "sourceEvidence": [
+        "Record what you can observe and explain how that feature might affect function, appearance, strength or ease of production.",
+        "Include enough information to find it again, such as the website, book, catalogue or photograph title, along with the date accessed when appropriate."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M02&id=read-research-notes",
+      "printRoute": "activities/reading.html?id=read-research-notes",
+      "storageKey": "desk-tidy:active-reading:v1:read-research-notes",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "Look closely at the organiser",
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Say what you can observe",
+          "sourceIndices": [
+            1
+          ]
+        },
+        {
+          "heading": "Make the source easy to find",
+          "sourceIndices": [
+            3
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-04-four-concept-sketches.webp",
+        "alt": "Sketchbook showing four organiser ideas with different shapes and compartment arrangements.",
+        "caption": "Choose one visible storage feature. What can you actually observe?",
+        "sourceRoute": "weeks3-4/index.html#research-concepts",
+        "purpose": "Provides visible storage features for practising an observation. The sketches are examples, not proof that a design works or approved construction designs."
+      },
+      "task": "What should you add to this research note to make it useful and truthful?"
+    },
+    {
+      "id": "read-prototype-evidence",
+      "moduleId": "M02",
+      "theorySection": "Comparing concepts and justifying a preferred design",
+      "mechanic": "repair",
+      "source": "weeks3-4/index.html#compare-concepts",
+      "sourceTextSha256": "51ac2a543afc8e844eff5648fc05797acea4ccaf8deaeb270c9829eebca50d02",
+      "sourceEvidence": [
+        "Create: Make the prototype, model or sample for one clearly stated purpose.",
+        "Record: Photograph or sketch the test and write what the evidence shows.",
+        "Refine: Change the concept in response to the result and explain why."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M02&id=read-prototype-evidence",
+      "printRoute": "activities/reading.html?id=read-prototype-evidence",
+      "storageKey": "desk-tidy:active-reading:v1:read-prototype-evidence",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "Give the test a clear purpose",
+          "sourceIndices": [
+            4,
+            5
+          ]
+        },
+        {
+          "heading": "Test and keep the evidence",
+          "sourceIndices": [
+            6,
+            7
+          ]
+        },
+        {
+          "heading": "Use the result to improve the idea",
+          "sourceIndices": [
+            8,
+            9
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-05-concept-comparison-matrix.webp",
+        "alt": "Four organiser sketches beside a blank comparison table with four rows of criteria symbols.",
+        "caption": "Choose one idea. What feature would you want to test before developing it?",
+        "sourceRoute": "weeks3-4/index.html#compare-concepts",
+        "purpose": "Provides concept sketches from which students can choose a feature to test. The blank matrix offers no test results or approved final design."
+      },
+      "task": "How would you correct this claim about what a prototype should do?"
+    },
+    {
+      "id": "read-general-design-principles",
+      "moduleId": "M02",
+      "theorySection": "Learning respectfully from Aboriginal and Torres Strait Islander design knowledge",
+      "mechanic": "decision",
+      "source": "weeks3-4/index.html#respectful-design",
+      "sourceTextSha256": "56e888c1ed89d017cbea156c3e007630df48c219397fff68ea60961feff150e6",
+      "sourceEvidence": [
+        "Instead, students can consider broad design lessons that are suitable to apply, such as choosing materials carefully, designing for a clear purpose, making products that can be maintained or repaired, and reducing waste.",
+        "Good work shows respectful learning, accurate attribution and thoughtful application of general principles."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M02&id=read-general-design-principles",
+      "printRoute": "activities/reading.html?id=read-general-design-principles",
+      "storageKey": "desk-tidy:active-reading:v1:read-general-design-principles",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "Learn whose knowledge is being shared",
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Choose a broad design lesson",
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Apply it to your own design",
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-06-respectful-research-workflow.webp",
+        "alt": "Four stages show research, listening, recording source details and developing an original design.",
+        "caption": "How could research lead to an original design choice?",
+        "sourceRoute": "weeks3-4/index.html#respectful-design",
+        "purpose": "Connects respectful research and source recording to an original response without presenting cultural motifs to copy."
+      },
+      "task": "What original design choice could show the student’s learning respectfully?"
+    },
+    {
+      "id": "read-working-drawings-complementary-views",
+      "moduleId": "M03",
+      "theorySection": "Communicating the selected design with working drawings",
+      "mechanic": "repair",
+      "source": "weeks5-6/index.html#working-drawings",
+      "sourceTextSha256": "fb41e44f6b33bcf930d041f33d17b3ed3fec9dd280ce580ff68ddd2be9b4cd2d",
+      "sourceEvidence": [
+        "An isometric drawing shows the Desk Tidy as a three-dimensional form.",
+        "However, an isometric drawing does not replace the measured information in the orthographic drawings."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M03&id=read-working-drawings-complementary-views",
+      "printRoute": "activities/reading.html?id=read-working-drawings-complementary-views",
+      "storageKey": "desk-tidy:active-reading:v1:read-working-drawings-complementary-views",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "Separate views",
+          "sourceIndices": [
+            1
+          ]
+        },
+        {
+          "heading": "The overall shape",
+          "sourceIndices": [
+            2
+          ]
+        },
+        {
+          "heading": "One matching drawing set",
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-07-orthographic-view-relationship.webp",
+        "alt": "A stepped block and three flat views of the same shape are connected by projection lines.",
+        "caption": "The same shape appears in several views. Read why a clear 3D view still needs the separate measured views.",
+        "sourceRoute": "weeks5-6/index.html#working-drawings",
+        "purpose": "Uses the approved view-relationship image to support comparison of the different information supplied by orthographic and isometric drawings."
+      },
+      "task": "Rewrite the claim to explain why the drawing set needs both orthographic and isometric views."
+    },
+    {
+      "id": "read-cutting-schedule-delays",
+      "moduleId": "M03",
+      "theorySection": "Cutting lists and a realistic production schedule",
+      "mechanic": "decision",
+      "source": "weeks5-6/index.html#cutting-schedule",
+      "sourceTextSha256": "37faf428c4ffc8388aae62d33bf7ed60e2452726c3fa32d3dd78e88c467c9514",
+      "sourceEvidence": [
+        "The chart should also consider teacher access, shared tools, workshop resources and other activities that may affect progress.",
+        "Contingency time allows for realistic delays, corrections or extra checking without rushing.",
+        "It should not be used as spare time at the start of the project."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M03&id=read-cutting-schedule-delays",
+      "printRoute": "activities/reading.html?id=read-cutting-schedule-delays",
+      "storageKey": "desk-tidy:active-reading:v1:read-cutting-schedule-delays",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "Put stages in order",
+          "sourceIndices": [
+            2
+          ]
+        },
+        {
+          "heading": "Plan for shared resources",
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Allow time to adjust",
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-08-drawing-list-schedule-flow.webp",
+        "alt": "A checked drawing leads to a parts table, then a sequence of production-stage symbols.",
+        "caption": "The production stages follow a checked drawing and parts list. Read why the timing must also allow for delays.",
+        "sourceRoute": "weeks5-6/index.html#cutting-schedule",
+        "purpose": "Uses the approved drawing-list-schedule flow to connect production planning with realistic timing and dependencies."
+      },
+      "task": "Use the reading to decide how a schedule should allow for delays and extra checking."
+    },
+    {
+      "id": "read-accurate-markout-waste-check",
+      "moduleId": "M03",
+      "theorySection": "Datums and accurate marking out",
+      "mechanic": "hunt",
+      "source": "weeks5-6/index.html#accurate-markout",
+      "sourceTextSha256": "756cb6548fc3987434521bcd8f43bffc359dadc72443819c3a05134414380005",
+      "sourceEvidence": [
+        "Mark the waste side clearly so the required material is not removed by mistake.",
+        "“Measure twice, cut once” means confirming the dimension, datum, orientation and waste side before making an irreversible decision.",
+        "It does not simply mean repeating the same unchecked measurement."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M03&id=read-accurate-markout-waste-check",
+      "printRoute": "activities/reading.html?id=read-accurate-markout-waste-check",
+      "storageKey": "desk-tidy:active-reading:v1:read-accurate-markout-waste-check",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "Make the mark clear",
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Check what stays",
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Check before cutting",
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-09-datum-square-marking.webp",
+        "alt": "Practice timber with a fine pencil line, a combination square beside its edge and a steel rule nearby.",
+        "caption": "The pencil line marks a position. Read why the waste side must also be clear before cutting.",
+        "sourceRoute": "weeks5-6/index.html#accurate-markout",
+        "purpose": "Uses the approved marking image as an entry point for distinguishing a dimension line from the additional waste-side and orientation checks."
+      },
+      "task": "Find why checking the waste side belongs in ‘measure twice, cut once’."
+    },
+    {
+      "id": "read-cutting-shaping-regular-checks",
+      "moduleId": "M04",
+      "theorySection": "Cutting and shaping components accurately",
+      "mechanic": "hunt",
+      "source": "weeks7-8/index.html#cutting-shaping",
+      "sourceTextSha256": "f9fdae4e2f586d03b94a77ae5d8c1ae8e6b798e45100202dbff95ca18a20a93e",
+      "sourceEvidence": [
+        "Confirm that edges are square where required and compare matching components so they remain consistent.",
+        "Small differences can build into larger problems during dry fitting and assembly.",
+        "Regular checking reduces waste and makes later adjustments more manageable."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M04&id=read-cutting-shaping-regular-checks",
+      "printRoute": "activities/reading.html?id=read-cutting-shaping-regular-checks",
+      "storageKey": "desk-tidy:active-reading:v1:read-cutting-shaping-regular-checks",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "Accuracy is the aim",
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Leave room to refine",
+          "sourceIndices": [
+            2
+          ]
+        },
+        {
+          "heading": "Compare as you go",
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/support-waste-side-kerf-relationship.webp",
+        "alt": "Timber diagram showing a plain required piece on the left, a narrow grey kerf band and cross-hatched waste on the right.",
+        "caption": "The pencil line is a checking reference. Read why matching parts also need regular comparison.",
+        "sourceRoute": "weeks7-8/index.html#cutting-shaping",
+        "purpose": "Uses the approved waste-side image to connect a visible checking reference with the broader source requirement to compare matching parts regularly."
+      },
+      "task": "Find why matching components should be compared during cutting and shaping."
+    },
+    {
+      "id": "read-joint-choices-dowel-alignment",
+      "moduleId": "M04",
+      "theorySection": "Butt, rebate and dowel joints in a Desk Tidy",
+      "mechanic": "repair",
+      "source": "weeks7-8/index.html#joint-choices",
+      "sourceTextSha256": "d43d3020544b2ea4ea134284ccf07539c0661348a9d01f4be285621c4e978f3b",
+      "sourceEvidence": [
+        "Its success depends on matching hole positions and accurate alignment between parts.",
+        "Small marking errors can cause the components to sit unevenly or prevent the joint from closing properly."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M04&id=read-joint-choices-dowel-alignment",
+      "printRoute": "activities/reading.html?id=read-joint-choices-dowel-alignment",
+      "storageKey": "desk-tidy:active-reading:v1:read-joint-choices-dowel-alignment",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "Choose for the design",
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Hidden connections",
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Check the fit",
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/support-dowel-joint-alignment.webp",
+        "alt": "Two pine blocks separated to show two timber dowels aligned with two matching holes.",
+        "caption": "These dowels face matching holes. Read why a neat hidden joint still needs accurate positions.",
+        "sourceRoute": "weeks7-8/index.html#joint-choices",
+        "purpose": "Reuses the approved dowel-alignment illustration to make the relationship between connectors and matching holes visible without adding drilling instructions."
+      },
+      "task": "Rewrite the claim to explain why dowel positions must match accurately."
+    },
+    {
+      "id": "read-dry-fit-glue-clamp-check",
+      "moduleId": "M04",
+      "theorySection": "Dry fitting, PVA assembly and surface preparation",
+      "mechanic": "decision",
+      "source": "weeks7-8/index.html#dry-fit-glue",
+      "sourceTextSha256": "1dd3761d40f0222cd46882f4815bca2cdea84f158cd02e8178441df46359982d",
+      "sourceEvidence": [
+        "Recheck squareness, alignment and stability after clamping because parts can move during assembly.",
+        "No-rush rule: Do not use glue, add clamp pressure or move to a finer abrasive to hide a problem.",
+        "Stop, identify the cause and follow teacher or product instructions before continuing."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M04&id=read-dry-fit-glue-clamp-check",
+      "printRoute": "activities/reading.html?id=read-dry-fit-glue-clamp-check",
+      "storageKey": "desk-tidy:active-reading:v1:read-dry-fit-glue-clamp-check",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "Hold the intended shape",
+          "sourceIndices": [
+            2
+          ]
+        },
+        {
+          "heading": "Check again after clamping",
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Deal with the cause",
+          "sourceIndices": [
+            11
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-12-dry-fit-square-check.webp",
+        "alt": "Three timber pieces in a practice dry fit, with a clamp across the open end and a square inside a corner.",
+        "caption": "The square checks a corner. Read why squareness and alignment need checking again after clamping.",
+        "sourceRoute": "weeks7-8/index.html#dry-fit-glue",
+        "purpose": "Reuses the approved dry-fit square-check image to support the need for repeated quality checks during assembly, without presenting the illustration as a clamping instruction."
+      },
+      "task": "Use the reading to decide what to do when a component moves during clamping."
+    },
+    {
+      "id": "read-clear-finish-surface-check",
+      "moduleId": "M05",
+      "theorySection": "Applying a clear finish safely and evenly",
+      "mechanic": "decision",
+      "source": "weeks9-10/index.html#clear-finish",
+      "sourceTextSha256": "ff1bfb62e59a517025ba5d623f45e8b929ea2e54fcf8e513707e19fea51006ef",
+      "sourceEvidence": [
+        "This finish does not hide poor preparation, so the quality of the final result depends on careful sanding, clean surfaces and controlled application.",
+        "Correct only the faults identified through teacher guidance, then remove dust using the approved workshop method.",
+        "The surface should be clean, dry and ready before the container is opened."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M05&id=read-clear-finish-surface-check",
+      "printRoute": "activities/reading.html?id=read-clear-finish-surface-check",
+      "storageKey": "desk-tidy:active-reading:v1:read-clear-finish-surface-check",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "What varnish can do",
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Inspect the surface first",
+          "sourceIndices": [
+            1
+          ]
+        },
+        {
+          "heading": "Apply as demonstrated",
+          "sourceIndices": [
+            2
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-13-raw-clear-finish-comparison.webp",
+        "alt": "Two pine samples: a pale raw surface on the left and an even clear-finished surface with more sheen on the right.",
+        "caption": "The finished sample has an even surface. Read what preparation must happen before varnish is applied.",
+        "sourceRoute": "weeks9-10/index.html#clear-finish",
+        "purpose": "Reuses the approved raw-and-finished comparison to link the desired surface result with preparation described in the source."
+      },
+      "task": "Use the reading to decide whether a rough, dusty Desk Tidy is ready for varnish."
+    },
+    {
+      "id": "read-functional-testing-evidence",
+      "moduleId": "M05",
+      "theorySection": "Functional testing against the design criteria",
+      "mechanic": "hunt",
+      "source": "weeks9-10/index.html#functional-testing",
+      "sourceTextSha256": "9a8ff6791658426d7ae9ca99f542109744de1533e39d85019281564313ea2142",
+      "sourceEvidence": [
+        "Check whether the Desk Tidy sits steadily or rocks when items are added or removed.",
+        "Evidence is what can be observed, measured or shown in a photograph.",
+        "Opinion is a personal judgement, such as saying the product “looks good”."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M05&id=read-functional-testing-evidence",
+      "printRoute": "activities/reading.html?id=read-functional-testing-evidence",
+      "storageKey": "desk-tidy:active-reading:v1:read-functional-testing-evidence",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "Use a fair test",
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Observe stability",
+          "sourceIndices": [
+            2
+          ]
+        },
+        {
+          "heading": "Separate evidence and opinion",
+          "sourceIndices": [
+            3
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-14-functional-test-criteria.webp",
+        "alt": "An organiser is linked to five test pictures: stored items, access, stability, desk space and close inspection of a joint.",
+        "caption": "Find the stability check in the picture. Read which observation would count as evidence.",
+        "sourceRoute": "weeks9-10/index.html#functional-testing",
+        "purpose": "Reuses the approved functional-test criteria illustration to connect the stability test area with a specific observable result."
+      },
+      "task": "Find an observation that would provide evidence about the organiser’s stability."
+    },
+    {
+      "id": "read-evaluation-reflection-learning",
+      "moduleId": "M05",
+      "theorySection": "Evaluation, presentation and reflection",
+      "mechanic": "repair",
+      "source": "weeks9-10/index.html#evaluation-reflection",
+      "sourceTextSha256": "b1376600ff731df5f8ec1c8063041360e358ec385eaeadedd6a58a849eb51e7e",
+      "sourceEvidence": [
+        "Reflection focuses on learning.",
+        "Explain which practical or design skills improved and what still needs development.",
+        "Finish by describing one realistic change you would make next time, based on evidence rather than hindsight alone."
+      ],
+      "lessonPlacement": "Additional optional choice in the module selector and bank; original inline challenges retained.",
+      "bankRoute": "activities/reading.html?v=dice1&module=M05&id=read-evaluation-reflection-learning",
+      "printRoute": "activities/reading.html?id=read-evaluation-reflection-learning",
+      "storageKey": "desk-tidy:active-reading:v1:read-evaluation-reflection-learning",
+      "feedback": "Choose or write a text clue and attempt the answer before Check. Self-review is not a mark.",
+      "periodAndOutcomes": "Existing section allocation retained; optional method choice, no new required period or assessment.",
+      "focusedReading": [
+        {
+          "heading": "Use the project evidence",
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Show the design journey",
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Explain the learning",
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-15-evaluation-evidence-pathway.webp",
+        "alt": "An evaluation pathway shows a target, evidence camera, success and fault check, improvement sketch and reflection notebook.",
+        "caption": "The pathway ends with reflection. Read what this adds after the evidence has been presented.",
+        "sourceRoute": "weeks9-10/index.html#evaluation-reflection",
+        "purpose": "Reuses the approved evaluation pathway to distinguish presenting project evidence from explaining learning and a future improvement."
+      },
+      "task": "Rewrite the claim to explain what a useful reflection adds to a list of completed steps."
     }
   ],
   "revision": "2026-09-06-read5",
-  "experience": "One question; three short source readings with headings and sentence selection; Answer; Check. Relevant existing visual and plain-language glossary."
+  "experience": "One question; three short source readings with headings and sentence selection; Answer; Check. Relevant existing visual and plain-language glossary.",
+  "extension": "2026-09-07: six choices in Modules 2–5; Module 2 has an animated die; 31 challenges total."
 }

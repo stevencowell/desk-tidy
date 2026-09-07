@@ -40,6 +40,23 @@ body.reading-page { background: #f7f6ef; }
 .reading-wheel-label-0 { top: 15%; left: 50%; transform: translateX(-50%); }
 .reading-wheel-label-1 { top: 62%; right: 7%; transform: rotate(120deg); }
 .reading-wheel-label-2 { top: 62%; left: 7%; transform: rotate(240deg); }
+/* The die is a six-face cube; its rotation and bounce are driven by the selector. */
+.reading-chooser.is-dice { background: linear-gradient(120deg, #f4eddf, #fff9e8 55%, #edf3e5); border-color: #dacdb7; }
+.reading-dice-wrap[hidden], .reading-wheel-wrap[hidden] { display: none !important; }
+.reading-dice-wrap { --reading-die-size: 100px; --reading-die-half: calc(var(--reading-die-size) / 2); position: relative; width: min(100%, 230px); height: 220px; margin: 0 auto; perspective: 750px; perspective-origin: 50% 40%; }
+.reading-dice-wrap::before { content: ''; position: absolute; left: 3%; right: 3%; bottom: 20px; height: 75px; border: 3px solid #bb9161; border-radius: 50%; background: repeating-linear-gradient(3deg, transparent 0 8px, #8861330a 9px 10px), radial-gradient(ellipse at 50% 40%, #e8cea5, #d6b07e); box-shadow: inset 0 3px 7px #81542824, inset 0 -3px 0 #f8e7ca99, 0 7px 0 #a77b4f, 0 11px 15px #6645231c; }
+.reading-dice-shadow { position: absolute; left: calc(50% - 51px); bottom: 43px; width: 102px; height: 29px; border-radius: 50%; background: radial-gradient(ellipse, #5e442d55 0%, #5e442d22 48%, transparent 73%); transform-origin: center; }
+.reading-die { position: absolute; left: calc(50% - var(--reading-die-half)); top: calc(45% - var(--reading-die-half)); width: var(--reading-die-size); height: var(--reading-die-size); transform-style: preserve-3d; transform-origin: center; transform: rotateX(-22deg) rotateY(-25deg) rotateZ(0deg); }
+.reading-die-face { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); gap: 9px; padding: 15px; border: 2px solid #e0d3b8; border-radius: 13px; background: linear-gradient(135deg, #fffdf4, #f3e9d2); box-shadow: inset 2px 2px 3px #fff, inset -3px -3px 7px #b9a88a35; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.reading-die-face[data-face="1"] { transform: translateZ(var(--reading-die-half)); }
+.reading-die-face[data-face="2"] { transform: rotateY(90deg) translateZ(var(--reading-die-half)); background: linear-gradient(135deg, #f7efdc, #e7dabf); }
+.reading-die-face[data-face="3"] { transform: rotateX(90deg) translateZ(var(--reading-die-half)); background: linear-gradient(135deg, #fffef8, #f6eedc); }
+.reading-die-face[data-face="4"] { transform: rotateX(-90deg) translateZ(var(--reading-die-half)); }
+.reading-die-face[data-face="5"] { transform: rotateY(-90deg) translateZ(var(--reading-die-half)); background: linear-gradient(135deg, #f8f0dd, #e9ddc4); }
+.reading-die-face[data-face="6"] { transform: rotateY(180deg) translateZ(var(--reading-die-half)); }
+.reading-die-pip { display: block; min-width: 0; min-height: 0; border-radius: 50%; opacity: 0; }
+.reading-die-pip.is-visible { opacity: 1; background: radial-gradient(circle at 60% 65%, #326449, #173e2c 85%); box-shadow: inset 1px 2px 2px #0a291d70, 0 1px 0 #fffdf3; }
+.reading-chooser.is-dice.is-spinning .reading-die { will-change: transform; }
 .reading-field { display: block; margin: 1.2rem 0; }
 .reading-field > span { display: block; font-weight: 700; margin-bottom: .4rem; }
 .reading-field textarea, .reading-field select { display: block; width: 100%; max-width: 100%; min-width: 0; border: 1px solid #7e9484; border-radius: 8px; padding: .8rem; background: #fff; color: #20372b; font: inherit; line-height: 1.5; }
@@ -211,6 +228,7 @@ body.reading-page { background: #f7f6ef; }
   .reading-mechanics p { margin-top: .2rem; }
   .reading-chooser { grid-template-columns: 1fr; gap: .7rem; padding: 1.3rem; }
   .reading-wheel-wrap { width: 200px; }
+  .reading-dice-wrap { width: min(100%, 220px); height: 205px; }
   .reading-activity-list li { grid-template-columns: 1fr; gap: .15rem; }
   .reading-row-meta { justify-content: flex-start; padding-left: .3rem; }
   .reading-practice > summary { grid-template-columns: 1fr; padding: .9rem; }

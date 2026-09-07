@@ -8,7 +8,7 @@
   const script = document.currentScript;
   const root = new URL('../', script ? script.src : new URL('reading.js', location.href));
   const bankURL = new URL('activities/reading.html', root);
-  bankURL.searchParams.set('v', 'read7');
+  bankURL.searchParams.set('v', 'dice1');
   const modules = new Map(data.modules.map(module => [module.id, module]));
   const activities = data.activities.filter(activity => modules.has(activity.moduleId));
   const memory = new Map();
@@ -467,7 +467,8 @@
     }
     const picker = el('details', 'reading-picker');
     picker.open = !selected;
-    picker.append(el('summary', '', 'Choose a challenge · spin the wheel or pick a title'));
+    const pickerSummary = el('summary');
+    picker.append(pickerSummary);
     const chooser = el('section', 'reading-chooser');
     const wheelWrap = el('div', 'reading-wheel-wrap');
     wheelWrap.setAttribute('aria-hidden', 'true');
@@ -475,8 +476,24 @@
     const pointer = el('span', 'reading-pointer');
     const wheelCentre = el('span', 'reading-wheel-centre', '?');
     wheelWrap.append(pointer, wheel, wheelCentre);
+    const diceWrap = el('div', 'reading-dice-wrap');
+    diceWrap.setAttribute('aria-hidden', 'true');
+    const diceShadow = el('div', 'reading-dice-shadow');
+    const die = el('div', 'reading-die');
+    const pipPositions = [[4], [0, 8], [0, 4, 8], [0, 2, 6, 8], [0, 2, 4, 6, 8], [0, 2, 3, 5, 6, 8]];
+    pipPositions.forEach((positions, index) => {
+      const face = el('div', 'reading-die-face');
+      face.dataset.face = String(index + 1);
+      for (let pip = 0; pip < 9; pip += 1) {
+        face.append(el('span', 'reading-die-pip' + (positions.includes(pip) ? ' is-visible' : '')));
+      }
+      die.append(face);
+    });
+    diceWrap.append(diceShadow, die);
     const controls = el('div', 'reading-chooser-controls');
-    controls.append(el('h2', '', 'What will you investigate?'), el('p', '', 'Choose your module. Spin the wheel, or pick a challenge below.'));
+    const chooserTitle = el('h2');
+    const chooserHelp = el('p');
+    controls.append(chooserTitle, chooserHelp);
     const label = el('label', 'reading-field');
     label.append(el('span', '', 'Choose a module'));
     const select = el('select');
@@ -490,6 +507,8 @@
     live.setAttribute('aria-live', 'polite');
     let used = new Set();
     let angle = 0;
+    let diceX = 0;
+    let diceY = 0;
     let spinning = false;
     const wheelCount = el('p', 'reading-small');
     const launch = button('Start this challenge →', () => {
@@ -504,16 +523,19 @@
       if (!pool.length) { used = new Set(); pool = filtered(); }
       if (!pool.length) { live.textContent = 'No activities are available for this module.'; return; }
       const picked = pool[Math.floor(Math.random() * pool.length)];
+      const diceMode = isDice();
+      const faceNumber = filtered().findIndex(activity => activity.id === picked.id) + 1;
       used.add(picked.id);
       spinning = true;
       launch.hidden = true;
       spin.disabled = true;
-      spin.textContent = 'Spinning…';
+      spin.textContent = diceMode ? 'Rolling…' : 'Spinning…';
       select.disabled = true;
       chooser.setAttribute('aria-busy', 'true');
+      chooser.classList.add('is-spinning');
       rows.querySelectorAll('.reading-choice').forEach(choice => choice.setAttribute('aria-disabled', 'true'));
       current.inert = true;
-      live.textContent = 'The wheel is spinning. Wait for it to settle…';
+      live.textContent = diceMode ? 'The die is rolling. Your challenge will appear when it settles…' : 'The wheel is spinning. Wait for it to settle…';
       wheelCentre.textContent = '?';
       const wheelActivities = filtered();
       const sectorAngle = 360 / wheelActivities.length;
@@ -529,16 +551,45 @@
         pointer.style.transform = 'rotate(0deg)';
         wheelCentre.textContent = '✓';
         open(picked, false);
-        live.textContent = picked.title + ' — ' + (kinds[picked.mechanic] || kinds.hunt).label + '. Your challenge is ready below.';
+        live.textContent = (diceMode ? 'Rolled ' + faceNumber + ': ' : '') + picked.title + ' — ' + (kinds[picked.mechanic] || kinds.hunt).label + '. Your challenge is ready below.';
         spin.disabled = false;
-        spin.textContent = 'Spin again';
+        spin.textContent = diceMode ? 'Roll again' : 'Spin again';
         select.disabled = false;
         chooser.removeAttribute('aria-busy');
+        chooser.classList.remove('is-spinning');
         rows.querySelectorAll('.reading-choice').forEach(choice => choice.removeAttribute('aria-disabled'));
         current.inert = false;
         spinning = false;
         launch.hidden = false;
       };
+      if (diceMode) {
+        // Each face corresponds to the same numbered challenge in Module 2's list.
+        const faceRotation = [[0, 0], [0, -90], [-90, 0], [90, 0], [0, 90], [0, 180]][faceNumber - 1];
+        const startX = diceX;
+        const startY = diceY;
+        const gentle = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        diceX = gentle ? faceRotation[0] : (Math.floor(startX / 360) + 2) * 360 + faceRotation[0];
+        diceY = gentle ? faceRotation[1] : (Math.floor(startY / 360) + 3) * 360 + faceRotation[1];
+        const duration = gentle ? 650 : 2200 + Math.random() * 400;
+        let started;
+        const tumble = now => {
+          if (started === undefined) started = now;
+          const progress = Math.min(1, (now - started) / duration);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const bounce = Math.abs(Math.sin(progress * Math.PI * 3)) * (1 - progress) * (gentle ? 3 : 42);
+          const tilt = Math.sin(progress * Math.PI) * (1 - progress) * (gentle ? 0 : 18);
+          poseDie(startX + (diceX - startX) * eased, startY + (diceY - startY) * eased, bounce, tilt);
+          diceShadow.style.transform = 'scale(' + (1 - bounce / 110) + ')';
+          if (progress < 1) window.requestAnimationFrame(tumble);
+          else {
+            poseDie(diceX, diceY);
+            diceShadow.style.transform = '';
+            finish();
+          }
+        };
+        window.requestAnimationFrame(tumble);
+        return;
+      }
       const duration = 4800 + Math.random() * 800;
       const distance = angle - startAngle;
       let startTime;
@@ -565,7 +616,7 @@
       window.requestAnimationFrame(frame);
     });
     controls.append(label, wheelCount, spin, live, launch);
-    chooser.append(wheelWrap, controls);
+    chooser.append(wheelWrap, diceWrap, controls);
     const current = el('section', 'reading-current');
     current.id = 'reading-current';
     current.setAttribute('aria-label', 'Current reading challenge');
@@ -576,12 +627,29 @@
     bankStatus = el('p', 'reading-progress');
     headingRow.append(el('h2', '', 'Choose a challenge'), bankStatus);
     const rows = el('div');
-    directory.append(headingRow, rows);
+    directory.append(headingRow, el('p', 'reading-small', 'Working in pairs? Take different challenges, then share your answer and the sentence that supports it.'), rows);
     picker.append(chooser, directory);
     host.replaceChildren(picker, current);
     function filtered() { return activities.filter(activity => select.value === 'all' || activity.moduleId === select.value); }
+    function isDice() { return select.value === 'M02'; }
+    function poseDie(x, y, lift = 0, tilt = 0) {
+      // A slight viewing angle keeps the cube's depth visible when it has settled.
+      die.style.transform = 'translateY(' + (-lift) + 'px) rotateX(-14deg) rotateY(-18deg) rotateX(' + x + 'deg) rotateY(' + y + 'deg) rotateZ(' + tilt + 'deg)';
+    }
     function renderWheel() {
       const choices = filtered();
+      const diceMode = isDice();
+      wheelWrap.hidden = diceMode;
+      diceWrap.hidden = !diceMode;
+      chooser.classList.toggle('is-dice', diceMode);
+      pickerSummary.textContent = diceMode ? 'Choose a challenge · roll the die or pick a title' : 'Choose a challenge · spin the wheel or pick a title';
+      chooserTitle.textContent = diceMode ? 'Roll your next challenge' : 'What will you investigate?';
+      chooserHelp.textContent = diceMode ? 'One face. One challenge. Roll the die, then use the text to work it out.' : 'Choose your module. Spin the wheel, or pick a challenge below.';
+      spin.textContent = diceMode ? 'Roll for a challenge' : 'Spin for a challenge';
+      diceX = 0;
+      diceY = 0;
+      poseDie(0, 0);
+      diceShadow.style.transform = '';
       const slice = 360 / choices.length;
       const colours = ['#dfecc9', '#f5d97f', '#abd3b5', '#f2ccac', '#c8dcec', '#e4d4eb', '#ece6af'];
       wheel.replaceChildren();
@@ -607,7 +675,7 @@
       }
       angle = 0;
       wheel.style.transform = 'rotate(0deg)';
-      wheelCount.textContent = choices.length + ' challenges · no repeats until you have seen them all.';
+      wheelCount.textContent = choices.length + ' challenges' + (diceMode ? ' · one per die face' : '') + ' · no repeats until you have seen them all.';
     }
     function renderRows() {
       renderWheel();
@@ -674,7 +742,7 @@
       if (select.value !== 'all') url.searchParams.set('module', select.value);
       else url.searchParams.delete('module');
       history.replaceState(null, '', url);
-      live.textContent = 'Module selected. Spin or choose a challenge below.';
+      live.textContent = isDice() ? 'Module selected. Roll or choose a challenge below.' : 'Module selected. Spin or choose a challenge below.';
       renderRows();
     });
     renderRows();

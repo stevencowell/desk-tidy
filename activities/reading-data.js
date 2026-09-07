@@ -1790,6 +1790,1131 @@ window.DESK_TIDY_READING = {
       },
       "placement": "bank",
       "wheelLabel": "Less waste"
+    },
+    {
+      "id": "read-research-notes",
+      "moduleId": "M02",
+      "sectionId": "research-concepts",
+      "title": "What makes a useful research note?",
+      "mechanic": "hunt",
+      "prompt": "What should you add to this research note to make it useful and truthful?",
+      "lookFor": [
+        "Describe something visible, such as the compartment arrangement, rather than just saying the organiser looks good.",
+        "Explain what the feature might help with. Keep your observation separate from a result you have not tested.",
+        "Record enough source information to find the example again, including the date accessed when appropriate."
+      ],
+      "sourceEvidence": [
+        "Record what you can observe and explain how that feature might affect function, appearance, strength or ease of production.",
+        "Include enough information to find it again, such as the website, book, catalogue or photograph title, along with the date accessed when appropriate."
+      ],
+      "pairPrompt": "Show a partner the visible feature in the image. Explain what you know from looking and what you would still need to test.",
+      "sourceRefs": [
+        "weeks3-4/index.html#research-concepts",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Researching organisers and generating four concepts",
+      "sourceText": [
+        "Purposeful research means examining existing desk organisers to understand how they solve storage problems. Look at several different examples rather than choosing the first one you find. Consider what each organiser holds, how its compartments are arranged and whether the user can reach items easily. Notice how the shape, base and proportions may improve stability on a desk.",
+        "Research can also reveal useful clues about materials and manufacturing. Visible grain, sheet edges, joints, folds, fasteners or repeated shapes may suggest how a product was made. You do not need to know every process. Record what you can observe and explain how that feature might affect function, appearance, strength or ease of production.",
+        "Products and systems are created through connected roles. A designer identifies needs, develops ideas and communicates decisions. Producers and manufacturers plan and use materials, tools and processes to make the product consistently and safely. When researching an organiser, identify evidence of how these roles shaped its layout, material choices, production sequence and quality.",
+        "Keep a clear record of each source. Include enough information to find it again, such as the website, book, catalogue or photograph title, along with the date accessed when appropriate. Add short observations beside each example. Useful notes explain what works, what may not suit your user and which general ideas could inform your own design without being copied.",
+        "Ethical considerations include truthful attribution, respectful use of ideas and producing an original response. Legal considerations may include copyright, licences and permission to reproduce an image, plan or design. Public access does not mean unrestricted reuse: record the source, check its stated conditions and ask your teacher when permission is unclear.",
+        "After researching, develop four genuinely different concepts for your Desk Tidy. Changing only one small feature does not create a new concept. Each idea should explore a different layout, storage arrangement or overall form. Students design their own layout, so concepts should respond to the intended stationery, cables or paperclips and the available desk space.",
+        "Use quick sketches with labels and annotations to communicate each idea. Add approximate dimensions based on the items the organiser needs to hold and the space where it will sit. These are design estimates, not fixed project dimensions. Feedback from classmates or the teacher can help you identify strengths, problems and possible improvements before selecting a preferred direction.",
+        "Concept 1: Explore one clear storage layout.",
+        "Concept 2: Change the arrangement, access or overall form.",
+        "Concept 3: Test another approach to stability and organisation.",
+        "Concept 4: Combine useful lessons without repeating an earlier idea.",
+        "Research integrity: Use existing products as evidence and inspiration, not as templates. Record where ideas came from, explain your observations and transform useful features into an original layout suited to your user and desk space."
+      ],
+      "sourceAnchor": "weeks3-4/index.html#research-concepts",
+      "sentenceStarter": "I can see … This might help … I would record …",
+      "mission": "What should you add to this research note to make it useful and truthful?",
+      "answerLabel": "What would you add to the note?",
+      "answerHint": "Write two or three short sentences: a visible feature, what it might help with, and the source details to record.",
+      "scenario": "An organiser research note says only, “This looks good.” The student has not recorded the source.",
+      "glossary": [
+        {
+          "term": "observation",
+          "definition": "Something you notice by looking closely."
+        },
+        {
+          "term": "source",
+          "definition": "Where an example or information came from."
+        },
+        {
+          "term": "function",
+          "definition": "What a product does and how well it meets a need."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "Look closely at the organiser",
+          "paragraphs": [
+            "Purposeful research means examining existing desk organisers to understand how they solve storage problems. Look at several different examples rather than choosing the first one you find. Consider what each organiser holds, how its compartments are arranged and whether the user can reach items easily. Notice how the shape, base and proportions may improve stability on a desk."
+          ],
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Say what you can observe",
+          "paragraphs": [
+            "Research can also reveal useful clues about materials and manufacturing. Visible grain, sheet edges, joints, folds, fasteners or repeated shapes may suggest how a product was made. You do not need to know every process. Record what you can observe and explain how that feature might affect function, appearance, strength or ease of production."
+          ],
+          "sourceIndices": [
+            1
+          ]
+        },
+        {
+          "heading": "Make the source easy to find",
+          "paragraphs": [
+            "Keep a clear record of each source. Include enough information to find it again, such as the website, book, catalogue or photograph title, along with the date accessed when appropriate. Add short observations beside each example. Useful notes explain what works, what may not suit your user and which general ideas could inform your own design without being copied."
+          ],
+          "sourceIndices": [
+            3
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-04-four-concept-sketches.webp",
+        "alt": "Sketchbook showing four organiser ideas with different shapes and compartment arrangements.",
+        "caption": "Choose one visible storage feature. What can you actually observe?",
+        "sourceRoute": "weeks3-4/index.html#research-concepts",
+        "purpose": "Provides visible storage features for practising an observation. The sketches are examples, not proof that a design works or approved construction designs."
+      },
+      "placement": "bank"
+    },
+    {
+      "id": "read-prototype-evidence",
+      "moduleId": "M02",
+      "sectionId": "compare-concepts",
+      "title": "What should a prototype test?",
+      "mechanic": "repair",
+      "prompt": "How would you correct this claim about what a prototype should do?",
+      "scenario": "“My prototype only needs to show what the organiser will look like. I can keep my design the same without checking the test result.”",
+      "lookFor": [
+        "Give the teacher-approved prototype, model or sample one clear purpose, such as testing compartment size, access or stability.",
+        "Compare the test with the brief and success criteria, then record what it shows with a photograph or sketch and a written note.",
+        "Use the evidence to guide a change to the concept and explain why that change helps."
+      ],
+      "sourceEvidence": [
+        "Create: Make the prototype, model or sample for one clearly stated purpose.",
+        "Record: Photograph or sketch the test and write what the evidence shows.",
+        "Refine: Change the concept in response to the result and explain why."
+      ],
+      "pairPrompt": "Teach a partner your test plan: name the feature, the evidence you would collect and a change a poor result could lead to.",
+      "sourceRefs": [
+        "weeks3-4/index.html#compare-concepts",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Comparing concepts and justifying a preferred design",
+      "sourceText": [
+        "Before comparing ideas, turn the design brief into clear criteria. These may include function, easy access to stored items, stability, efficient material use, manufacturability, appearance and suitability for the available time and student skills. Some criteria may be more important than others, so they can be weighted or clearly ranked. The ranking should reflect the user’s needs and the project constraints.",
+        "A simple decision matrix helps compare all four concepts against the same criteria. Each concept is considered one criterion at a time, using brief scores, rankings or comments chosen with teacher guidance. The completed matrix becomes evidence of the decision-making process. It should show why one idea appears more suitable, not just which sketch received the highest total.",
+        "Scores must be supported by reasoning. A concept may provide excellent storage but use more material. Another may look appealing but be difficult to manufacture accurately with the available time and skills. A stable design may take up more desk space, while a compact design may make some items harder to reach. These trade-offs are normal and should be explained honestly.",
+        "The matrix does not make the final decision automatically. A high-scoring concept may still contain a serious weakness that the numbers do not show. Teacher feedback, project constraints and workshop requirements must also be considered. Teacher approval is required before the preferred concept is developed or produced.",
+        "Apply design and creative thinking by exploring alternatives, combining useful features and testing uncertainty. Before final drawings, create at least one teacher-approved prototype, model or sample that tests an important feature such as compartment size, access, stability, proportion, material thickness or a joint. Your teacher will confirm the most suitable form and material for the test.",
+        "Create: Make the prototype, model or sample for one clearly stated purpose.",
+        "Test: Compare its performance with the brief and success criteria.",
+        "Record: Photograph or sketch the test and write what the evidence shows.",
+        "Refine: Change the concept in response to the result and explain why.",
+        "After selecting a preferred direction, improve it using feedback. Changes might refine the layout, improve access, reduce wasted material, strengthen stability or simplify construction. Record what changed and why. A strong justification explains how the final concept responds to the brief, which trade-offs were accepted and why the design is realistic for the project."
+      ],
+      "sourceAnchor": "weeks3-4/index.html#compare-concepts",
+      "sentenceStarter": "My prototype should test … I would record … The result could help me change …",
+      "mission": "How would you correct this claim about what a prototype should do?",
+      "answerLabel": "How would you correct this claim?",
+      "answerHint": "Write two or three short sentences. Name one feature to test, how to record the result and how the result could guide a change.",
+      "glossary": [
+        {
+          "term": "prototype",
+          "definition": "A model or sample made to test a design feature before the final product."
+        },
+        {
+          "term": "evidence",
+          "definition": "Recorded information that supports what you say happened."
+        },
+        {
+          "term": "refine",
+          "definition": "Improve a design by making a useful change."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "Give the test a clear purpose",
+          "paragraphs": [
+            "Apply design and creative thinking by exploring alternatives, combining useful features and testing uncertainty. Before final drawings, create at least one teacher-approved prototype, model or sample that tests an important feature such as compartment size, access, stability, proportion, material thickness or a joint. Your teacher will confirm the most suitable form and material for the test.",
+            "Create: Make the prototype, model or sample for one clearly stated purpose."
+          ],
+          "sourceIndices": [
+            4,
+            5
+          ]
+        },
+        {
+          "heading": "Test and keep the evidence",
+          "paragraphs": [
+            "Test: Compare its performance with the brief and success criteria.",
+            "Record: Photograph or sketch the test and write what the evidence shows."
+          ],
+          "sourceIndices": [
+            6,
+            7
+          ]
+        },
+        {
+          "heading": "Use the result to improve the idea",
+          "paragraphs": [
+            "Refine: Change the concept in response to the result and explain why.",
+            "After selecting a preferred direction, improve it using feedback. Changes might refine the layout, improve access, reduce wasted material, strengthen stability or simplify construction. Record what changed and why. A strong justification explains how the final concept responds to the brief, which trade-offs were accepted and why the design is realistic for the project."
+          ],
+          "sourceIndices": [
+            8,
+            9
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-05-concept-comparison-matrix.webp",
+        "alt": "Four organiser sketches beside a blank comparison table with four rows of criteria symbols.",
+        "caption": "Choose one idea. What feature would you want to test before developing it?",
+        "sourceRoute": "weeks3-4/index.html#compare-concepts",
+        "purpose": "Provides concept sketches from which students can choose a feature to test. The blank matrix offers no test results or approved final design."
+      },
+      "placement": "bank"
+    },
+    {
+      "id": "read-general-design-principles",
+      "moduleId": "M02",
+      "sectionId": "respectful-design",
+      "title": "How can your own design show learning?",
+      "mechanic": "decision",
+      "prompt": "What original design choice could show the student’s learning respectfully?",
+      "scenario": "After teacher-approved research, a student wants their Desk Tidy to show what they learnt. They suggest adding unfamiliar decorative patterns.",
+      "lookFor": [
+        "Choose a broad lesson from the reading, such as designing for a clear purpose, careful material use, repair or reducing waste.",
+        "Explain how the lesson would guide one feature or decision in the student’s own Desk Tidy.",
+        "Keep the design original and acknowledge the research source. Adding unfamiliar patterns is not a substitute for thoughtful application of a general principle."
+      ],
+      "sourceEvidence": [
+        "Instead, students can consider broad design lessons that are suitable to apply, such as choosing materials carefully, designing for a clear purpose, making products that can be maintained or repaired, and reducing waste.",
+        "Good work shows respectful learning, accurate attribution and thoughtful application of general principles."
+      ],
+      "pairPrompt": "Explain your chosen broad lesson to a partner. Ask them to point to the design choice that puts the lesson into practice.",
+      "sourceRefs": [
+        "weeks3-4/index.html#respectful-design",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Learning respectfully from Aboriginal and Torres Strait Islander design knowledge",
+      "sourceText": [
+        "Aboriginal and Torres Strait Islander design knowledge is diverse and cannot be treated as one shared set of ideas. Knowledge is connected to Country, community, history and responsibility. Students should avoid broad claims and instead learn from teacher-approved, authoritative sources that explain whose knowledge is being presented and the context in which it is shared.",
+        "Where appropriate, local community guidance may help students understand how knowledge should be approached. This does not mean asking community members to provide cultural content on demand. It means recognising that some knowledge has owners, custodians and conditions around its use. Teachers will guide which sources are suitable and whether any local consultation is appropriate.",
+        "Indigenous Cultural and Intellectual Property refers to the rights Aboriginal and Torres Strait Islander peoples hold in relation to their cultural knowledge, designs, stories and other forms of expression. Finding an image or idea online does not automatically give permission to copy it. Students must record sources, give clear attribution and avoid reproducing restricted, sacred or culturally significant designs.",
+        "This research should not become a decorative exercise. Adding unfamiliar patterns or symbols to a Desk Tidy without context or permission can be disrespectful and may reduce living cultures to surface decoration. Instead, students can consider broad design lessons that are suitable to apply, such as choosing materials carefully, designing for a clear purpose, making products that can be maintained or repaired, and reducing waste.",
+        "The final Desk Tidy should remain the student’s own original design. Research may influence the way a student thinks about material use, longevity, responsibility and connection to place, but it should not imitate a cultural object or copy a design. Good work shows respectful learning, accurate attribution and thoughtful application of general principles.",
+        "Use teacher-approved and authoritative sources.",
+        "Identify whose knowledge is being shared and its context.",
+        "Record sources and provide clear attribution.",
+        "Check whether permission or local guidance is required.",
+        "Do not copy restricted, sacred or culturally significant designs.",
+        "Apply broad lessons to an original design rather than adding decoration.",
+        "Cultural safety check: If a source does not clearly explain where the knowledge comes from, who has authority to share it or whether it may be reused, do not copy it. Ask the teacher before including it in your research or design."
+      ],
+      "sourceAnchor": "weeks3-4/index.html#respectful-design",
+      "sentenceStarter": "The student could apply the lesson of … by … This keeps the design original because …",
+      "mission": "What original design choice could show the student’s learning respectfully?",
+      "answerLabel": "What design choice would you suggest, and why?",
+      "answerHint": "Write two short sentences. Choose one broad lesson from the reading and explain how to apply it to an original Desk Tidy.",
+      "glossary": [
+        {
+          "term": "general principle",
+          "definition": "A broad idea that can guide different design choices."
+        },
+        {
+          "term": "original",
+          "definition": "Developed as your own design instead of copying another design."
+        },
+        {
+          "term": "attribution",
+          "definition": "Clearly naming where information or an idea came from."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "Learn whose knowledge is being shared",
+          "paragraphs": [
+            "Aboriginal and Torres Strait Islander design knowledge is diverse and cannot be treated as one shared set of ideas. Knowledge is connected to Country, community, history and responsibility. Students should avoid broad claims and instead learn from teacher-approved, authoritative sources that explain whose knowledge is being presented and the context in which it is shared."
+          ],
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Choose a broad design lesson",
+          "paragraphs": [
+            "This research should not become a decorative exercise. Adding unfamiliar patterns or symbols to a Desk Tidy without context or permission can be disrespectful and may reduce living cultures to surface decoration. Instead, students can consider broad design lessons that are suitable to apply, such as choosing materials carefully, designing for a clear purpose, making products that can be maintained or repaired, and reducing waste."
+          ],
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Apply it to your own design",
+          "paragraphs": [
+            "The final Desk Tidy should remain the student’s own original design. Research may influence the way a student thinks about material use, longevity, responsibility and connection to place, but it should not imitate a cultural object or copy a design. Good work shows respectful learning, accurate attribution and thoughtful application of general principles."
+          ],
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-06-respectful-research-workflow.webp",
+        "alt": "Four stages show research, listening, recording source details and developing an original design.",
+        "caption": "How could research lead to an original design choice?",
+        "sourceRoute": "weeks3-4/index.html#respectful-design",
+        "purpose": "Connects respectful research and source recording to an original response without presenting cultural motifs to copy."
+      },
+      "placement": "bank"
+    },
+    {
+      "id": "read-working-drawings-complementary-views",
+      "moduleId": "M03",
+      "sectionId": "working-drawings",
+      "title": "Can one 3D drawing do both jobs?",
+      "mechanic": "repair",
+      "prompt": "Rewrite the claim to explain why the drawing set needs both orthographic and isometric views.",
+      "scenario": "“My isometric drawing shows the whole Desk Tidy, so I do not need orthographic views.”",
+      "lookFor": [
+        "Explain that an isometric view helps someone understand the overall three-dimensional shape and compartment layout.",
+        "Explain that orthographic views show separate flat views with measured information that the isometric view does not replace."
+      ],
+      "sourceEvidence": [
+        "An isometric drawing shows the Desk Tidy as a three-dimensional form.",
+        "However, an isometric drawing does not replace the measured information in the orthographic drawings."
+      ],
+      "pairPrompt": "Explain the different jobs of the two drawing types to a partner using your clue.",
+      "sourceRefs": [
+        "weeks5-6/index.html#working-drawings",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Communicating the selected design with working drawings",
+      "sourceText": [
+        "Working drawings explain what a product should look like and how its parts relate to one another. For the Desk Tidy project, students use drawings to communicate their own approved layout before production begins. Clear drawings help the student and teacher check that the design is practical, complete and consistent with the project brief.",
+        "Orthographic drawings show separate views of the design, such as the front, top and side. Each view presents the object without perspective, making component positions and relationships easier to understand. The authorised unit requirement is for orthographic views drawn at a scale of 1:10 and supported by written dimensions. The required views should show enough information to explain the selected design clearly.",
+        "An isometric drawing shows the Desk Tidy as a three-dimensional form. It helps the viewer understand the overall shape, layout and arrangement of compartments more quickly than separate flat views. However, an isometric drawing does not replace the measured information in the orthographic drawings. Both drawing types communicate different parts of the design.",
+        "Scale and dimensions must not be confused. A visual scale of 1:10 means the drawing is shown smaller than the intended product. Written dimensions state the intended size and must be recorded in millimetres. During production, students use the written dimensions rather than estimating from the image or measuring the printed drawing.",
+        "The completed drawing set should include a clear title, labelled views, written dimensions, component relationships and short notes where they improve understanding. The drawings must match the approved student design, not an earlier concept or another student’s layout. Before production, check that matching parts, positions and dimensions agree across every view and submit the drawings for teacher approval.",
+        "Match: Confirm the drawings represent the approved design.",
+        "Compare: Check that components align across all views.",
+        "Dimension: Record required sizes clearly in millimetres.",
+        "Clarify: Add labels and notes where meaning could be unclear.",
+        "Approve: Complete teacher checks before starting production.",
+        "Accuracy check: Never rely on the apparent size of a printed or screen image. Use the written millimetre dimensions, check that every view agrees and correct any mismatch before material is marked or cut."
+      ],
+      "sourceAnchor": "weeks5-6/index.html#working-drawings",
+      "sentenceStarter": "The isometric view helps show … The orthographic views are also needed because …",
+      "mission": "Rewrite the claim to explain why the drawing set needs both orthographic and isometric views.",
+      "answerLabel": "Why are both drawing types useful?",
+      "answerHint": "Write one or two sentences. Explain the different information each drawing type provides.",
+      "glossary": [
+        {
+          "term": "orthographic",
+          "definition": "Separate flat views of a design, such as front, top and side."
+        },
+        {
+          "term": "isometric",
+          "definition": "A drawing that shows the design as a three-dimensional form."
+        },
+        {
+          "term": "dimension",
+          "definition": "A written measurement of an intended size."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "Separate views",
+          "paragraphs": [
+            "Orthographic drawings show separate views of the design, such as the front, top and side. Each view presents the object without perspective, making component positions and relationships easier to understand. The authorised unit requirement is for orthographic views drawn at a scale of 1:10 and supported by written dimensions. The required views should show enough information to explain the selected design clearly."
+          ],
+          "sourceIndices": [
+            1
+          ]
+        },
+        {
+          "heading": "The overall shape",
+          "paragraphs": [
+            "An isometric drawing shows the Desk Tidy as a three-dimensional form. It helps the viewer understand the overall shape, layout and arrangement of compartments more quickly than separate flat views. However, an isometric drawing does not replace the measured information in the orthographic drawings. Both drawing types communicate different parts of the design."
+          ],
+          "sourceIndices": [
+            2
+          ]
+        },
+        {
+          "heading": "One matching drawing set",
+          "paragraphs": [
+            "The completed drawing set should include a clear title, labelled views, written dimensions, component relationships and short notes where they improve understanding. The drawings must match the approved student design, not an earlier concept or another student’s layout. Before production, check that matching parts, positions and dimensions agree across every view and submit the drawings for teacher approval."
+          ],
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-07-orthographic-view-relationship.webp",
+        "alt": "A stepped block and three flat views of the same shape are connected by projection lines.",
+        "caption": "The same shape appears in several views. Read why a clear 3D view still needs the separate measured views.",
+        "sourceRoute": "weeks5-6/index.html#working-drawings",
+        "purpose": "Uses the approved view-relationship image to support comparison of the different information supplied by orthographic and isometric drawings."
+      },
+      "placement": "bank"
+    },
+    {
+      "id": "read-cutting-schedule-delays",
+      "moduleId": "M03",
+      "sectionId": "cutting-schedule",
+      "title": "Why leave room for delays?",
+      "mechanic": "decision",
+      "prompt": "Use the reading to decide how a schedule should allow for delays and extra checking.",
+      "scenario": "A student fills every available lesson with making tasks. Their plan leaves no time for corrections or waiting for shared tools.",
+      "lookFor": [
+        "Allow contingency time for realistic delays, corrections or extra checking without rushing.",
+        "Connect the plan to shared tools, teacher access or workshop resources that may affect progress.",
+        "Explain that contingency time is not spare time to use up at the start."
+      ],
+      "sourceEvidence": [
+        "The chart should also consider teacher access, shared tools, workshop resources and other activities that may affect progress.",
+        "Contingency time allows for realistic delays, corrections or extra checking without rushing.",
+        "It should not be used as spare time at the start of the project."
+      ],
+      "pairPrompt": "Explain why the schedule needs contingency time to a partner using your clue.",
+      "sourceRefs": [
+        "weeks5-6/index.html#cutting-schedule",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Cutting lists and a realistic production schedule",
+      "sourceText": [
+        "Once the Desk Tidy design and working drawings are approved, the next step is to prepare a cutting list. A cutting list converts the drawings into clear production information. Each entry should include the part name, quantity, material and exact dimensions shown on the approved drawings. It must match the selected design and be checked by the teacher before production begins.",
+        "Accuracy matters because one mistake can affect several later stages. Check that every part shown in the drawings appears on the cutting list, that quantities are correct and that matching parts have matching dimensions. Review the totals carefully and confirm that the listed material suits the approved design. Do not rely on memory or estimate missing information.",
+        "A production schedule places the project stages in a sensible order. The authorised sequence moves from marking to cutting, joint preparation, dry fitting, assembly, surface preparation, finishing, testing and evaluation. Some stages depend on earlier work being completed correctly. For example, assembly should not begin until the parts have been dry fitted and any problems have been identified.",
+        "A simple Gantt chart shows when each stage is expected to occur and how long it may take relative to the rest of the project. Milestones mark important checkpoints, such as approved drawings, a completed cutting list, a successful dry fit or a finished product ready for testing. The chart should also consider teacher access, shared tools, workshop resources and other activities that may affect progress.",
+        "Contingency time allows for realistic delays, corrections or extra checking without rushing. It should not be used as spare time at the start of the project. A useful schedule helps students work steadily, identify what must happen next and adjust the plan when approved changes are required.",
+        "Stage Planning focus Checkpoint",
+        "Marking and cutting Follow approved dimensions and sequence Parts checked before moving on",
+        "Joint preparation and dry fitting Check fit and component relationships Teacher-approved dry fit",
+        "Assembly and surface preparation Maintain order and quality Form and surfaces checked",
+        "Finishing, testing and evaluation Complete final stages and record evidence Product ready for evaluation",
+        "Quality gate: Do not move to the next stage because the calendar says so. Move on only when the current stage has been checked, problems have been addressed and the teacher has approved the next step."
+      ],
+      "sourceAnchor": "weeks5-6/index.html#cutting-schedule",
+      "sentenceStarter": "The schedule should allow … so that …",
+      "mission": "Use the reading to decide how a schedule should allow for delays and extra checking.",
+      "answerLabel": "What should change in this schedule?",
+      "answerHint": "Write one or two sentences. Explain what contingency time is for.",
+      "glossary": [
+        {
+          "term": "cutting list",
+          "definition": "A list of parts, quantities, materials and exact measurements from the approved drawings."
+        },
+        {
+          "term": "production schedule",
+          "definition": "A plan showing the order and timing of the making stages."
+        },
+        {
+          "term": "contingency time",
+          "definition": "Time allowed for delays, corrections or extra checking."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "Put stages in order",
+          "paragraphs": [
+            "A production schedule places the project stages in a sensible order. The authorised sequence moves from marking to cutting, joint preparation, dry fitting, assembly, surface preparation, finishing, testing and evaluation. Some stages depend on earlier work being completed correctly. For example, assembly should not begin until the parts have been dry fitted and any problems have been identified."
+          ],
+          "sourceIndices": [
+            2
+          ]
+        },
+        {
+          "heading": "Plan for shared resources",
+          "paragraphs": [
+            "A simple Gantt chart shows when each stage is expected to occur and how long it may take relative to the rest of the project. Milestones mark important checkpoints, such as approved drawings, a completed cutting list, a successful dry fit or a finished product ready for testing. The chart should also consider teacher access, shared tools, workshop resources and other activities that may affect progress."
+          ],
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Allow time to adjust",
+          "paragraphs": [
+            "Contingency time allows for realistic delays, corrections or extra checking without rushing. It should not be used as spare time at the start of the project. A useful schedule helps students work steadily, identify what must happen next and adjust the plan when approved changes are required."
+          ],
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-08-drawing-list-schedule-flow.webp",
+        "alt": "A checked drawing leads to a parts table, then a sequence of production-stage symbols.",
+        "caption": "The production stages follow a checked drawing and parts list. Read why the timing must also allow for delays.",
+        "sourceRoute": "weeks5-6/index.html#cutting-schedule",
+        "purpose": "Uses the approved drawing-list-schedule flow to connect production planning with realistic timing and dependencies."
+      },
+      "placement": "bank"
+    },
+    {
+      "id": "read-accurate-markout-waste-check",
+      "moduleId": "M03",
+      "sectionId": "accurate-markout",
+      "title": "What does ‘measure twice’ really check?",
+      "mechanic": "hunt",
+      "prompt": "Find why checking the waste side belongs in ‘measure twice, cut once’.",
+      "lookFor": [
+        "Explain that marking the waste side helps prevent the required material being removed by mistake.",
+        "Show that ‘measure twice’ means confirming details such as the waste side and orientation, not just repeating an unchecked measurement."
+      ],
+      "sourceEvidence": [
+        "Mark the waste side clearly so the required material is not removed by mistake.",
+        "“Measure twice, cut once” means confirming the dimension, datum, orientation and waste side before making an irreversible decision.",
+        "It does not simply mean repeating the same unchecked measurement."
+      ],
+      "pairPrompt": "Explain why repeating a measurement is not the whole check to a partner using your clue.",
+      "sourceRefs": [
+        "weeks5-6/index.html#accurate-markout",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Datums and accurate marking out",
+      "sourceText": [
+        "Workshop dimensions are recorded in millimetres, so measurements must be read and marked carefully. Use a sharp pencil to produce fine, clear lines, a steel rule for measuring and a try square for lines that must be square to an edge. Thick or unclear marks can make it difficult to decide exactly where a cut or joint should be placed.",
+        "A datum is a reliable starting point used for measurements. This may be a straight reference edge or, where appropriate, identified face-side and face-edge surfaces. Measuring related features from the same datum reduces the chance of small errors building up across a component. If measurements are taken from several different edges, any unevenness can cause parts to misalign.",
+        "Place the rule so its zero mark aligns exactly with the datum. Do not assume the physical end of the rule is the same as zero. Look directly above the measurement to avoid parallax, which occurs when a scale is viewed from an angle and appears to line up with the wrong point. Hold the rule securely and make one fine mark before using the try square to extend it.",
+        "Mark the waste side clearly so the required material is not removed by mistake. Matching components should be compared and, where suitable, checked together so their lengths, positions or related features agree. “Measure twice, cut once” means confirming the dimension, datum, orientation and waste side before making an irreversible decision. It does not simply mean repeating the same unchecked measurement.",
+        "Mark-out accuracy affects every later stage. Incorrect lines can create poor joint fit, components that are out of square, reduced stability and unnecessary material waste. Before cutting, compare the marks with the approved drawing and cutting list. Ask the teacher or a partner to check critical measurements and relationships, while remembering that teacher approval still controls production.",
+        "Select: Identify the reliable datum or reference edge.",
+        "Measure: Work from zero and read directly above the rule.",
+        "Mark: Use a sharp pencil and extend square lines clearly.",
+        "Identify: Mark the waste side and component orientation.",
+        "Compare: Check matching parts and related measurements.",
+        "Verify: Complete a teacher or partner check before cutting.",
+        "Stop and check: If the datum is unclear, the rule moved, two marks disagree or the waste side is uncertain, do not cut. Recheck the approved drawing, confirm the measurement and seek teacher guidance."
+      ],
+      "sourceAnchor": "weeks5-6/index.html#accurate-markout",
+      "sentenceStarter": "Checking the waste side helps prevent … because …",
+      "mission": "Find why checking the waste side belongs in ‘measure twice, cut once’.",
+      "answerLabel": "Why check the waste side before cutting?",
+      "answerHint": "Write one or two sentences. Explain what this check helps protect.",
+      "scenario": "",
+      "glossary": [
+        {
+          "term": "waste side",
+          "definition": "The side of a marked line containing material intended to be removed."
+        },
+        {
+          "term": "orientation",
+          "definition": "The direction or position of a component."
+        },
+        {
+          "term": "datum",
+          "definition": "A reliable starting point for measurements."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "Make the mark clear",
+          "paragraphs": [
+            "Workshop dimensions are recorded in millimetres, so measurements must be read and marked carefully. Use a sharp pencil to produce fine, clear lines, a steel rule for measuring and a try square for lines that must be square to an edge. Thick or unclear marks can make it difficult to decide exactly where a cut or joint should be placed."
+          ],
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Check what stays",
+          "paragraphs": [
+            "Mark the waste side clearly so the required material is not removed by mistake. Matching components should be compared and, where suitable, checked together so their lengths, positions or related features agree. “Measure twice, cut once” means confirming the dimension, datum, orientation and waste side before making an irreversible decision. It does not simply mean repeating the same unchecked measurement."
+          ],
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Check before cutting",
+          "paragraphs": [
+            "Mark-out accuracy affects every later stage. Incorrect lines can create poor joint fit, components that are out of square, reduced stability and unnecessary material waste. Before cutting, compare the marks with the approved drawing and cutting list. Ask the teacher or a partner to check critical measurements and relationships, while remembering that teacher approval still controls production."
+          ],
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-09-datum-square-marking.webp",
+        "alt": "Practice timber with a fine pencil line, a combination square beside its edge and a steel rule nearby.",
+        "caption": "The pencil line marks a position. Read why the waste side must also be clear before cutting.",
+        "sourceRoute": "weeks5-6/index.html#accurate-markout",
+        "purpose": "Uses the approved marking image as an entry point for distinguishing a dimension line from the additional waste-side and orientation checks."
+      },
+      "placement": "bank"
+    },
+    {
+      "id": "read-cutting-shaping-regular-checks",
+      "moduleId": "M04",
+      "sectionId": "cutting-shaping",
+      "title": "Why check parts as you go?",
+      "mechanic": "hunt",
+      "prompt": "Find why matching components should be compared during cutting and shaping.",
+      "lookFor": [
+        "Explain that comparing matching components helps keep their size and related features consistent.",
+        "Link small differences to larger problems during dry fitting and assembly, or explain that regular checks reduce waste and make adjustments more manageable."
+      ],
+      "sourceEvidence": [
+        "Confirm that edges are square where required and compare matching components so they remain consistent.",
+        "Small differences can build into larger problems during dry fitting and assembly.",
+        "Regular checking reduces waste and makes later adjustments more manageable."
+      ],
+      "pairPrompt": "Explain the value of checking matching parts to a partner using your clue.",
+      "sourceRefs": [
+        "weeks7-8/index.html#cutting-shaping",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Cutting and shaping components accurately",
+      "sourceText": [
+        "Cutting and shaping remove material to create the parts shown in the approved drawings. Begin only after the mark-out has been checked and production has been authorised by the teacher. The aim is not to remove material as quickly as possible. The aim is to work accurately, safely and in a way that leaves enough material for controlled refinement.",
+        "Teacher-approved hand tools may include a tenon saw, bevel-edged chisel and block plane, depending on the task and the student’s authorisation. Each tool removes material differently, so it must be used only after instruction and demonstration. Work should be secured in a bench hook or vice as demonstrated so the component remains stable and both hands can be kept under control.",
+        "Start from the approved mark-out and identify the waste side before cutting. Work on the waste side of the line rather than removing the line itself. Leaving a small amount of material allows the surface or edge to be refined gradually. Removing too much material is harder to correct and may affect joint fit, component size or the overall squareness of the Desk Tidy.",
+        "The kerf is the narrow width of material removed by the saw cut. Keeping the kerf on the waste side protects the required component and preserves the fine pencil line as a checking reference.",
+        "Check progress often using the approved drawings and suitable checking tools. Confirm that edges are square where required and compare matching components so they remain consistent. Small differences can build into larger problems during dry fitting and assembly. Regular checking reduces waste and makes later adjustments more manageable.",
+        "If a cut wanders, a surface becomes uneven or the tool begins to bind, stop and diagnose the cause. Do not force the tool or continue hoping the error will disappear. Seek teacher guidance before attempting a correction. Any drilling required for the approved design is completed only as an authorised, teacher-controlled process following instruction and workshop requirements.",
+        "Secure: Hold the work in the demonstrated bench hook or vice setup.",
+        "Confirm: Check the approved mark-out and identify the waste side.",
+        "Cut: Remove material with controlled strokes on the waste side.",
+        "Refine: Leave material for careful shaping rather than overcutting.",
+        "Check: Test squareness, fit and matching components regularly.",
+        "Stop: Diagnose errors and seek guidance before continuing.",
+        "Safety and quality check: Never hold unstable work, force a tool or attempt an unfamiliar correction. Stop, secure the component and ask the teacher before proceeding."
+      ],
+      "sourceAnchor": "weeks7-8/index.html#cutting-shaping",
+      "sentenceStarter": "Comparing matching parts helps … because …",
+      "mission": "Find why matching components should be compared during cutting and shaping.",
+      "answerLabel": "Why compare matching parts before assembly?",
+      "answerHint": "Write one or two sentences. Link regular checks to a problem they help prevent.",
+      "scenario": "",
+      "glossary": [
+        {
+          "term": "component",
+          "definition": "One of the parts used to make the product."
+        },
+        {
+          "term": "refinement",
+          "definition": "Gradually improving a surface or edge through controlled shaping."
+        },
+        {
+          "term": "dry fitting",
+          "definition": "Putting prepared parts together without glue to check how they fit."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "Accuracy is the aim",
+          "paragraphs": [
+            "Cutting and shaping remove material to create the parts shown in the approved drawings. Begin only after the mark-out has been checked and production has been authorised by the teacher. The aim is not to remove material as quickly as possible. The aim is to work accurately, safely and in a way that leaves enough material for controlled refinement."
+          ],
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Leave room to refine",
+          "paragraphs": [
+            "Start from the approved mark-out and identify the waste side before cutting. Work on the waste side of the line rather than removing the line itself. Leaving a small amount of material allows the surface or edge to be refined gradually. Removing too much material is harder to correct and may affect joint fit, component size or the overall squareness of the Desk Tidy."
+          ],
+          "sourceIndices": [
+            2
+          ]
+        },
+        {
+          "heading": "Compare as you go",
+          "paragraphs": [
+            "Check progress often using the approved drawings and suitable checking tools. Confirm that edges are square where required and compare matching components so they remain consistent. Small differences can build into larger problems during dry fitting and assembly. Regular checking reduces waste and makes later adjustments more manageable."
+          ],
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/support-waste-side-kerf-relationship.webp",
+        "alt": "Timber diagram showing a plain required piece on the left, a narrow grey kerf band and cross-hatched waste on the right.",
+        "caption": "The pencil line is a checking reference. Read why matching parts also need regular comparison.",
+        "sourceRoute": "weeks7-8/index.html#cutting-shaping",
+        "purpose": "Uses the approved waste-side image to connect a visible checking reference with the broader source requirement to compare matching parts regularly."
+      },
+      "placement": "bank"
+    },
+    {
+      "id": "read-joint-choices-dowel-alignment",
+      "moduleId": "M04",
+      "sectionId": "joint-choices",
+      "title": "Do hidden dowels need accuracy?",
+      "mechanic": "repair",
+      "prompt": "Rewrite the claim to explain why dowel positions must match accurately.",
+      "scenario": "“The dowels are hidden inside the joint, so it does not matter if their positions do not match.”",
+      "lookFor": [
+        "Explain that a dowel joint needs matching hole positions and accurate alignment.",
+        "Link a marking error to parts sitting unevenly or the joint failing to close properly."
+      ],
+      "sourceEvidence": [
+        "Its success depends on matching hole positions and accurate alignment between parts.",
+        "Small marking errors can cause the components to sit unevenly or prevent the joint from closing properly."
+      ],
+      "pairPrompt": "Explain why hidden connectors still need accurate positions to a partner using your clue.",
+      "sourceRefs": [
+        "weeks7-8/index.html#joint-choices",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Butt, rebate and dowel joints in a Desk Tidy",
+      "sourceText": [
+        "A joint connects two or more components so they work as one structure. In a Desk Tidy, the most suitable joint depends on the relationship between the parts, the required alignment, the appearance of the finished product and the level of accuracy that can be achieved. The approved student drawing and teacher direction determine which joint is used in each situation.",
+        "A butt joint places the end or edge of one component directly against another. It is simple to understand and can be suitable where parts meet clearly and accurately. Its main limitation is that alignment depends heavily on careful marking, square edges and secure positioning. The contact area for glue may also be smaller than in some other joint types.",
+        "A rebate joint includes a step or recess that helps locate one component against another. This can improve alignment and provide a clearer seating position during assembly. It may also increase the available glue area. However, the rebate must be marked and formed accurately. If it is uneven, too loose or out of square, the connected parts may sit incorrectly.",
+        "A dowel joint uses hidden cylindrical connectors to align and join components. It can create a neat appearance because the connectors are usually not visible in the finished joint. Its success depends on matching hole positions and accurate alignment between parts. Small marking errors can cause the components to sit unevenly or prevent the joint from closing properly.",
+        "Before glue is applied, every approved joint should be dry fitted. Check that surfaces meet evenly, components remain square and matching parts align as intended. Gaps may suggest inaccurate edges or poor seating. Twist may indicate that parts are not square or are being held unevenly. Misalignment may come from incorrect marking, joint position or component orientation. Stop and diagnose the cause with the teacher rather than forcing the joint together.",
+        "Joint Main advantage Main limitation Key check",
+        "Butt Simple component relationship Relies on accurate edges and alignment Square contact with no rocking",
+        "Rebate Helps locate parts and may increase glue area Recess must be accurate Even seating along the joint",
+        "Dowel Neat, concealed connection Matching positions are critical Parts close without offset",
+        "Fit check: Never use glue to hide a poor dry fit. If there is a gap, twist or offset, stop and identify the cause before assembly continues."
+      ],
+      "sourceAnchor": "weeks7-8/index.html#joint-choices",
+      "sentenceStarter": "Even though the dowels are hidden, … because …",
+      "mission": "Rewrite the claim to explain why dowel positions must match accurately.",
+      "answerLabel": "Why must the dowel positions match?",
+      "answerHint": "Write one or two sentences. Explain how a marking error could affect the joint.",
+      "glossary": [
+        {
+          "term": "dowel",
+          "definition": "A cylindrical connector used to align and join components."
+        },
+        {
+          "term": "alignment",
+          "definition": "How accurately parts line up with each other."
+        },
+        {
+          "term": "dry fit",
+          "definition": "A check of how parts fit together before glue is applied."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "Choose for the design",
+          "paragraphs": [
+            "A joint connects two or more components so they work as one structure. In a Desk Tidy, the most suitable joint depends on the relationship between the parts, the required alignment, the appearance of the finished product and the level of accuracy that can be achieved. The approved student drawing and teacher direction determine which joint is used in each situation."
+          ],
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Hidden connections",
+          "paragraphs": [
+            "A dowel joint uses hidden cylindrical connectors to align and join components. It can create a neat appearance because the connectors are usually not visible in the finished joint. Its success depends on matching hole positions and accurate alignment between parts. Small marking errors can cause the components to sit unevenly or prevent the joint from closing properly."
+          ],
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Check the fit",
+          "paragraphs": [
+            "Before glue is applied, every approved joint should be dry fitted. Check that surfaces meet evenly, components remain square and matching parts align as intended. Gaps may suggest inaccurate edges or poor seating. Twist may indicate that parts are not square or are being held unevenly. Misalignment may come from incorrect marking, joint position or component orientation. Stop and diagnose the cause with the teacher rather than forcing the joint together."
+          ],
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/support-dowel-joint-alignment.webp",
+        "alt": "Two pine blocks separated to show two timber dowels aligned with two matching holes.",
+        "caption": "These dowels face matching holes. Read why a neat hidden joint still needs accurate positions.",
+        "sourceRoute": "weeks7-8/index.html#joint-choices",
+        "purpose": "Reuses the approved dowel-alignment illustration to make the relationship between connectors and matching holes visible without adding drilling instructions."
+      },
+      "placement": "bank"
+    },
+    {
+      "id": "read-dry-fit-glue-clamp-check",
+      "moduleId": "M04",
+      "sectionId": "dry-fit-glue",
+      "title": "Are clamps the final check?",
+      "mechanic": "decision",
+      "prompt": "Use the reading to decide what to do when a component moves during clamping.",
+      "scenario": "The dry fit was approved. After glue and clamps are added, one component appears to have moved out of alignment.",
+      "lookFor": [
+        "Stop and recheck squareness, alignment and stability because parts can move during assembly.",
+        "Follow teacher or product instructions to address the cause; do not add clamp pressure to hide the problem."
+      ],
+      "sourceEvidence": [
+        "Recheck squareness, alignment and stability after clamping because parts can move during assembly.",
+        "No-rush rule: Do not use glue, add clamp pressure or move to a finer abrasive to hide a problem.",
+        "Stop, identify the cause and follow teacher or product instructions before continuing."
+      ],
+      "pairPrompt": "Explain why an approved dry fit still needs checks after clamping to a partner using your clue.",
+      "sourceRefs": [
+        "weeks7-8/index.html#dry-fit-glue",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Dry fitting, PVA assembly and surface preparation",
+      "sourceText": [
+        "A complete dry fit means assembling all prepared components without glue so the Desk Tidy can be checked as a whole. Confirm that the parts are in the correct order, joints close properly, the structure sits square and the organiser remains stable on a flat surface. Check the approved drawing as you work and identify any gaps, twist, rocking or misalignment before assembly continues.",
+        "The dry fit is also a planning check. Students should know which component is positioned first, how the remaining parts relate to it and where clamps can be placed safely. If anything is unclear or does not fit correctly, stop and seek teacher guidance. The teacher must approve the dry fit and assembly plan before PVA adhesive is applied.",
+        "PVA is applied only to prepared joint surfaces using the method demonstrated by the teacher and following product instructions. Parts should be brought together carefully so their alignment is maintained. Clamps must be positioned as demonstrated to hold the joints securely without pulling the structure out of square. Use only enough pressure to close the joints appropriately; excessive pressure can shift components, damage edges or force out too much adhesive.",
+        "Any squeeze-out should be managed using the approved workshop method before it creates extra surface-preparation work. Recheck squareness, alignment and stability after clamping because parts can move during assembly. Record clear photographs that show the assembled structure, clamp arrangement and important quality checks. These images can provide useful evidence for the project folio.",
+        "Once the teacher and product instructions allow surface preparation to continue, sanding should progress through the authorised sequence of 80, 120 and 240 grit, unless the teacher directs otherwise. Each stage removes marks left by the previous grit. Protect corners and edges from becoming rounded unintentionally, sand surfaces evenly and remove dust using the approved method before checking the result or moving to the next stage.",
+        "Dry fit: Assemble all parts and check order, fit, square and stability.",
+        "Approve: Resolve faults and gain teacher approval.",
+        "Assemble: Apply PVA and clamp using demonstrated methods.",
+        "Check: Manage squeeze-out and recheck alignment.",
+        "Record: Photograph the assembly and quality checks.",
+        "Prepare: Sand progressively and remove dust as directed.",
+        "No-rush rule: Do not use glue, add clamp pressure or move to a finer abrasive to hide a problem. Stop, identify the cause and follow teacher or product instructions before continuing."
+      ],
+      "sourceAnchor": "weeks7-8/index.html#dry-fit-glue",
+      "sentenceStarter": "The student should stop and … because …",
+      "mission": "Use the reading to decide what to do when a component moves during clamping.",
+      "answerLabel": "What should happen after this movement is noticed?",
+      "answerHint": "Write one or two sentences. Name the checks needed and explain why more pressure is not a solution.",
+      "glossary": [
+        {
+          "term": "alignment",
+          "definition": "How accurately the components line up with each other."
+        },
+        {
+          "term": "squareness",
+          "definition": "Whether the required corners and edges meet at right angles."
+        },
+        {
+          "term": "PVA",
+          "definition": "The adhesive used for the approved assembly process."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "Hold the intended shape",
+          "paragraphs": [
+            "PVA is applied only to prepared joint surfaces using the method demonstrated by the teacher and following product instructions. Parts should be brought together carefully so their alignment is maintained. Clamps must be positioned as demonstrated to hold the joints securely without pulling the structure out of square. Use only enough pressure to close the joints appropriately; excessive pressure can shift components, damage edges or force out too much adhesive."
+          ],
+          "sourceIndices": [
+            2
+          ]
+        },
+        {
+          "heading": "Check again after clamping",
+          "paragraphs": [
+            "Any squeeze-out should be managed using the approved workshop method before it creates extra surface-preparation work. Recheck squareness, alignment and stability after clamping because parts can move during assembly. Record clear photographs that show the assembled structure, clamp arrangement and important quality checks. These images can provide useful evidence for the project folio."
+          ],
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Deal with the cause",
+          "paragraphs": [
+            "No-rush rule: Do not use glue, add clamp pressure or move to a finer abrasive to hide a problem. Stop, identify the cause and follow teacher or product instructions before continuing."
+          ],
+          "sourceIndices": [
+            11
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-12-dry-fit-square-check.webp",
+        "alt": "Three timber pieces in a practice dry fit, with a clamp across the open end and a square inside a corner.",
+        "caption": "The square checks a corner. Read why squareness and alignment need checking again after clamping.",
+        "sourceRoute": "weeks7-8/index.html#dry-fit-glue",
+        "purpose": "Reuses the approved dry-fit square-check image to support the need for repeated quality checks during assembly, without presenting the illustration as a clamping instruction."
+      },
+      "placement": "bank"
+    },
+    {
+      "id": "read-clear-finish-surface-check",
+      "moduleId": "M05",
+      "sectionId": "clear-finish",
+      "title": "Will varnish cover poor preparation?",
+      "mechanic": "decision",
+      "prompt": "Use the reading to decide whether a rough, dusty Desk Tidy is ready for varnish.",
+      "scenario": "A student notices rough areas and dust on the Desk Tidy but wants to apply varnish to cover them.",
+      "lookFor": [
+        "Explain that varnish does not hide poor preparation, so rough areas and dust must be addressed first.",
+        "Inspect the surface, correct identified faults with teacher guidance and remove dust using the approved method so the surface is clean and dry."
+      ],
+      "sourceEvidence": [
+        "This finish does not hide poor preparation, so the quality of the final result depends on careful sanding, clean surfaces and controlled application.",
+        "Correct only the faults identified through teacher guidance, then remove dust using the approved workshop method.",
+        "The surface should be clean, dry and ready before the container is opened."
+      ],
+      "pairPrompt": "Explain why varnish cannot replace surface preparation to a partner using your clue.",
+      "sourceRefs": [
+        "weeks9-10/index.html#clear-finish",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Applying a clear finish safely and evenly",
+      "sourceText": [
+        "A finish is applied to protect the timber surface, improve its appearance and make the completed Desk Tidy easier to care for. The authorised unit uses one coat of water-based clear varnish. This finish does not hide poor preparation, so the quality of the final result depends on careful sanding, clean surfaces and controlled application.",
+        "Before finishing, inspect the entire product under good light. Look for scratches, rough areas, dents, glue residue, rounded edges or dust trapped in corners. Correct only the faults identified through teacher guidance, then remove dust using the approved workshop method. The surface should be clean, dry and ready before the container is opened.",
+        "Apply the varnish only after the teacher demonstration and in accordance with the product information. Use a controlled amount and work methodically so all approved surfaces are covered. Watch for runs on vertical faces, pooling in corners and joints, and missed areas around edges or internal sections. Do not repeatedly work over a section once the finish has begun to settle, as this may create an uneven surface.",
+        "After application, place the Desk Tidy in the teacher-approved location where it can remain protected from dust, contact and accidental movement. Drying and curing are related but different. Drying means the surface has lost enough moisture to feel dry, while curing means the finish has developed its full working strength. A surface that feels dry may still be too soft for handling or testing, so teacher and product instructions determine when the project may be moved.",
+        "Before functional testing, inspect the finish for even coverage, runs, pooling, missed areas, trapped dust or damage. Check that the product remains stable and that the finish has not interfered with any component relationship. Record the completed surface with clear photographs, then seek teacher approval before placing stationery, cables or paperclips into the organiser.",
+        "Surface inspected and dust removed by the approved method.",
+        "One coat of water-based clear varnish applied as demonstrated.",
+        "Coverage checked for runs, pooling and missed areas.",
+        "Work protected while drying and curing.",
+        "Final result checked before functional testing.",
+        "Safety check: Do not guess how to apply, handle or test a finish. Follow the teacher demonstration and product information, report spills or unexpected results, and leave the project undisturbed until authorised."
+      ],
+      "sourceAnchor": "weeks9-10/index.html#clear-finish",
+      "sentenceStarter": "The surface is not ready because … Before varnishing, the student should …",
+      "mission": "Use the reading to decide whether a rough, dusty Desk Tidy is ready for varnish.",
+      "answerLabel": "Is this surface ready for varnish?",
+      "answerHint": "Write one or two sentences. Explain what must happen before the finish is applied.",
+      "glossary": [
+        {
+          "term": "surface preparation",
+          "definition": "Getting the timber surface ready before applying a finish."
+        },
+        {
+          "term": "varnish",
+          "definition": "A finish applied to protect the timber surface and improve its appearance."
+        },
+        {
+          "term": "glue residue",
+          "definition": "Glue left on the surface after assembly."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "What varnish can do",
+          "paragraphs": [
+            "A finish is applied to protect the timber surface, improve its appearance and make the completed Desk Tidy easier to care for. The authorised unit uses one coat of water-based clear varnish. This finish does not hide poor preparation, so the quality of the final result depends on careful sanding, clean surfaces and controlled application."
+          ],
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Inspect the surface first",
+          "paragraphs": [
+            "Before finishing, inspect the entire product under good light. Look for scratches, rough areas, dents, glue residue, rounded edges or dust trapped in corners. Correct only the faults identified through teacher guidance, then remove dust using the approved workshop method. The surface should be clean, dry and ready before the container is opened."
+          ],
+          "sourceIndices": [
+            1
+          ]
+        },
+        {
+          "heading": "Apply as demonstrated",
+          "paragraphs": [
+            "Apply the varnish only after the teacher demonstration and in accordance with the product information. Use a controlled amount and work methodically so all approved surfaces are covered. Watch for runs on vertical faces, pooling in corners and joints, and missed areas around edges or internal sections. Do not repeatedly work over a section once the finish has begun to settle, as this may create an uneven surface."
+          ],
+          "sourceIndices": [
+            2
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-13-raw-clear-finish-comparison.webp",
+        "alt": "Two pine samples: a pale raw surface on the left and an even clear-finished surface with more sheen on the right.",
+        "caption": "The finished sample has an even surface. Read what preparation must happen before varnish is applied.",
+        "sourceRoute": "weeks9-10/index.html#clear-finish",
+        "purpose": "Reuses the approved raw-and-finished comparison to link the desired surface result with preparation described in the source."
+      },
+      "placement": "bank"
+    },
+    {
+      "id": "read-functional-testing-evidence",
+      "moduleId": "M05",
+      "sectionId": "functional-testing",
+      "title": "What proves the organiser is stable?",
+      "mechanic": "hunt",
+      "prompt": "Find an observation that would provide evidence about the organiser’s stability.",
+      "lookFor": [
+        "Describe observing whether the Desk Tidy sits steadily or rocks on a flat surface when items are added or removed.",
+        "Explain how a specific observation gives evidence about stability, unlike a personal comment such as ‘it looks good’."
+      ],
+      "sourceEvidence": [
+        "Check whether the Desk Tidy sits steadily or rocks when items are added or removed.",
+        "Evidence is what can be observed, measured or shown in a photograph.",
+        "Opinion is a personal judgement, such as saying the product “looks good”."
+      ],
+      "pairPrompt": "Explain why your observation is evidence rather than an opinion to a partner using your clue.",
+      "sourceRefs": [
+        "weeks9-10/index.html#functional-testing",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Functional testing against the design criteria",
+      "sourceText": [
+        "A fair test uses the same design criteria developed earlier in the project. The Desk Tidy should be tested with the intended stationery, such as pens, pencils, scissors and paperclips, rather than with unrelated objects. The test should be completed carefully and consistently so the results can be compared with the approved design brief and selected design.",
+        "Begin by checking storage capacity and access. Place the intended items into their planned compartments and observe whether they fit without crowding, falling over or becoming difficult to remove. Check whether commonly used items can be reached easily and whether the compartment layout supports the user’s needs. Also confirm that the organiser fits the intended desk space without creating unnecessary obstruction.",
+        "Stability and workmanship should be examined on a flat surface. Check whether the Desk Tidy sits steadily or rocks when items are added or removed. Inspect edges for roughness or damage, joints for gaps or movement, and components for alignment. Overall workmanship includes the accuracy, surface quality and care shown across the completed product.",
+        "Evidence is what can be observed, measured or shown in a photograph. Opinion is a personal judgement, such as saying the product “looks good”. A stronger evaluation explains that the organiser remained stable while holding the intended items, or that one compartment made scissors awkward to access. Record clear photographs and short notes that identify the test, observation and related criterion.",
+        "If testing reveals wobble, awkward access or an unsuitable compartment layout, diagnose the likely cause before suggesting an improvement. Do not force parts, alter the finished product or attempt an unapproved repair. Any adjustment must be discussed with and approved by the teacher.",
+        "Test area What to observe Evidence to record",
+        "Storage and access Fit, reach and compartment suitability Photo and specific observation",
+        "Stability and desk fit Rocking, balance and space used Test note linked to criteria",
+        "Edges, joints and finish Quality, alignment and visible faults Close-up photo and diagnosis",
+        "Honest evidence: Do not hide faults or write what you hoped would happen. Record what the test actually showed, explain why it matters and make only teacher-approved adjustments."
+      ],
+      "sourceAnchor": "weeks9-10/index.html#functional-testing",
+      "sentenceStarter": "I would observe whether … This would provide evidence about …",
+      "mission": "Find an observation that would provide evidence about the organiser’s stability.",
+      "answerLabel": "What observation would show how stable it is?",
+      "answerHint": "Write one or two sentences. Describe a test observation, not a result you have not seen.",
+      "scenario": "",
+      "glossary": [
+        {
+          "term": "stability",
+          "definition": "How steadily the organiser sits as items are added or removed."
+        },
+        {
+          "term": "evidence",
+          "definition": "Something that can be observed, measured or shown in a photograph."
+        },
+        {
+          "term": "opinion",
+          "definition": "A personal judgement about something."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "Use a fair test",
+          "paragraphs": [
+            "A fair test uses the same design criteria developed earlier in the project. The Desk Tidy should be tested with the intended stationery, such as pens, pencils, scissors and paperclips, rather than with unrelated objects. The test should be completed carefully and consistently so the results can be compared with the approved design brief and selected design."
+          ],
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Observe stability",
+          "paragraphs": [
+            "Stability and workmanship should be examined on a flat surface. Check whether the Desk Tidy sits steadily or rocks when items are added or removed. Inspect edges for roughness or damage, joints for gaps or movement, and components for alignment. Overall workmanship includes the accuracy, surface quality and care shown across the completed product."
+          ],
+          "sourceIndices": [
+            2
+          ]
+        },
+        {
+          "heading": "Separate evidence and opinion",
+          "paragraphs": [
+            "Evidence is what can be observed, measured or shown in a photograph. Opinion is a personal judgement, such as saying the product “looks good”. A stronger evaluation explains that the organiser remained stable while holding the intended items, or that one compartment made scissors awkward to access. Record clear photographs and short notes that identify the test, observation and related criterion."
+          ],
+          "sourceIndices": [
+            3
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-14-functional-test-criteria.webp",
+        "alt": "An organiser is linked to five test pictures: stored items, access, stability, desk space and close inspection of a joint.",
+        "caption": "Find the stability check in the picture. Read which observation would count as evidence.",
+        "sourceRoute": "weeks9-10/index.html#functional-testing",
+        "purpose": "Reuses the approved functional-test criteria illustration to connect the stability test area with a specific observable result."
+      },
+      "placement": "bank"
+    },
+    {
+      "id": "read-evaluation-reflection-learning",
+      "moduleId": "M05",
+      "sectionId": "evaluation-reflection",
+      "title": "Is a list of steps a reflection?",
+      "mechanic": "repair",
+      "prompt": "Rewrite the claim to explain what a useful reflection adds to a list of completed steps.",
+      "scenario": "“My reflection only needs to list the steps I completed.”",
+      "lookFor": [
+        "Explain what was learned from a significant challenge, including how the response worked or which skills improved and still need development.",
+        "Include one realistic change for next time based on evidence, rather than only listing completed tasks."
+      ],
+      "sourceEvidence": [
+        "Reflection focuses on learning.",
+        "Explain which practical or design skills improved and what still needs development.",
+        "Finish by describing one realistic change you would make next time, based on evidence rather than hindsight alone."
+      ],
+      "pairPrompt": "Explain how reflection shows learning to a partner using your clue.",
+      "sourceRefs": [
+        "weeks9-10/index.html#evaluation-reflection",
+        "course-manifests/source-map-v1.0.json"
+      ],
+      "sourceTitle": "Evaluation, presentation and reflection",
+      "sourceText": [
+        "Evaluation means judging the completed Desk Tidy against each design criterion developed earlier in the project. Use evidence from functional testing, observations, photographs and the approved drawings. Avoid vague statements such as “it worked well”. Explain what was tested, what happened and whether the result met the intended need for storage, access, stability, desk fit, appearance and workmanship.",
+        "A balanced evaluation identifies successful decisions as well as faults. A successful decision might involve a layout that keeps commonly used items easy to reach or a form that remains stable during use. Faults might include awkward access, uneven alignment, visible gaps or a surface that does not match the intended quality. Some faults may be improved with teacher approval, while others should be recorded honestly as limitations of the final product.",
+        "Students should also justify important material and process choices. Explain why the selected material suited the product, how the chosen joints or production methods supported the design, and whether those choices were realistic for the available time and skills. Sustainability should be discussed as a trade-off. Consider suitable stock selection, waste reduction, durability, repair, responsible material use and whether a different decision could have reduced environmental impact.",
+        "A short presentation should communicate the design journey clearly. Useful evidence may include early sketches, the selected concept, working drawings, process photographs, assembly checks, the finished product and functional test results. Arrange the evidence in a logical order and use brief explanations to show how the design changed and why decisions were made.",
+        "Reflection focuses on learning. Identify the most significant challenge, how it was approached and whether the response was effective. Explain which practical or design skills improved and what still needs development. Finish by describing one realistic change you would make next time, based on evidence rather than hindsight alone.",
+        "Criterion: State what the design was meant to achieve.",
+        "Evidence: Show the test result, observation or photograph.",
+        "Judgement: Explain the success, fault or trade-off.",
+        "Improvement: Identify an approved or future change.",
+        "Reflection: Describe the learning and skill growth.",
+        "Authenticity check: Present your own decisions, evidence and learning. Do not hide faults or copy another student’s reflection. Honest evaluation is more useful than pretending every part of the project was successful."
+      ],
+      "sourceAnchor": "weeks9-10/index.html#evaluation-reflection",
+      "sentenceStarter": "A useful reflection should explain … and use evidence to suggest …",
+      "mission": "Rewrite the claim to explain what a useful reflection adds to a list of completed steps.",
+      "answerLabel": "What should a useful reflection explain?",
+      "answerHint": "Write one or two sentences. Focus on learning and a realistic change for next time.",
+      "glossary": [
+        {
+          "term": "reflection",
+          "definition": "Thinking about what you learned and what still needs work."
+        },
+        {
+          "term": "evidence",
+          "definition": "Information from tests, observations, photographs or drawings that supports an explanation."
+        },
+        {
+          "term": "design journey",
+          "definition": "How a design develops and changes through the project."
+        }
+      ],
+      "readingCards": [
+        {
+          "heading": "Use the project evidence",
+          "paragraphs": [
+            "Evaluation means judging the completed Desk Tidy against each design criterion developed earlier in the project. Use evidence from functional testing, observations, photographs and the approved drawings. Avoid vague statements such as “it worked well”. Explain what was tested, what happened and whether the result met the intended need for storage, access, stability, desk fit, appearance and workmanship."
+          ],
+          "sourceIndices": [
+            0
+          ]
+        },
+        {
+          "heading": "Show the design journey",
+          "paragraphs": [
+            "A short presentation should communicate the design journey clearly. Useful evidence may include early sketches, the selected concept, working drawings, process photographs, assembly checks, the finished product and functional test results. Arrange the evidence in a logical order and use brief explanations to show how the design changed and why decisions were made."
+          ],
+          "sourceIndices": [
+            3
+          ]
+        },
+        {
+          "heading": "Explain the learning",
+          "paragraphs": [
+            "Reflection focuses on learning. Identify the most significant challenge, how it was approached and whether the response was effective. Explain which practical or design skills improved and what still needs development. Finish by describing one realistic change you would make next time, based on evidence rather than hindsight alone."
+          ],
+          "sourceIndices": [
+            4
+          ]
+        }
+      ],
+      "visual": {
+        "src": "assets/learning/section-15-evaluation-evidence-pathway.webp",
+        "alt": "An evaluation pathway shows a target, evidence camera, success and fault check, improvement sketch and reflection notebook.",
+        "caption": "The pathway ends with reflection. Read what this adds after the evidence has been presented.",
+        "sourceRoute": "weeks9-10/index.html#evaluation-reflection",
+        "purpose": "Reuses the approved evaluation pathway to distinguish presenting project evidence from explaining learning and a future improvement."
+      },
+      "placement": "bank"
     }
   ]
 };

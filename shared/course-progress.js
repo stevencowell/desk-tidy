@@ -3,7 +3,7 @@
 
   const COURSE_ID = "desk-tidy";
   const BACKUP_SCHEMA = "tas-course-backup";
-  const BACKUP_VERSION = 3;
+  const BACKUP_VERSION = 4;
   const FOLIO_KEY = "desk_tidy_folio_v1";
   const FOLIO_PROJECT = "Stage 4 Timber Desk Tidy Project Folio";
   const ACTIVITY_PREFIX = "desk-tidy:applied-learning:v1:";
@@ -106,16 +106,38 @@
     route: module.route
   })));
   const BONUS_READINGS = [
-    { id: "read-testable-criteria", title: "Can you test 'it looks good'?", module: "M01" },
-    { id: "read-stronger-controls", title: "Which control is stronger?", module: "M01" },
-    { id: "read-clear-workspace", title: "Why does a clear bench matter?", module: "M01" },
-    { id: "read-reduce-timber-waste", title: "How could you waste less timber?", module: "M01" }
+    { id: "read-testable-criteria", title: "Can you test 'it looks good'?", module: "M01", placement: "bank" },
+    { id: "read-stronger-controls", title: "Which control is stronger?", module: "M01", placement: "bank" },
+    { id: "read-clear-workspace", title: "Why does a clear bench matter?", module: "M01", placement: "bank" },
+    { id: "read-reduce-timber-waste", title: "How could you waste less timber?", module: "M01", placement: "bank" },
+    { id: "read-research-notes", title: "What makes a useful research note?", module: "M02", placement: "bank" },
+    { id: "read-prototype-evidence", title: "What should a prototype test?", module: "M02", placement: "bank" },
+    { id: "read-general-design-principles", title: "How can your own design show learning?", module: "M02", placement: "bank" },
+    { id: "read-working-drawings-complementary-views", title: "Can one 3D drawing do both jobs?", module: "M03", placement: "bank" },
+    { id: "read-cutting-schedule-delays", title: "Why leave room for delays?", module: "M03", placement: "bank" },
+    { id: "read-accurate-markout-waste-check", title: "What does ‘measure twice’ really check?", module: "M03", placement: "bank" },
+    { id: "read-cutting-shaping-regular-checks", title: "Why check parts as you go?", module: "M04", placement: "bank" },
+    { id: "read-joint-choices-dowel-alignment", title: "Do hidden dowels need accuracy?", module: "M04", placement: "bank" },
+    { id: "read-dry-fit-glue-clamp-check", title: "Are clamps the final check?", module: "M04", placement: "bank" },
+    { id: "read-clear-finish-surface-check", title: "Will varnish cover poor preparation?", module: "M05", placement: "bank" },
+    { id: "read-functional-testing-evidence", title: "What proves the organiser is stable?", module: "M05", placement: "bank" },
+    { id: "read-evaluation-reflection-learning", title: "Is a list of steps a reflection?", module: "M05", placement: "bank" }
   ];
   const READINGS = ORIGINAL_READINGS.concat(BONUS_READINGS);
   const ORIGINAL_READING_KEYS = ORIGINAL_READINGS.map((reading) => READING_PREFIX + reading.id);
+  // Version 3 is the fixed 19-reading format, even as the current bank grows.
+  const V3_READING_KEYS = Object.freeze([
+    "read-design-brief", "read-workshop-safety", "read-materials",
+    "read-research-concepts", "read-compare-concepts", "read-respectful-design",
+    "read-working-drawings", "read-cutting-schedule", "read-accurate-markout",
+    "read-cutting-shaping", "read-joint-choices", "read-dry-fit-glue",
+    "read-clear-finish", "read-functional-testing", "read-evaluation-reflection",
+    "read-testable-criteria", "read-stronger-controls", "read-clear-workspace", "read-reduce-timber-waste"
+  ].map((id) => READING_PREFIX + id));
   const READING_KEYS = READINGS.map((reading) => READING_PREFIX + reading.id);
   const LEGACY_KEYS = MODULE_KEYS.concat(ACTIVITY_KEYS, FOLIO_KEY);
   const V2_KEYS = LEGACY_KEYS.concat(ORIGINAL_READING_KEYS);
+  const V3_KEYS = LEGACY_KEYS.concat(V3_READING_KEYS);
   const EXPECTED_KEYS = LEGACY_KEYS.concat(READING_KEYS);
 
   function isPlainObject(value) {
@@ -269,7 +291,7 @@
       || statuses.find((status) => !status.complete);
     if (!next) return { href: "activities/reading.html", label: "Review reading challenges" };
     return {
-      href: `activities/reading.html?id=${encodeURIComponent(next.reading.id)}${next.reading.module ? `&module=${encodeURIComponent(next.reading.module)}` : ""}`,
+      href: `activities/reading.html?id=${encodeURIComponent(next.reading.id)}${next.reading.placement === "bank" && next.reading.module ? `&module=${encodeURIComponent(next.reading.module)}` : ""}`,
       label: next.started ? `Continue reading: ${next.reading.title}` : `Try reading: ${next.reading.title}`
     };
   }
@@ -454,7 +476,7 @@
   function validateBackup(candidate) {
     if (!isPlainObject(candidate)
       || candidate.schema !== BACKUP_SCHEMA
-      || ![1, 2, BACKUP_VERSION].includes(candidate.version)) {
+      || ![1, 2, 3, BACKUP_VERSION].includes(candidate.version)) {
       throw new Error("That file is not a supported TAS course backup.");
     }
     if (candidate.courseId !== COURSE_ID) {
@@ -468,7 +490,8 @@
       || !arraysMatch(candidate.recordManifest.activityKeys, ACTIVITY_KEYS)
       || candidate.recordManifest.folioKey !== FOLIO_KEY
       || (candidate.version === 2 && !arraysMatch(candidate.recordManifest.readingKeys, ORIGINAL_READING_KEYS))
-      || (candidate.version === 3 && !arraysMatch(candidate.recordManifest.readingKeys, READING_KEYS))
+      || (candidate.version === 3 && !arraysMatch(candidate.recordManifest.readingKeys, V3_READING_KEYS))
+      || (candidate.version === 4 && !arraysMatch(candidate.recordManifest.readingKeys, READING_KEYS))
       || (candidate.version === 1 && Object.prototype.hasOwnProperty.call(candidate.recordManifest, "readingKeys"))) {
       throw new Error("That Desk Tidy backup has the wrong record manifest.");
     }
@@ -486,7 +509,7 @@
   }
 
   function backupKeys(version) {
-    return version === 1 ? LEGACY_KEYS : version === 2 ? V2_KEYS : EXPECTED_KEYS;
+    return version === 1 ? LEGACY_KEYS : version === 2 ? V2_KEYS : version === 3 ? V3_KEYS : EXPECTED_KEYS;
   }
 
   function setBackupStatus(message) {
@@ -515,7 +538,7 @@
   function restoreRecords(records) {
     if (!isPlainObject(records)) throw new Error("That Desk Tidy backup does not contain course records.");
     const actualKeys = Object.keys(records).sort();
-    const keys = [LEGACY_KEYS, V2_KEYS, EXPECTED_KEYS].find((supportedKeys) => arraysMatch(actualKeys, supportedKeys.slice().sort()));
+    const keys = [LEGACY_KEYS, V2_KEYS, V3_KEYS, EXPECTED_KEYS].find((supportedKeys) => arraysMatch(actualKeys, supportedKeys.slice().sort()));
     if (!keys) {
       throw new Error("That Desk Tidy backup is missing records or contains unexpected record keys.");
     }
@@ -562,8 +585,10 @@
       const readingNotice = candidate.version === 1
         ? "This older backup contains no active-reading responses. All current active-reading responses will be kept."
         : candidate.version === 2
-          ? "The original 15 active-reading responses will be overwritten or removed to match this backup. The four newer Module 1 challenge responses will be kept."
-          : "This includes all 19 active-reading responses: they will be overwritten or removed to match the backup.";
+          ? "The original 15 active-reading responses will be overwritten or removed to match this backup. The four extra Module 1 and 12 extra Module 2–5 challenge responses will be kept."
+          : candidate.version === 3
+            ? "The 19 active-reading responses in this backup will be overwritten or removed to match it. The 12 extra Module 2–5 challenge responses will be kept."
+            : "This includes all 31 active-reading responses: they will be overwritten or removed to match the backup.";
       const confirmed = window.confirm(
         `Restore this Desk Tidy course backup?\n\nThis will overwrite or remove ${keys.length} Desk Tidy record slots on this device. ${existingCount} currently contain saved data; the selected backup contains ${incomingCount}.\n\n${readingNotice}\n\nDownload a current backup first if you may need to undo this restore.`
       );
@@ -576,8 +601,10 @@
       const restoredNotice = candidate.version === 1
         ? " Current active-reading responses were kept."
         : candidate.version === 2
-          ? " The original 15 active-reading responses now match the backup. The four newer Module 1 challenge responses were kept."
-          : " All 19 active-reading responses now match the backup.";
+          ? " The original 15 active-reading responses now match the backup. The four extra Module 1 and 12 extra Module 2–5 challenge responses were kept."
+          : candidate.version === 3
+            ? " The 19 active-reading responses in the backup now match it. The 12 extra Module 2–5 challenge responses were kept."
+            : " All 31 active-reading responses now match the backup.";
       setBackupStatus(`Course backup restored with ${incomingCount} saved records.${restoredNotice}`);
     } catch (error) {
       setBackupStatus(error?.message || "That backup could not be read. No Desk Tidy work was changed.");
