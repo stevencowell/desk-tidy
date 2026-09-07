@@ -17,9 +17,9 @@
       [...document.querySelectorAll(".lesson-overview")].find((panel) =>
         /module presentation/i.test(text(panel.querySelector(".section-kicker, .eyebrow"))));
 
-    if (!presentation && location.pathname.toLowerCase().includes("/desk-tidy/weeks")) {
+    if (!presentation && /\/weeks\d+-\d+\//i.test(location.pathname)) {
       presentation = document.querySelector(".lesson-overview");
-      const week = location.pathname.match(/weeks(\\d+)-(\\d+)/i);
+      const week = location.pathname.match(/weeks(\d+)-(\d+)/i);
       if (presentation && week) {
         const copy = presentation.querySelector(".overview-heading, div") || presentation;
         const kicker = copy.querySelector(".section-kicker");
@@ -33,7 +33,7 @@
         download.className = "primary-button";
         download.href = `../presentations/desk-tidy-weeks-${week[1]}-${week[2]}.pptx`;
         download.download = "";
-        download.textContent = "Download presentation";
+        download.textContent = "Download PowerPoint";
         presentation.append(download);
       }
     }
@@ -49,6 +49,13 @@
     if (support) {
       const actions = support.querySelector(".module-support-actions, .button-row");
       if (actions) {
+        // Keep one primary deck download when the module declares it in its HTML.
+        const deck = presentation.querySelector('a[download][href$=".pptx"]');
+        if (deck) {
+          actions.querySelectorAll('a[download][href$=".pptx"]').forEach((link) => {
+            if (link.href === deck.href) link.remove();
+          });
+        }
         actions.classList.add("mirror-support-actions");
         presentation.append(actions);
       }
@@ -56,6 +63,13 @@
     }
 
     document.querySelector(".module-preview-card")?.remove();
+
+    // Group copy and controls beside the preview, with the same reading order on phones.
+    const copy = document.createElement("div");
+    copy.className = "module-presentation-copy";
+    [...presentation.children].filter((node) => !node.matches(".module-slide-preview"))
+      .forEach((node) => copy.append(node));
+    presentation.prepend(copy);
 
     const heroTitle = document.querySelector(".lesson-hero h1, .module-hero h1, .page-hero h1, [data-module-title]");
     const heroSubtitle = document.querySelector(".hero-subtitle, [data-module-summary], .page-hero-sub");

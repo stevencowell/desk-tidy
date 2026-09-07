@@ -1,18 +1,35 @@
 /* Shared Timber module presentation pattern: Mirror reference. */
 body.mirror-module-flow .module-presentation-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, .85fr) !important;
   align-items: center;
   gap: 24px 32px;
   min-height: 260px;
+}
+
+body.mirror-module-flow .module-presentation-copy {
+  display: grid;
+  justify-items: start;
+  gap: 14px;
+  min-width: 0;
+}
+
+body.mirror-module-flow .module-presentation-copy .overview-heading p:last-child {
+  margin-bottom: 0;
+}
+
+body.mirror-module-flow .module-presentation-copy .primary-button {
+  min-width: 0;
+  max-width: 100%;
 }
 
 body.mirror-module-flow .mirror-module-actions,
 body.mirror-module-flow .mirror-support-actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 10px;
+  margin: 0;
 }
 
 body.mirror-module-flow .student-strip {
@@ -56,14 +73,17 @@ body.mirror-module-flow .part-banner.mirror-theory-divider h2 { margin: 0 0 6px;
 body.mirror-module-flow .part-banner.mirror-theory-divider p { margin: 0; }
 
 body.mirror-module-flow .module-slide-preview {
-  grid-column: 1 / -1;
+  grid-column: auto;
   display: grid;
-  grid-template-columns: minmax(220px, 390px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  gap: 16px 22px;
+  justify-self: end;
+  gap: 12px;
+  width: 100%;
+  max-width: 390px;
   margin: 0;
-  padding-top: 20px;
-  border-top: 1px solid var(--line, #cbd7df);
+  padding: 0;
+  border: 0;
 }
 
 body.mirror-module-flow .module-slide-preview__image {
@@ -209,7 +229,8 @@ body.mirror-module-flow .module-written-summary #written-questions { display: no
 }
 
 @media (max-width: 680px) {
-  body.mirror-module-flow .module-presentation-card { grid-template-columns: 1fr; }
+  body.mirror-module-flow .module-presentation-card { grid-template-columns: minmax(0, 1fr) !important; }
+  body.mirror-module-flow .module-slide-preview { justify-self: start; }
   body.mirror-module-flow .mirror-module-actions,
   body.mirror-module-flow .mirror-support-actions { justify-content: flex-start; }
   body.mirror-module-flow .student-strip .student-fields { grid-template-columns: 1fr; }
